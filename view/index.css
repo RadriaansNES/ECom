@@ -22,3 +22,18 @@
         width: 400px;
     }
 }
+
+@media (min-width: 992px) and (max-width: 1420px) {
+    .navbar {
+        height: 60px;
+        padding: 0;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .nav-item a{
+        font-size: 12px;
+      }
+}
