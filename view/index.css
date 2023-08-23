@@ -12,6 +12,42 @@
     margin-top: -5px;
 }
 
+.main {
+    padding: 0;
+}
+
+.mainIntro {
+    background-image: url(../src/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* products */
+
+.prod {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    row-gap: 20px;
+}
+
+.card {
+    display: flex;
+    max-width: 150px;
+}
+
+.card img {
+    max-height: 100px;
+}
+
+
 @media (min-width: 1440px) {
     .navbar {
         height: 60px;
