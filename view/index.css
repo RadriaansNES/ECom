@@ -54,6 +54,8 @@ th, td {
     text-align: center;
 }
 
+
+
 .mainIntro {
     background-image: url(../src/back.jpg);
     background-size: cover;
@@ -78,11 +80,26 @@ th, td {
 
 .card {
     display: flex;
+    flex-direction: column; /* Stack card elements vertically */
     max-width: 150px;
+    height: 100%; /* Ensure the card takes up all vertical space */
+}
+
+.card-body {
+    flex-grow: 1; /* Allow card-body to grow and fill vertical space */
+    display: flex; /* Use flex layout for card-body content */
+    flex-direction: column; /* Stack card-body content vertically */
+    justify-content: space-between; /* Push content to the top and bottom */
+}
+
+.btn-primary {
+    align-self: flex-end; /* Align the button to the bottom of the card-body */
+    margin-top: auto; /* Push the button to the bottom */
 }
 
 .card img {
     max-height: 100px;
+    margin-bottom: auto; /* Push the image to the top of the card */
 }
 
 
