@@ -36,6 +36,24 @@
     padding: 2rem 0rem;
 }
 
+th, td {
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.modal-footer {
+    padding-top: 0rem;
+}
+
+.custom-qty-input {
+    max-width: 50px; /* Adjust the width as needed */
+    text-align: center;
+}
+
 .mainIntro {
     background-image: url(../src/back.jpg);
     background-size: cover;

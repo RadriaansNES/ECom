@@ -22,23 +22,7 @@
           <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#cartModal">
             <img src="../src/8827372.png" alt="Cart" width="30" height="100%">
           </a>
-          <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  Cart
-                </div>
-                <div class="modal-body">
-                  Populate from local storage
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Checkout</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -96,119 +80,181 @@
     <div class="mainIntro container-fluid">
       <p>Where health meets wellness</p>
     </div>
-  <div class="prod container-fluid">
+    <div class="prod container-fluid">
       <div class="card" style="width: 18rem;">
-          <img src="../src/red.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">Red Crystal</h5>
-              <p class="card-text">Red crystal strong</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                  View item details
-                </button>
-              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <img src="../src/red.jpg">
-                      </div>
-                      <div class="modal-body">
-                        hand crafted from the earth
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Add to cart</button>
-                      </div>
-                    </div>
-                  </div>
+        <img src="../src/red.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Red Crystal</h5>
+          <p class="card-text">Red crystal strong</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            View item details
+          </button>
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="../src/red.jpg">
                 </div>
-          </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-          <img src="../src/red.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">Red Crystal</h5>
-              <p class="card-text">Red crystal strong</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                  View item details
-                </button>
-              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="modal-body">
+                  <p>Price $50</p>
+                  hand crafted from the earth
                 </div>
-          </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-          <img src="../src/red.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">Red Crystal</h5>
-              <p class="card-text">Red crystal strong</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                  View item details
-                </button>
-              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="addToCartButton" data-bs-dismiss="modal">Add to
+                    cart</button>
                 </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-      <div class="card" style="width: 18rem;">
-          <img src="../src/red.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">Red Crystal</h5>
-              <p class="card-text">Red crystal strong</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                  View item details
-                </button>
-              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+      <!-- Popup Cart -->
+      <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-end">
+                <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+              </div>
+            </div>
+            <div class="modal-footer border-top-0 d-flex justify-content-between">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Checkout</button>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
+
+
+
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+
+  <script>
+    // Initialize an empty shopping cart array
+    const shoppingCart = [];
+
+    // Function to add an item to the shopping cart
+    function addToCart(product, price, quantity) {
+      // Check if the product is already in the cart
+      const existingItem = shoppingCart.find(item => item.product === product);
+
+      if (existingItem) {
+        // If it exists, update the quantity
+        existingItem.quantity += quantity;
+      } else {
+        // If it doesn't exist, create a new cart item object
+        const cartItem = {
+          product,
+          price,
+          quantity
+        };
+        // Add the item to the shopping cart
+        shoppingCart.push(cartItem);
+      }
+
+      // Update the cart display
+      updateCartDisplay();
+    }
+
+    // Function to update the cart display
+    function updateCartDisplay() {
+      const cartTableBody = $('#cartTableBody');
+      const cartTotal = $('#cartTotal');
+
+      // Clear the existing cart table
+      cartTableBody.empty();
+
+      // Calculate the total price
+      let total = 0;
+
+      // Iterate through the shopping cart items and display them
+      shoppingCart.forEach((item, index) => {
+        total += item.price * item.quantity;
+
+        const newRow = $('<tr>');
+
+        // Product column
+        const productCell = $('<td>').text(item.product);
+
+        // Price column
+        const priceCell = $('<td>').text(`${item.price}$`);
+
+        // Quantity input field column
+        const qtyInputCell = $('<td class="qty">');
+        const qtyInput = $('<input>').attr('type', 'number').attr('value', item.quantity);
+
+        // Add a custom class to the input field
+        qtyInput.addClass('custom-qty-input');
+
+        // Add an event handler to update the quantity in the shopping cart
+        qtyInput.on('input', function () {
+          item.quantity = parseInt($(this).val());
+          updateCartDisplay();
+        });
+
+        qtyInputCell.append(qtyInput);
+
+        // Total column
+        const totalCell = $('<td>').text(`${item.price * item.quantity}$`);
+
+        // Actions column
+        const actionsCell = $('<td>');
+        const removeButton = $('<button>').text('Remove').addClass('btn btn-danger btn-sm');
+        removeButton.on('click', () => removeItemFromCart(index));
+        actionsCell.append(removeButton);
+
+        newRow.append(productCell, priceCell, qtyInputCell, totalCell, actionsCell); 
+        cartTableBody.append(newRow);
+      });
+
+      // Update the total price
+      cartTotal.text(`${total}$`);
+    }
+
+    // Function to remove an item from the shopping cart
+    function removeItemFromCart(index) {
+      shoppingCart.splice(index, 1);
+      updateCartDisplay();
+    }
+
+    // Attach a click event handler to the "Add to cart" button using jQuery
+    $('#addToCartButton').on('click', function () {
+      const productName = 'Red Crystal'; // Replace with the actual product name
+      const productPrice = 50; // Replace with the actual product price
+      const quantity = 1; // Default quantity
+      addToCart(productName, productPrice, quantity);
+    });
+  </script>
+
 </body>
 
 </html>
