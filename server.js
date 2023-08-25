@@ -11,6 +11,19 @@ const pricingController = require('./controller/pricingController');
 
 const YOUR_DOMAIN = 'C:/Users/ryaan/Desktop/Code/ECom/view/index.html';
 
+//Check if its running locally, or hosted. Use the respective link in html 
+app.get('/', async (req, res) => {
+    const PORT = process.env.PORT || 4242;
+    
+    // Create a script block to set the PORT as a global variable
+    const script = `<script>var PORT = ${PORT};</script>`;
+
+    // Send the HTML file along with the script block
+    res.sendFile(__dirname + '/path/to/your/index.html', { additionalScript: script });
+});
+
+
+
 //THIS IS THE ROUTE!
 app.post('/create-checkout-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
