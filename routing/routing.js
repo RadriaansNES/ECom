@@ -1,9 +1,11 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const pricingController = require('../controller/pricingController');
+const express = require('express');
+const router = express.Router();
 
-module.exports = (app) => {
+module.exports = (router) => {
     //THIS IS THE ROUTE!
-    app.post('/create-checkout-session', async (req, res) => {
+    router.post('/create-checkout-session', async (req, res) => {
         const session = await stripe.checkout.sessions.create({
             line_items: [
                 {
