@@ -3,6 +3,7 @@ const router = express.Router();
 const checkoutController = require('../controllers/checkoutController');
 
 // Define a route for creating a checkout session
+/*
 router.post('/create-checkout-session', async (req, res) => {
   try {
     const session = await checkoutController.createCheckoutSession();
@@ -14,3 +15,4 @@ router.post('/create-checkout-session', async (req, res) => {
 });
 
 module.exports = router;
+*/
