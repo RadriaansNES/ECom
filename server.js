@@ -1,4 +1,5 @@
 require('dotenv').config();
+const PORT = process.env.PORT || 4242;
 
 // Access the Stripe secret key from the environmental variables
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
@@ -28,4 +29,6 @@ app.post('/create-checkout-session', async (req, res) => {
     res.redirect(303, session.url);
 });
 
-app.listen(4242, () => console.log('Running on port 4242'));
+app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`);
+});
