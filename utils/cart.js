@@ -4,14 +4,15 @@ const shoppingCart = [];
 //Convery array to JSON string and set as cookie
 function saveCartToCookie() {
   const cartJSON = JSON.stringify(shoppingCart);
-  document.cookie = `shoppingCart=${cartJSON}; path=/`;
+  console.log("Saving cart to cookie:", cartJSON);
+  document.cookie = `shoppingCart=${cartJSON}; expires=123; =/`;
 }
 
-//Retrieve cookie, parse JSON, load into array. 
 function loadCartFromCookie() {
   const cookieData = document.cookie.split(';').find(cookie => cookie.trim().startsWith('shoppingCart='));
   if (cookieData) {
     const cartJSON = cookieData.split('=')[1];
+    console.log("Loading cart from cookie:", cartJSON);
     shoppingCart.length = 0; // Clear the current cart
     shoppingCart.push(...JSON.parse(cartJSON)); // Load cart from cookie
   }
