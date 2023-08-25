@@ -1,5 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const pricingController = require('./controller/pricingController');
+const pricingController = require('../controller/pricingController');
 
 module.exports = (app) => {
     //THIS IS THE ROUTE!
