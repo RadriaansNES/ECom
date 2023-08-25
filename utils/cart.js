@@ -1,6 +1,22 @@
 // Initialize an empty shopping cart array
 const shoppingCart = [];
 
+//Convery array to JSON string and set as cookie
+function saveCartToCookie() {
+  const cartJSON = JSON.stringify(shoppingCart);
+  document.cookie = `shoppingCart=${cartJSON}; path=/`;
+}
+
+//Retrieve cookie, parse JSON, load into array. 
+function loadCartFromCookie() {
+  const cookieData = document.cookie.split(';').find(cookie => cookie.trim().startsWith('shoppingCart='));
+  if (cookieData) {
+    const cartJSON = cookieData.split('=')[1];
+    shoppingCart.length = 0; // Clear the current cart
+    shoppingCart.push(...JSON.parse(cartJSON)); // Load cart from cookie
+  }
+}
+
 // Function to add an item to the shopping cart
 function addToCart(product, price, quantity) {
   // Check if the product is already in the cart
@@ -22,6 +38,7 @@ function addToCart(product, price, quantity) {
 
   // Update the cart display
   updateCartDisplay();
+  saveCartToCookie();
 }
 
 // Function to update the cart display
@@ -99,6 +116,7 @@ function updateCartDisplay() {
 function removeItemFromCart(index) {
   shoppingCart.splice(index, 1);
   updateCartDisplay();
+  saveCartToCookie();
 }
 
 // Attach a click event handler to the "Add to cart" buttons using jQuery
