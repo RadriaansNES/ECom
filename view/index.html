@@ -141,49 +141,53 @@
             </div>
           </div>
         </div>
-
-
-        <!-- Popup Cart -->
-        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
+      </div>
+    </div>
+    <!-- Popup Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
               <div class="modal-header border-bottom-0">
-                <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+                  <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
               </div>
               <div class="modal-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Product</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Qty</th>
-                      <th scope="col">Total</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody id="cartTableBody">
-                    <!-- Cart items will be dynamically added here -->
-                  </tbody>
-                </table>
-                <div class="d-flex justify-content-end">
-                  <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
-                </div>
+                  <div id="emptyCartMessage" class="alert alert-info text-center">
+                      Your shopping cart is currently empty.
+                  </div>
+  
+                  <div id="cartTableContainer" style="display: none;">
+                      <table class="table">
+                          <thead>
+                              <tr>
+                                  <th scope="col">Product</th>
+                                  <th scope="col">Price</th>
+                                  <th scope="col">Qty</th>
+                                  <th scope="col">Total</th>
+                                  <th scope="col">Actions</th>
+                              </tr>
+                          </thead>
+                          <tbody id="cartTableBody">
+                              <!-- Cart items will be dynamically added here -->
+                          </tbody>
+                      </table>
+                  </div>
+  
+                  <div class="d-flex justify-content-end">
+                      <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+                  </div>
               </div>
               <div class="modal-footer border-top-0 d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <form id="checkout-form" method="POST">
-                  <button type="submit" class="btn btn-success">Checkout</button>
-                </form>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <form id="checkout-form" method="POST">
+                      <button type="submit" class="btn btn-success">Checkout</button>
+                  </form>
               </div>
-            </div>
           </div>
-        </div>
-
-
+      </div>
+  </div>
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -191,21 +195,7 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script src="../utils/cart.js"></script>
-  <script>
-    // check to see where the link should be headed based on host
-    $(document).ready(function () {
-        // Get the form element
-        const form = $("#checkout-form");
-
-        // Set the action attribute based on the PORT value
-        if (typeof PORT !== 'undefined' && PORT === 4242) {
-            form.attr("action", "http://localhost:4242/create-checkout-session");
-        } else {
-            form.attr("action", "https://ecom-server-5e1g.onrender.com/create-checkout-session");
-        }
-    });
-</script>
-
+  <script src="../utils/host.js"></script>
 </body>
 
 </html>
