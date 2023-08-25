@@ -1,18 +1,24 @@
+require('dotenv').config();
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const express = require('express');
-const router = express.Router();
-const checkoutController = require('../controllers/checkoutController');
+const app = express();
+const pricingController = require('./controller/pricingController');
 
-// Define a route for creating a checkout session
-/*
-router.post('/create-checkout-session', async (req, res) => {
-  try {
-    const session = await checkoutController.createCheckoutSession();
-    res.status(200).json({ sessionId: session.id });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An error occurred while creating the session.' });
-  }
+
+//THIS IS THE ROUTE!
+app.post('/create-checkout-session', async (req, res) => {
+    const session = await stripe.checkout.sessions.create({
+        line_items: [
+            {
+                // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                price: await pricingController.createPrice(),
+                quantity: 1,
+            },
+        ],
+        mode: 'payment',
+        success_url: 'https://www.google.ca',
+        cancel_url: 'https://www.facebook.com',
+    });
+
+    res.redirect(303, session.url);
 });
-
-module.exports = router;
-*/
