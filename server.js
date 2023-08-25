@@ -1,15 +1,14 @@
 require('dotenv').config();
 const express = require('express');
-const routes = require('./routing/routing');
+const app = express(); // Initialize the Express app instance
 
-//run server
-const app = express(); 
+app.use(express.static('public'));
+
 const PORT = process.env.PORT || 4242;
 
-// route middlewares
-app.use('/api', routes);
+// Import the routing file and pass the app instance
+require('./routing/routing')(app);
 
-//listen
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 });
