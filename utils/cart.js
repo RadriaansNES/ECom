@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function saveCartToCookie() {
   const cartJSON = JSON.stringify(shoppingCart);
   console.log("Saving cart to cookie:", cartJSON);
-  document.cookie = `shoppingCart=${cartJSON}; =/`;
+  document.cookie = `shoppingCart=${cartJSON}; path=/`;
 }
 
 function loadCartFromCookie() {
