@@ -61,7 +61,7 @@ th, td {
 
 
 .mainIntro {
-    background-image: url(../src/back.jpg);
+    background-image: url(src/back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

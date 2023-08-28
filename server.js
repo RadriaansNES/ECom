@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express(); // Initialize the Express app instance
 
-app.use(express.static(__dirname + '/view/'));
+app.use(express.static(__dirname));
 
 const PORT = process.env.PORT || 4242;
 
