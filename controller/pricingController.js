@@ -5,7 +5,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 async function createPrice() {
   try {
     const price = await stripe.prices.create({
-      unit_amount: 2000,
+      unit_amount: 8000,
       currency: 'cad',
       product: 'prod_OVoZoiUqWYvxZm', // Replace with your actual product ID
     });
