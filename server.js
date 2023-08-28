@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express(); // Initialize the Express app instance
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/view/'));
 
 const PORT = process.env.PORT || 4242;
 
@@ -11,7 +11,7 @@ require('./routing/routing')(app);
 
 // Define a route handler for the root path ("/")
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/view/index.html'); // Adjust the file path as needed
+    res.sendFile(__dirname + 'index.html'); // Adjust the file path as needed
 });
 
 app.listen(PORT, () => {
