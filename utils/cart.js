@@ -5,7 +5,7 @@ const shoppingCart = [];
 function saveCartToCookie() {
   const cartJSON = JSON.stringify(shoppingCart);
   console.log("Saving cart to cookie:", cartJSON);
-  document.cookie = `shoppingCart=${cartJSON}; expires=123; =/`;
+  document.cookie = 'shoppingCart=${cartJSON}; =/';
 }
 
 function loadCartFromCookie() {
