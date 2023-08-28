@@ -1,11 +1,18 @@
 // Initialize an empty shopping cart array
 const shoppingCart = [];
+let cartJSON = null;
+
+document.addEventListener("DOMContentLoaded", function () {
+  // This function will be called when the page is fully loaded
+  loadCartFromCookie();
+  updateCartDisplay();
+});
 
 //Convery array to JSON string and set as cookie
 function saveCartToCookie() {
   const cartJSON = JSON.stringify(shoppingCart);
   console.log("Saving cart to cookie:", cartJSON);
-  document.cookie = 'shoppingCart=${cartJSON}; =/';
+  document.cookie = `shoppingCart=${cartJSON}; =/`;
 }
 
 function loadCartFromCookie() {
@@ -57,7 +64,7 @@ function updateCartDisplay() {
   // Calculate the total price
   let total = 0;
 
-  if (shoppingCart.length === 0) {
+  if (shoppingCart.length === 0 && cartJSON === null) {
     // If the cart is empty, display the empty cart message and hide the table
     cartTableContainer.hide();
     emptyCartMessage.show();
@@ -141,17 +148,27 @@ $('#cartTableBody').on('keydown', '.custom-qty-input', function (e) {
   }
 });
 
-// Function to update the cart quantity
 function updateCartQuantity(inputField) {
   const index = $(inputField).data('index'); // Get the index of the item in the cart
   const newValue = parseInt($(inputField).val());
 
-  if (!isNaN(newValue) && newValue >= 0) {
-    shoppingCart[index].quantity = newValue;
-  } else {
-    // Reset the input value to the previous quantity
-    $(inputField).val(shoppingCart[index].quantity);
+  // Check if index is a valid index in the shoppingCart array
+  if (!isNaN(index) && index >= 0 && index < shoppingCart.length) {
+    if (!isNaN(newValue) && newValue >= 0) {
+      if (newValue === 0) {
+        // Remove the item from the shoppingCart array
+        shoppingCart.splice(index, 1);
+      } else {
+        // Update the quantity
+        shoppingCart[index].quantity = newValue;
+      }
+      // Save the updated cart to the cookie
+      saveCartToCookie();
+    } else {
+      // Reset the input value to the previous quantity
+      $(inputField).val(shoppingCart[index].quantity);
+    }
   }
 
   updateCartDisplay();
-};
+}
