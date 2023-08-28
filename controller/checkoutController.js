@@ -14,7 +14,6 @@ async function createCheckoutSession() {
       line_items: [
         {
           price: priceId, // Use the Price ID obtained from pricingController
-          quantity: 1,
         },
       ],
       mode: 'payment',

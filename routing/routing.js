@@ -8,6 +8,7 @@ module.exports = (app) => {
             line_items: [
                 {
                     // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                    //this one actually controls quantity
                     price: await pricingController.createPrice(),
                     quantity: 1,
                 },

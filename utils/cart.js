@@ -26,9 +26,9 @@ function loadCartFromCookie() {
 }
 
 // Function to add an item to the shopping cart
-function addToCart(product, price, quantity) {
+function addToCart(productName, productPrice, quantity, productId) {
   // Check if the product is already in the cart
-  const existingItem = shoppingCart.find(item => item.product === product);
+  const existingItem = shoppingCart.find(item => item.product === productId);
 
   if (existingItem) {
     // If it exists, update the quantity
@@ -36,9 +36,10 @@ function addToCart(product, price, quantity) {
   } else {
     // If it doesn't exist, create a new cart item object
     const cartItem = {
-      product,
-      price,
-      quantity
+      product: productId, // Store the product ID
+      name: productName, // Store the product name
+      price: productPrice, // Store the product price
+      quantity,
     };
     // Add the item to the shopping cart
     shoppingCart.push(cartItem);
@@ -48,6 +49,7 @@ function addToCart(product, price, quantity) {
   updateCartDisplay();
   saveCartToCookie();
 }
+
 
 // Function to update the cart display
 function updateCartDisplay() {
@@ -85,7 +87,7 @@ function updateCartDisplay() {
       const newRow = $('<tr>');
 
       // Product column
-      const productCell = $('<td>').text(item.product);
+      const productCell = $('<td>').text(item.name);
 
       // Price column
       const priceCell = $('<td>').text(`${item.price}$`);
@@ -131,8 +133,9 @@ function removeItemFromCart(index) {
 $('.addToCartButton').on('click', function () {
   const productName = $(this).data('product-name');
   const productPrice = $(this).data('product-price');
+  const productId = $(this).data('product'); // Get the product ID
   const quantity = 1; // Default quantity
-  addToCart(productName, productPrice, quantity);
+  addToCart(productName, productPrice, quantity, productId); // Pass the product ID
 });
 
 // Attach a focusout event handler to the quantity input fields
