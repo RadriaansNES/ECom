@@ -77,8 +77,18 @@
     </nav>
   </header>
   <main class="main">
-    <div class="mainIntro container-fluid">
-      <p>THIS IS THE LOGIN PAGE, MY DUDE! </p>
+    <div class="loginscreen container-fluid">
+      <form action="/login/password" method="post">
+        <section id="user">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+        </section>
+        <section>
+            <label for="current-password">Password </label>
+            <input id="current-password" name="password" type="password" autocomplete="current-password" required>
+        </section>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
     </div>
     
 

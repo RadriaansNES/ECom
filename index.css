@@ -54,7 +54,7 @@ th, td {
 }
 
 .custom-qty-input {
-    max-width: 50px; /* Adjust the width as needed */
+    max-width: 50px;  
     text-align: center;
 }
 
@@ -84,26 +84,50 @@ th, td {
 
 .card {
     display: flex;
-    flex-direction: column; /* Stack card elements vertically */
+    flex-direction: column;  
     max-width: 150px;
-    height: 100%; /* Ensure the card takes up all vertical space */
+    height: 100%;  
 }
 
 .card-body {
-    flex-grow: 1; /* Allow card-body to grow and fill vertical space */
-    display: flex; /* Use flex layout for card-body content */
-    flex-direction: column; /* Stack card-body content vertically */
-    justify-content: space-between; /* Push content to the top and bottom */
+    flex-grow: 1;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: space-between;  
 }
 
 .btn-primary {
-    align-self: flex-end; /* Align the button to the bottom of the card-body */
-    margin-top: auto; /* Push the button to the bottom */
+    align-self: flex-end; 
+    margin-top: auto; 
 }
 
 .card img {
     max-height: 100px;
-    margin-bottom: auto; /* Push the image to the top of the card */
+    margin-bottom: auto;  
+}
+
+/* login page */
+
+.loginscreen {
+    background-color: lightblue;
+    text-align: center;
+    height: 92vh;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.loginscreen #user {
+    padding-top: 30vh;
+}
+
+#current-password {
+    margin-left: 6px;
+}
+
+.loginscreen .btn {
+    margin-top: 30px;
+    width: 200px;
 }
 
 
