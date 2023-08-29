@@ -111,14 +111,14 @@ th, td {
 .loginscreen {
     background-color: lightblue;
     text-align: center;
-    height: 92vh;
+    height: 716px;
     margin: 0;
     padding: 0;
     font-size: 20px;
 }
 
 .loginscreen #user {
-    padding-top: 30vh;
+    padding-top: 100px;
 }
 
 #current-password {
