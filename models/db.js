@@ -1,22 +1,24 @@
 const { Pool } = require('pg');
+const session = require('express-session');
+const PgSession = require('connect-pg-simple')(session); // Import connect-pg-simple
+
 const connectionString = process.env.CONNECTION_STRING;
 
-//QUERY IS WORKING. CAN TYPE require('./database'); IN SERVER TO SHOW BOOT, CREDENTIALS. 
+// Create a pool for database connections
+const pool = new Pool({
+  connectionString,
+});
 
-async function connectAndQuery() {
-  const pool = new Pool({
-    connectionString,
-  });
+// Initialize express-session with connect-pg-simple
+const sessionMiddleware = session({
+  store: new PgSession({
+    pool, // Use the PostgreSQL pool
+    tableName: 'session', // Replace with your preferred table name
+  }),
+  secret: process.env.SESSION_SECRET, // Replace with your session secret
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }, // Session expires after 30 days
+});
 
-  try {
-   
-
-    // When done, you can end the pool
-    //await pool.end();
-  } catch (error) {
-    console.error('Error:', error.message);
-  }
-}
-
-// Call the async function to execute the database query
-connectAndQuery(); 
+module.exports = { pool, sessionMiddleware };

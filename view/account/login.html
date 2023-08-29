@@ -79,14 +79,14 @@
   </header>
   <main class="main">
     <div class="loginscreen container-fluid">
-      <form action="/login/password" method="POST"> <!-- Update action to "/auth" -->
+      <form action="/login" method="POST"> <!-- Update action to "/auth" -->
         <section id="user">
           <label for="username">Username</label>
-          <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+          <input id="username" type="text" name="username" placeholder="Username" required autofocus>
         </section>
         <section>
           <label for="current-password">Password</label>
-          <input id="current-password" name="password" type="password" autocomplete="current-password" required>
+          <input id="current-password" type="password" name="password" placeholder="Password" autocomplete="current-password" required>
         </section>
         <button type="submit" class="btn btn-primary">Sign in</button>
       </form>
