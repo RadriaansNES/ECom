@@ -8,6 +8,9 @@ app.use(cookieParser());
 
 const PORT = process.env.PORT || 4242;
 
+//check for database working
+//require('./models/database');
+
 // Import the routing file and pass the app instance
 require('./routing/routing')(app);
 
