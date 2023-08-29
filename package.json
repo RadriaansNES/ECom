@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon npm run lite"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
