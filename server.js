@@ -1,9 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const passport = require('passport'); // Import Passport
-const LocalStrategy = require('passport-local').Strategy; // Import Passport Local strategy
-const { pool, sessionMiddleware } = require('./models/db'); // Import the session middleware
+const passport = require('passport'); 
+const LocalStrategy = require('passport-local').Strategy; 
+const { pool, sessionMiddleware } = require('./models/db'); 
 
 const app = express();
 const PORT = process.env.PORT || 4242;
@@ -15,9 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 // Initialize Passport
 app.use(sessionMiddleware);
 app.use(passport.initialize());
-app.use(passport.session()); // Use Passport with sessions
-
-
+app.use(passport.session()); 
 
 //Define your user serialization and deserialization functions
 passport.serializeUser((user, done) => {
