@@ -78,17 +78,17 @@
   </header>
   <main class="main">
     <div class="loginscreen container-fluid">
-      <form action="/login/password" method="post">
+      <form action="/signup" method="POST"> <!-- Update action to "/auth" -->
         <section id="user">
-            <label for="username">Username</label>
-            <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+          <label for="email">Email</label> <!-- Change "username" to "email" -->
+          <input id="email" name="email" type="email" autocomplete="email" required autofocus> <!-- Change "username" to "email" -->
         </section>
         <section>
-            <label for="current-password">Password </label>
-            <input id="current-password" name="password" type="password" autocomplete="current-password" required>
+          <label for="password">Password</label> <!-- Change "current-password" to "password" -->
+          <input id="password" name="password" type="password" autocomplete="current-password" required> <!-- Change "current-password" to "password" -->
         </section>
         <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
+      </form>
     </div>
     
 
