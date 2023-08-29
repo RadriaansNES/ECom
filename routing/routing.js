@@ -22,8 +22,4 @@ router.post('/create-checkout-session', async (req, res) => {
     res.redirect(303, session.url);
 });
 
-router.get('/login', function(req, res, next) {
-    res.render('login');
-  });
-
 module.exports = router; // Export the router

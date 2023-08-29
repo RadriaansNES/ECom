@@ -11,11 +11,12 @@
 </head>
 
 <body>
-  <header>  
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid navigation">
         <a class="navbar-brand" href="../../index.html">
-          <img src="../../src/transpar.png" alt="Logo" width="30" height="100%" class="d-inline-block align-text-center">
+          <img src="../../src/transpar.png" alt="Logo" width="30" height="100%"
+            class="d-inline-block align-text-center">
           Mermagikal
         </a>
         <div class="right">
@@ -78,64 +79,65 @@
   </header>
   <main class="main">
     <div class="loginscreen container-fluid">
-      <form action="/signup" method="POST"> <!-- Update action to "/auth" -->
+      <form action="/login/password" method="POST"> <!-- Update action to "/auth" -->
         <section id="user">
-          <label for="email">Email</label> <!-- Change "username" to "email" -->
-          <input id="email" name="email" type="email" autocomplete="email" required autofocus> <!-- Change "username" to "email" -->
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" autocomplete="username" required autofocus>
         </section>
         <section>
-          <label for="password">Password</label> <!-- Change "current-password" to "password" -->
-          <input id="password" name="password" type="password" autocomplete="current-password" required> <!-- Change "current-password" to "password" -->
+          <label for="current-password">Password</label>
+          <input id="current-password" name="password" type="password" autocomplete="current-password" required>
         </section>
         <button type="submit" class="btn btn-primary">Sign in</button>
       </form>
     </div>
-    
+
 
 
 
     <!-- Popup Cart -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-          <div class="modal-content">
-              <div class="modal-header border-bottom-0">
-                  <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
-              </div>
-              <div class="modal-body">
-                  <div id="emptyCartMessage" class="alert alert-info text-center">
-                      Your shopping cart is currently empty.
-                  </div>
-  
-                  <div id="cartTableContainer" style="display: none;">
-                      <table class="table">
-                          <thead>
-                              <tr>
-                                  <th scope="col">Product</th>
-                                  <th scope="col">Price</th>
-                                  <th scope="col">Qty</th>
-                                  <th scope="col">Total</th>
-                                  <th scope="col">Actions</th>
-                              </tr>
-                          </thead>
-                          <tbody id="cartTableBody">
-                              <!-- Cart items will be dynamically added here -->
-                          </tbody>
-                      </table>
-                  </div>
-  
-                  <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
-                      <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
-                  </div>
-              </div>
-              <div class="modal-footer border-top-0 d-flex justify-content-between">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <form action="https://ecom-server-5e1g.onrender.com/create-checkout-session" method="POST">
-                      <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
-                  </form>
-              </div>
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
           </div>
+          <div class="modal-body">
+            <div id="emptyCartMessage" class="alert alert-info text-center">
+              Your shopping cart is currently empty.
+            </div>
+
+            <div id="cartTableContainer" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="https://ecom-server-5e1g.onrender.com/create-checkout-session" method="POST">
+              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+            </form>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
