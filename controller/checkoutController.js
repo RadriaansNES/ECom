@@ -1,7 +1,3 @@
-require('dotenv').config();
-
-// Access the Stripe secret key from the environmental variables
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const pricingController = require('./pricingController');
 
 async function createCheckoutSession() {

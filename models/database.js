@@ -1,11 +1,22 @@
 const { Pool } = require('pg');
 
-const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
-});
+const connectionString = process.env.CONNECTION_STRING;
 
-module.exports = pool;
+async function connectAndQuery() {
+  const pool = new Pool({
+    connectionString,
+  });
+
+  try {
+    const result = await pool.query('SELECT * FROM public."Products"');
+    console.log(result.rows); // Log or process the query results here
+
+    // When done, you can end the pool
+    await pool.end();
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+// Call the async function to execute the database query
+connectAndQuery(); 
