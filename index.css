@@ -141,6 +141,7 @@ th, td {
 #signup div {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 #signup .buttonz {
@@ -154,6 +155,10 @@ th, td {
     text-align: center;
     background-color: lightblue;
     height: 716px;
+}
+
+#signup p {
+    margin-bottom: 20px;
 }
 
 @media (min-width: 1440px) {
