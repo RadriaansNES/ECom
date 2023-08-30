@@ -155,28 +155,22 @@
   <script src="../../utils/cart.js"></script>
   <script>
     $(document).ready(function () {
-      // Check if the URL contains an error parameter, then show error box
       const logalert = $('#logalert');
+      const toggle = $('#toggle');
+      const toggle2 = $('#toggle2');
 
       const urlParams = new URLSearchParams(window.location.search);
+      
       if (urlParams.get('error') === '1') {
         logalert.show();
       }
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      // Check if the URL contains an error parameter, then show error box
-      const toggle = $('#toggle');
-      const toggle2=$('#toggle2');
 
-      const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('success') === '1') {
         toggle.hide();
         toggle2.show();
       }
     });
-  </script>
+</script>
 </body>
 
 </html>
