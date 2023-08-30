@@ -25,8 +25,8 @@ router.post('/create-checkout-session', async (req, res) => {
 
 // Route to handle login attempts
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '../view/account/dashboard.html', 
-  failureRedirect: '../view/account/login.html', 
+  successRedirect: '../view/account/dashboard.html',
+  failureRedirect: '../view/account/login.html?error=1' // Redirect with an error parameter
 }));
 
 // Logout
