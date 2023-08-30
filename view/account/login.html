@@ -81,13 +81,8 @@
     <div class="loginscreen container-fluid">
       <h4 id="user"><b>Login</b></h4>
       <form action="/login" method="POST">
-        <section>
-          <label for="username">Email</label>
-          <input id="username" type="text" name="username" required autofocus>
-        </section>
-        <section>
-          <label for="current-password">Password</label>
-          <input id="current-password" type="password" name="password"  autocomplete="current-password" required>
+          <input id="username" type="text" name="username" placeholder="Enter email" required autofocus>
+          <input id="current-password" type="password" name="password" placeholder="Enter password" autocomplete="current-password" required>
         </section>
         <div class="alert alert-danger" id='logalert' role="alert" style="display: none;">
           Invalid credentials. Please try again.
