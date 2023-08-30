@@ -131,6 +131,9 @@
     <div class="alert alert-danger" id='logalert' role="alert" style="display:none; margin-top: 30px;">
       Passwords do not match. Please try again.
     </div>
+    <div class="alert alert-danger" id='emailalert' role="alert" style="display:none; margin-top: 30px;">
+      Email already in use. Please use another or recover the existing.
+    </div>
   </div>
 
 
@@ -209,6 +212,17 @@
       });
     });
   </script>
+  <script>
+    $(document).ready(function () {
+      const emailalert = $('#emailalert');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      
+      if (urlParams.get('error') === '1') {
+        emailalert.show();
+      }
+    });
+</script>
 </body>
 
 </html>

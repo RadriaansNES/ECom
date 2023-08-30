@@ -47,8 +47,7 @@ router.post('/signup', async function (req, res, next) {
     // User successfully inserted, can now redirect or send a response 
     res.redirect('../view/account/login.html?success=1');
   } catch (error) {
-    console.error("Error inserting user:", error);
-    return res.status(500).send("An error occurred while creating your account.");
+    return res.redirect('../view/account/signup.html?error=1');
   }
 });
 
