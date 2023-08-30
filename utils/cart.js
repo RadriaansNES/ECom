@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCartDisplay();
 });
 
-//Convery array to JSON string and set as cookie
+// Convert array to JSON string and set as cookie
 function saveCartToCookie() {
   const cartJSON = JSON.stringify(shoppingCart);
   console.log("Saving cart to cookie:", cartJSON);
@@ -26,9 +26,9 @@ function loadCartFromCookie() {
 }
 
 // Function to add an item to the shopping cart
-function addToCart(productName, productPrice, quantity, productId) {
+function addToCart(productName, productPrice, quantity, priceId) {
   // Check if the product is already in the cart
-  const existingItem = shoppingCart.find(item => item.product === productId);
+  const existingItem = shoppingCart.find(item => item['price-id'] === priceId);
 
   if (existingItem) {
     // If it exists, update the quantity
@@ -36,7 +36,7 @@ function addToCart(productName, productPrice, quantity, productId) {
   } else {
     // If it doesn't exist, create a new cart item object
     const cartItem = {
-      product: productId, // Store the product ID
+      'price-id': priceId, // Store the price ID
       name: productName, // Store the product name
       price: productPrice, // Store the product price
       quantity,
@@ -49,7 +49,6 @@ function addToCart(productName, productPrice, quantity, productId) {
   updateCartDisplay();
   saveCartToCookie();
 }
-
 
 // Function to update the cart display
 function updateCartDisplay() {
@@ -133,9 +132,9 @@ function removeItemFromCart(index) {
 $('.addToCartButton').on('click', function () {
   const productName = $(this).data('product-name');
   const productPrice = $(this).data('product-price');
-  const productId = $(this).data('product'); // Get the product ID
+  const priceId = $(this).data('price-id'); // Get the price ID
   const quantity = 1; // Default quantity
-  addToCart(productName, productPrice, quantity, productId); // Pass the product ID
+  addToCart(productName, productPrice, quantity, priceId); // Pass the price ID
 });
 
 // Attach a focusout event handler to the quantity input fields

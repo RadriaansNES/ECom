@@ -1,21 +1,23 @@
 const express = require('express');
 const router = express.Router();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const pricingController = require('../controller/pricingController');
 const passport = require('passport');
 const { createUser } = require('../utils/dbhelper');
 
 // Define the route on the router
 router.post('/create-checkout-session', async (req, res) => {
+ 
+  const cookieData = req.cookies.shoppingCart; // Adjust the cookie name as needed
+
+  // Parse the cookie data
+  const cartItems = JSON.parse(cookieData);
+
+  // Create a checkout session with the dynamically generated line_items
   const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        //this one actually controls quantity
-        price: await pricingController.createPrice(),
-        quantity: 1,
-      },
-    ],
+    line_items: cartItems.map(item => ({
+      price: item["price-id"], // Use the 'price-id' from the cookie as the price ID
+      quantity: item.quantity, // Use the quantity from the cookie
+    })),
     mode: 'payment',
     success_url: 'https://www.google.ca',
     cancel_url: 'https://www.facebook.com',

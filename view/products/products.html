@@ -103,7 +103,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-primary addToCartButton" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal1" data-product-name="Red Crystal" data-product-price="50">Add to
+                    data-bs-target="#exampleModal1" data-price-id="price_1Nkw2UJyZz5ri1G4jkSkdKms" data-product-name="Red Crystal" data-product-price="50">Add to
                     cart</button>
                 </div>
               </div>
@@ -133,7 +133,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-primary addToCartButton" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2" data-product-name="Green Crystal" data-product-price="30">
+                    data-bs-target="#exampleModal2" data-price-id='price_1Nkw1eJyZz5ri1G45zKW2T3Y' data-product-name="Green Crystal" data-product-price="30">
                     Add to cart
                   </button>
                 </div>
@@ -178,7 +178,7 @@
               </div>
               <div class="modal-footer border-top-0 d-flex justify-content-between">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <form action="https://ecom-server-5e1g.onrender.com/create-checkout-session" method="POST">
+                  <form action="/create-checkout-session" method="POST">
                       <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
                   </form>
               </div>
