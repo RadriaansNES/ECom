@@ -81,18 +81,22 @@
     <div class="loginscreen container-fluid">
       <h4 id="user"><b>Login</b></h4>
       <form action="/login" method="POST">
-          <input id="username" type="text" name="username" placeholder="Enter email" required autofocus>
-          <input id="current-password" type="password" name="password" placeholder="Enter password" autocomplete="current-password" required>
+        <input id="username" type="text" name="username" placeholder="Enter email" required autofocus>
+        <input id="current-password" type="password" name="password" placeholder="Enter password"
+          autocomplete="current-password" required>
         </section>
         <div class="alert alert-danger" id='logalert' role="alert" style="display: none;">
           Invalid credentials. Please try again.
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
-      <h4> Don't have an account? Sign up today! </h2>
-        <a href="./signup.html">
-        <button type="submit" class="btn btn-secondary">Sign up</button>
-        </a>
+      <div id="toggle">
+        <h4> Don't have an account? Sign up today! </h2>
+          <a href="./signup.html">
+            <button type="submit" class="btn btn-secondary">Sign up</button>
+          </a>
+      </div>
+      <div id="toggle2" style="display:none;"><h4>Account succesfully created!</h4></div>
     </div>
 
 
@@ -150,13 +154,26 @@
     crossorigin="anonymous"></script>
   <script src="../../utils/cart.js"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Check if the URL contains an error parameter, then show error box
       const logalert = $('#logalert');
 
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('error') === '1') {
         logalert.show();
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      // Check if the URL contains an error parameter, then show error box
+      const toggle = $('#toggle');
+      const toggle2=$('#toggle2');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === '1') {
+        toggle.hide();
+        toggle2.show();
       }
     });
   </script>

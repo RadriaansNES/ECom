@@ -137,6 +137,10 @@ th, td {
     text-align: center;
 }
 
+#logalert {
+    margin-top: 30px;
+}
+
 /* Signup */
 #signup div {
     display: flex;
