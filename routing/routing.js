@@ -23,16 +23,23 @@ router.post('/create-checkout-session', async (req, res) => {
   res.redirect(303, session.url);
 });
 
-// Define the route for user login
+// Route to handle login attempts
 router.post('/login', passport.authenticate('local', {
   successRedirect: '../view/account/dashboard.html', 
   failureRedirect: '../view/account/login.html', 
 }));
 
-// Define the route for the /account page
+// Logout
+router.post('/logout', function(req, res, next) {
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/');
+  });
+});
+
+// Route to access the accounts page if authenticated
 router.get('/account', ensureAuthenticated, (req, res) => {
   // Redirect to the dashboard if authenticated
-  // Redirect to login page if not authenticated
   res.redirect('../view/account/dashboard.html');
 });
 

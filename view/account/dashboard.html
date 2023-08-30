@@ -80,69 +80,11 @@
     <div class="mainIntro container-fluid">
       <p>THIS IS THE DASHBOARD, MY DUDE! </p>
     </div>
-    <div class="prod container-fluid">
-      <div class="card" style="width: 18rem;">
-        <img src="../../src/red.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Red Crystal</h5>
-          <p class="card-text">Red crystal strong</p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-            View item details
-          </button>
-          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <img src="../../src/red.jpg">
-                </div>
-                <div class="modal-body">
-                  <p>Price $50</p>
-                  hand crafted from the earth
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary addToCartButton" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal1" data-product-name="Red Crystal" data-product-price="50">Add to
-                    cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="../../src/green.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Green Crystal</h5>
-          <p class="card-text">Green crystal good</p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-            View item details
-          </button>
-          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <img src="../../src/green.jpg">
-                </div>
-                <div class="modal-body">
-                  <p>Price $30</p>
-                  bulbarock
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary addToCartButton" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2" data-product-name="Green Crystal" data-product-price="30">
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <form action="/logout" method="POST">
+      <button type="submit" class="btn btn-primary">Sign out</button>
+    </form>
+
     <!-- Popup Cart -->
     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
