@@ -18,7 +18,7 @@ const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET, 
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 60 * 60 }, // Session expires after 30 days
+  cookie: { maxAge: 60 * 60 * 60 * 80 }, // Session expires after 30 days
 });
 
 module.exports = { pool, sessionMiddleware };
