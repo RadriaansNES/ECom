@@ -3,6 +3,7 @@ const router = express.Router();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const passport = require('passport');
 const { createUser } = require('../utils/dbhelper');
+const crypto = require('crypto');
 
 // Define the route on the router
 router.post('/create-checkout-session', async (req, res) => {
@@ -19,7 +20,7 @@ router.post('/create-checkout-session', async (req, res) => {
       quantity: item.quantity, // Use the quantity from the cookie
     })),
     mode: 'payment',
-    success_url: 'https://www.google.ca',
+    success_url: 'https://www.google.ca',           // GOTTTTTA UPDDDAAAAAAAAAATE
     cancel_url: 'https://www.facebook.com',
   });
 
@@ -67,5 +68,65 @@ function ensureAuthenticated(req, res, next) {
   res.redirect('../view/account/login.html');
 }
 
+function generateRandomOrderID(length) {
+  const min = Math.pow(10, length - 1);
+  const max = Math.pow(10, length) - 1;
+  return Math.floor(min + Math.random() * (max - min + 1));
+}
+
+//webhook route to add succesful orders to db
+router.post('/stripe-webhook', async (req, res) => {
+  const sig = req.headers['stripe-signature'];
+
+  try {
+    const event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
+
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object;
+
+      // Generate a random order_id
+      const order_id = generateRandomOrderID(8);
+
+      // Insert the order details into the database here
+      const client = await pool.connect();
+
+      try {
+        // Start a database transaction
+        await client.query('BEGIN');
+
+        // Insert the order into the 'order_final' table
+        const insertOrderQuery = `
+          INSERT INTO order_final (order_id, product_id, total, created_at)
+          VALUES ($1, $2, $3, NOW())
+          RETURNING order_id;
+        `;
+
+        // Calculate the total amount based on session.line_items (you need to implement this)
+        const totalAmount = calculateTotalAmount(session.line_items);
+
+        // Execute the insert query
+        const result = await client.query(insertOrderQuery, [
+          order_id,
+          session.line_items.map(item => item.price.product).join(','), // Replace with your logic to get product_ids
+          totalAmount,
+        ]);
+
+        // Commit the transaction
+        await client.query('COMMIT');
+      } catch (error) {
+        // Handle any errors and roll back the transaction if necessary
+        await client.query('ROLLBACK');
+        throw error;
+      } finally {
+        // Release the database client back to the pool
+        client.release();
+      }
+    }
+
+    res.status(200).end();
+  } catch (err) {
+    res.status(400).send('Webhook Error: ' + err.message);
+  }
+});
 
 module.exports = router; 
