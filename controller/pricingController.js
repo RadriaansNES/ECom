@@ -7,7 +7,7 @@ async function createPrice() {
     const price = await stripe.prices.create({
       unit_amount: 2000,
       currency: 'cad',
-      product: 'prod_OVoZoiUqWYvxZm', // Replace with your actual product ID
+      product: 'prod_OVoZoiUqWYvxZm', //From stripe Web
     });
     return price.id;
   } catch (error) {

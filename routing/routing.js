@@ -1,8 +1,8 @@
 const express = require('express');
-const router = express.Router(); // Create a router instance
+const router = express.Router();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const pricingController = require('../controller/pricingController');
-const passport = require('passport'); // Import Passport
+const passport = require('passport'); 
 
 // Define the route on the router
 router.post('/create-checkout-session', async (req, res) => {
@@ -25,8 +25,8 @@ router.post('/create-checkout-session', async (req, res) => {
 
 // Define the route for user login
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '../view/account/dashboard.html', // Redirect to the dashboard on success
-  failureRedirect: '../view/account/login.html', // Redirect to login page on failure
+  successRedirect: '../view/account/dashboard.html', 
+  failureRedirect: '../view/account/login.html', 
 }));
 
 // Define the route for the /account page
@@ -41,8 +41,8 @@ function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect('../view/account/login.html'); // Redirect to login page if not authenticated
+  res.redirect('../view/account/login.html'); 
 }
 
 
-module.exports = router; // Export the router
+module.exports = router; 
