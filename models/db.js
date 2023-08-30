@@ -22,3 +22,4 @@ const sessionMiddleware = session({
 });
 
 module.exports = { pool, sessionMiddleware };
+  
