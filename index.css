@@ -118,10 +118,12 @@ th, td {
 }
 
 .loginscreen #user {
-    padding-top: 100px;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
-#email {
+#username {
    margin-left: 37px;
 }
 
@@ -130,6 +132,29 @@ th, td {
     width: 200px;
 }
 
+.loginscreen h4 {
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+/* Signup */
+#signup div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#signup .buttonz {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signnup {
+    padding: 10px;
+    text-align: center;
+    background-color: lightblue;
+    height: 716px;
+}
 
 @media (min-width: 1440px) {
     .navbar {
