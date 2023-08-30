@@ -1,5 +1,6 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const crypto = require('crypto');
 const { pool } = require('../models/db');
 
 passport.serializeUser((user, done) => {
@@ -17,21 +18,27 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(
-    new LocalStrategy((username, password, done) => {
-        pool.query('SELECT * FROM users WHERE username = $1', [username], (err, result) => {
+    new LocalStrategy(async (username, password, done) => {
+        const userQuery = 'SELECT * FROM users WHERE username = $1';
+        const userResult = await pool.query(userQuery, [username]);
+
+        if (!userResult.rows.length) {
+            console.log('User not found for username:', username);
+            return done(null, false, { message: 'Incorrect username.' });
+        }
+
+        const user = userResult.rows[0];
+        const salt = user.salt; // Get the stored salt
+
+        // Hash the entered password with the stored salt
+        crypto.pbkdf2(password, salt, 310000, 32, 'sha256', (err, hashedPassword) => {
             if (err) {
-                console.error('Database error:', err);
+                console.error('Error hashing password:', err);
                 return done(err);
             }
 
-            if (!result.rows.length) {
-                console.log('User not found for username:', username);
-                return done(null, false, { message: 'Incorrect username.' });
-            }
-
-            const user = result.rows[0];
-
-            if (user.password !== password) {
+            // Compare the hashed passwords
+            if (user.hashed_password.toString('hex') !== hashedPassword.toString('hex')) {
                 console.log('Incorrect password for username:', username);
                 return done(null, false, { message: 'Incorrect password.' });
             }
