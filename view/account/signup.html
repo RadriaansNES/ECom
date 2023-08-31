@@ -128,9 +128,7 @@
         <button type="submit" class="signupbtn btn btn-primary">Sign Up</button>
       </div>
     </form>
-    <div class="alert alert-danger" id='logalert' role="alert" style="display:none; margin-top: 30px;">
-      Passwords do not match. Please try again.
-    </div>
+    <div class="alert alert-danger" id='logalert' role="alert" style="display:none; margin-top: 30px;"></div>
     <div class="alert alert-danger" id='emailalert' role="alert" style="display:none; margin-top: 30px;">
       Email already in use. Please use another or recover the existing.
     </div>
@@ -207,7 +205,12 @@
           // Prevent the form from submitting
           event.preventDefault();
           // Show the logalert message
-          logalert.show();
+          logalert.text('Passwords do not match. Please try again.').show();
+        } else if (password.length < 7 || !/\d/.test(password)) {
+          // Check if the password doesn't meet the requirements
+          event.preventDefault();
+          // Show the logalert message with the different text
+          logalert.text('Password requirements not met. Please use at least 7 characters with at least one number.').show();
         }
       });
     });
@@ -217,12 +220,12 @@
       const emailalert = $('#emailalert');
 
       const urlParams = new URLSearchParams(window.location.search);
-      
+
       if (urlParams.get('error') === '1') {
         emailalert.show();
       }
     });
-</script>
+  </script>
 </body>
 
 </html>
