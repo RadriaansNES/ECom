@@ -81,10 +81,11 @@
     <div class="loginscreen container-fluid">
       <h4 id="user"><b>Login</b></h4>
       <form action="/login" method="POST">
-        <input id="username" type="text" name="username" placeholder="Enter email" required autofocus>
-        <input id="current-password" type="password" name="password" placeholder="Enter password"
-          autocomplete="current-password" required>
-        </section>
+        <div>
+          <input id="username" type="text" name="username" placeholder="Enter email" required autofocus>
+          <input id="current-password" type="password" name="password" placeholder="Enter password"
+            autocomplete="current-password" required>
+        </div>
         <div class="alert alert-danger" id='logalert' role="alert" style="display: none;">
           Invalid credentials. Please try again.
         </div>
