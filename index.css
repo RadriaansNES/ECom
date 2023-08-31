@@ -165,6 +165,28 @@ th, td {
     margin-bottom: 20px;
 }
 
+/* queries */
+
+@media (min-width: 425px) and (max-width: 768px) {
+    .me-2 {
+        width: 315px;
+    }
+
+    .card {
+        max-width: 170px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+    .me-2 {
+        width: 315px;
+    }
+
+    .card {
+        max-width: 170px;
+    }
+}
+
 @media (min-width: 1440px) {
     .navbar {
         height: 60px;
@@ -173,20 +195,5 @@ th, td {
 
     .me-2 {
         width: 400px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1420px) {
-    .navbar {
-        height: 60px;
-        padding: 0;
-    }
-
-    .navbar-brand {
-        font-size: 20px;
-    }
-
-    .nav-item a {
-        font-size: 12px;
     }
 }

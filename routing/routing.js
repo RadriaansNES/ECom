@@ -37,6 +37,7 @@ router.post('/login', passport.authenticate('local', {
 router.post('/logout', function (req, res, next) {
   req.logout(function (err) {
     if (err) { return next(err); }
+    res.clearCookie('connect.sid');
     res.redirect('/');
   });
 });
@@ -58,6 +59,15 @@ router.post('/signup', async function (req, res, next) {
 router.get('/account', ensureAuthenticated, (req, res) => {
   // Redirect to the dashboard if authenticated
   res.redirect('../view/account/dashboard.html');
+});
+
+// Route to check if user is authenticated
+router.get('/check-auth', (req, res) => {
+  if (req.isAuthenticated()) {
+    res.status(200).send('Authenticated');
+  } else {
+    res.status(401).send('Unauthorized');
+  }
 });
 
 // Function to check if user is authenticated
