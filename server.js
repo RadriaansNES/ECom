@@ -6,7 +6,12 @@ const { sessionMiddleware } = require('./models/db');
 const app = express();
 const PORT = process.env.PORT || 4242;
 
-app.use(express.static(__dirname));
+// Serve static files with cache headers
+app.use(express.static(__dirname, {
+  maxAge: '7d', // Set cache max age to 7 days (604800 seconds)
+  etag: false, // Disable ETag to simplify caching behavior
+}));
+
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,5 +25,5 @@ const router = require('./routing/routing');
 app.use('', router); 
 
 app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
+  console.log(`Server started on port ${PORT}`);
 });
