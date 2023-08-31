@@ -10,6 +10,12 @@
 
 .navbar-brand img {
     margin-top: -5px;
+    width: 30px;
+    height: 100%;
+}
+
+.dropdown-menu {
+    margin-right: 12px;
 }
 
 #cart {
@@ -32,6 +38,10 @@
     margin-right: 0px;
 }
 
+.right2 {
+    display: none;
+}
+
 .me-2 {
     width: 250px;
 }
@@ -48,9 +58,12 @@ th, td {
     vertical-align: middle;
 }
 
-
 .modal-footer {
-    padding-top: 0rem;
+    height: 100% !important;
+}
+
+.modal-header {
+    justify-content: center;
 }
 
 .custom-qty-input {
@@ -87,6 +100,7 @@ th, td {
     flex-direction: column;  
     max-width: 150px;
     height: 100%;  
+    text-align: center;
 }
 
 .card-body {
@@ -97,13 +111,23 @@ th, td {
 }
 
 .btn-primary {
-    align-self: flex-end; 
+
     margin-top: auto; 
 }
 
 .card img {
     max-height: 100px;
     margin-bottom: auto;  
+}
+
+.modal-header img {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* login page */
@@ -167,33 +191,306 @@ th, td {
 
 /* queries */
 
-@media (min-width: 425px) and (max-width: 768px) {
-    .me-2 {
-        width: 315px;
-    }
+@media (min-width: 425px) and (max-width: 767px) {
 
     .card {
         max-width: 170px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .me-2 {
-        width: 315px;
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* global */
+  
+    p, b, h4, h5 {
+        font-size: 26px !important;
     }
 
+    .btn-primary, .btn-secondary {
+        font-size: 22px;
+    }
+
+    /*nav*/
+    .navbar-brand img {
+        margin-top: -5px;
+        width: 50px;
+        height: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+    }
+
+    .navbar-toggler-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-link, .dropdown-item {
+        font-size: 22px;
+    }
+
+    /* accounts */
+    .loginscreen input {
+        width: 500px;
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 50px; 
+        font-size: 22px;
+    }
+
+    .loginscreen, .signnup {
+        min-height: 705px;
+        height: 100%;
+    }
+
+    .alert {
+        margin: 30px 15px;
+        font-size: 26px;
+    }
+
+    .signnup input {
+        width: 400px;
+    }
+
+    #signup {
+        margin: 30px;
+        margin-top: 5px;
+    }
+
+    /*prod*/
     .card {
-        max-width: 170px;
+        max-width: 350px;
+        width: 350px !important;
+        height: 375px;
+    }
+
+    .prod {
+        height: 100%;
+    }
+    .card img {
+        max-height: 200px !important;
+    }
+
+    .card-body h5, .card-text {
+        font-size: 22px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    /* global */
+  
+    p, b, h4, h5 {
+        font-size: 26px !important;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 22px;
+    }
+
+    /*nav*/
+    .navbar-brand img {
+        margin-top: -5px;
+        width: 50px;
+        height: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+        margin-top: 7px;
+    }
+
+    .navbar-toggler-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-link, .dropdown-item {
+        font-size: 18px;
+    }
+
+    .navbar-collapse {
+        padding-right: 12px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .right2 a img {
+        margin-top: 0;
+    }
+    
+    .right2 .navbar-brand {
+        padding-right: 12px;
+    }
+
+    .right2 {
+        display: block;
+    }
+
+    /* accounts */
+    .loginscreen input {
+        width: 500px;
+        margin-left: 200px;
+        margin-right: 200px;
+        height: 50px; 
+        font-size: 22px;
+    }
+
+    .loginscreen, .signnup {
+        min-height: 705px;
+        height: 100%;
+    }
+
+    .alert {
+        margin: 30px 15px;
+        font-size: 26px;
+    }
+
+    .signnup input {
+        width: 400px;
+    }
+
+    #signup {
+        margin: 30px;
+        margin-top: 5px;
+    }
+
+    /*prod*/
+    .card {
+        max-width: 350px;
+        width: 350px !important;
+        height: 375px;
+    }
+
+    .prod {
+        height: 100%;
+    }
+    .card img {
+        max-height: 200px !important;
+    }
+
+    .card-body h5, .card-text {
+        font-size: 22px !important;
+    }
+
+    /*cart */
+    .modal-content {
+        width: 500px;
+    }
+
+    .modal-dialog {
+        justify-content: center;
     }
 }
 
 @media (min-width: 1440px) {
-    .navbar {
-        height: 60px;
-        padding: 0;
+
+    /* global */
+  
+    p, b, h4, h5 {
+        font-size: 26px !important;
     }
 
-    .me-2 {
+    .btn-primary, .btn-secondary {
+        font-size: 22px;
+    }
+
+    /*nav*/
+    .navbar-brand img {
+        margin-top: -5px;
+        width: 50px;
+        height: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+        margin-top: 7px;
+    }
+
+    .navbar-toggler-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-link, .dropdown-item {
+        font-size: 18px;
+    }
+
+    .navbar-collapse {
+        padding-right: 12px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .right2 a img {
+        margin-top: 0;
+    }
+    
+    .right2 .navbar-brand {
+        padding-right: 12px;
+    }
+
+    .right2 {
+        display: block;
+    }
+
+    /* accounts */
+    .loginscreen input {
+        width: 500px;
+        margin-left: 400px;
+        margin-right: 400px;
+        height: 50px; 
+        font-size: 22px;
+    }
+
+    .loginscreen, .signnup {
+        min-height: 705px;
+        height: 100%;
+    }
+
+    .alert {
+        margin: 30px 15px;
+        font-size: 26px;
+    }
+
+    .signnup input {
         width: 400px;
+    }
+
+    #signup {
+        margin: 30px;
+        margin-top: 5px;
+    }
+
+    /*prod*/
+    .card {
+        max-width: 350px;
+        width: 350px !important;
+        height: 375px;
+    }
+
+    .prod {
+        height: 100%;
+    }
+    .card img {
+        max-height: 200px !important;
+    }
+
+    .card-body h5, .card-text {
+        font-size: 22px !important;
+    }
+
+    /*cart */
+    .modal-content {
+        width: 500px;
+    }
+
+    .modal-dialog {
+        justify-content: center;
     }
 }

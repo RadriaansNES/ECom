@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header>  
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid navigation">
         <a class="navbar-brand" href="index.html">
@@ -68,11 +68,12 @@
             <a class="nav-link active" aria-current="page" href="#">About</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
+      </div>
+      <div class="right2">
+        <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <img src="src/8827372.png" alt="Cart" width="30" height="100%">
+        </a>
       </div>
     </nav>
   </header>
@@ -80,49 +81,50 @@
     <div class="mainIntro container-fluid">
       <p>Where health meets wellness</p>
     </div>
-  
+
     <!-- Popup Cart -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-          <div class="modal-content">
-              <div class="modal-header border-bottom-0">
-                  <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
-              </div>
-              <div class="modal-body">
-                  <div id="emptyCartMessage" class="alert alert-info text-center">
-                      Your shopping cart is currently empty.
-                  </div>
-  
-                  <div id="cartTableContainer" style="display: none;">
-                      <table class="table">
-                          <thead>
-                              <tr>
-                                  <th scope="col">Product</th>
-                                  <th scope="col">Price</th>
-                                  <th scope="col">Qty</th>
-                                  <th scope="col">Total</th>
-                                  <th scope="col">Actions</th>
-                              </tr>
-                          </thead>
-                          <tbody id="cartTableBody">
-                              <!-- Cart items will be dynamically added here -->
-                          </tbody>
-                      </table>
-                  </div>
-  
-                  <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
-                      <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
-                  </div>
-              </div>
-              <div class="modal-footer border-top-0 d-flex justify-content-between">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <form action="/create-checkout-session" method="POST">
-                      <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
-                  </form>
-              </div>
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
           </div>
+          <div class="modal-body">
+            <div id="emptyCartMessage" class="alert alert-info text-center">
+              Your shopping cart is currently empty.
+            </div>
+
+            <div id="cartTableContainer" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="/create-checkout-session" method="POST">
+              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+            </form>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

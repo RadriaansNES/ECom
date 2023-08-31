@@ -69,11 +69,11 @@
             <a class="nav-link active" aria-current="page" href="#">About</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
+      <div class="right2">
+        <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <img src="../../src/8827372.png" alt="Cart" width="30" height="100%">
+        </a>
       </div>
     </nav>
   </header>
@@ -96,7 +96,9 @@
             <button type="submit" class="btn btn-secondary">Sign up</button>
           </a>
       </div>
-      <div id="toggle2" style="display:none;"><h4>Account succesfully created!</h4></div>
+      <div id="toggle2" style="display:none;">
+        <h4>Account succesfully created!</h4>
+      </div>
     </div>
 
 
@@ -160,7 +162,7 @@
       const toggle2 = $('#toggle2');
 
       const urlParams = new URLSearchParams(window.location.search);
-      
+
       if (urlParams.get('error') === '1') {
         logalert.show();
       }
@@ -170,7 +172,7 @@
         toggle2.show();
       }
     });
-</script>
+  </script>
 </body>
 
 </html>
