@@ -15,11 +15,18 @@
     align-items: center;
 }
 
+.space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 header {
     display: flex;
     flex-direction: column;
 
 }
+
 
 nav .container-fluid {
     height: 15vh;
@@ -33,6 +40,10 @@ nav .container-fluid {
         display: flex;
         justify-content: space-between;
 
+        input {
+            width: 100px;
+        }
+
         .column {
             padding: 10px;
         }
@@ -40,6 +51,8 @@ nav .container-fluid {
 
     #logo {
         max-height: 15vh;
+        padding-bottom: 10px;
+        padding-left: 10px;
     }
 
     #cartlogo {
@@ -112,30 +125,9 @@ body::before {
     z-index: -10;
 }
 
-main .container-fluid {
+.main .container-fluid {
     margin-top: 5vh;
     padding: 0;
-
-
-    .wave-separator {
-        position: absolute;
-        bottom: 10vh;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-
-        svg {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        path {
-            clip: auto;
-            display: block;
-        }
-    }
 
     h2 {
         margin-bottom: 2vh;
@@ -162,33 +154,48 @@ main .container-fluid {
     }
 
     .C1 {
-        min-height: 70vh;
+        min-height: 90vh;
         justify-content: center;
         align-items: center;
-        background-image: url(/src/Home.jpg);
+        background-image: url(/src/HomeGood.png);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100%;
-        overflow: hidden;
+        background-size: 100% 100%;
         transition: background-size 0.5s;
-        z-index: 1000;
 
         div {
             width: 60%;
             text-align: center;
             color: white;
+            margin-bottom: -25vh;
         }
     }
 
-    .C1.scrolled {
-        background-size: 110%;
-        /* Adjust the background size for your desired zoom level */
-    }
 
     .C2 {
         justify-content: space-around;
         align-items: center;
         min-height: 70vh;
+
+        img {
+            border-radius: 35%;
+        }
+
+        .column img {
+            width: 150px;
+            height: 150px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+
+        #relative {
+            position: relative;
+            top: -10vh;
+        }
     }
 
     .C3 {
@@ -201,5 +208,42 @@ main .container-fluid {
         justify-content: space-around;
         align-items: center;
         min-height: 70vh;
+    }
+}
+
+.mission .container-fluid {
+    margin-top: 10vh;
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        margin-bottom: 4vh;
+    }
+
+    .column {
+        max-width: 40vw;
+        justify-content: space-around;
+    }
+
+    img {
+        max-height: 60vh;
+        margin-bottom: 10vh;
+        border-radius: 10px;
+    }
+}
+
+.crystals .container-fluid {
+    text-align: center;
+    margin-top: 10vh;
+
+    .title {
+        margin-bottom: 5vh;
+    }
+
+    div {
+        justify-content: center;
+        min-height: 40vh;
     }
 }

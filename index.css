@@ -14,6 +14,12 @@
   align-items: center;
 }
 
+.space-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -31,11 +37,16 @@ nav .container-fluid .nav1 {
   display: flex;
   justify-content: space-between;
 }
+nav .container-fluid .nav1 input {
+  width: 100px;
+}
 nav .container-fluid .nav1 .column {
   padding: 10px;
 }
 nav .container-fluid #logo {
   max-height: 15vh;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 nav .container-fluid #cartlogo {
   max-height: 50px;
@@ -98,80 +109,105 @@ body::before {
   z-index: -10;
 }
 
-main .container-fluid {
+.main .container-fluid {
   margin-top: 5vh;
   padding: 0;
 }
-main .container-fluid .wave-separator {
-  position: absolute;
-  bottom: 10vh;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-}
-main .container-fluid .wave-separator svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-main .container-fluid .wave-separator path {
-  clip: auto;
-  display: block;
-}
-main .container-fluid h2 {
+.main .container-fluid h2 {
   margin-bottom: 2vh;
 }
-main .container-fluid div {
+.main .container-fluid div {
   margin: 0;
   display: flex;
   flex-direction: row;
 }
-main .container-fluid div div {
+.main .container-fluid div div {
   width: 40%;
 }
-main .container-fluid div div img {
+.main .container-fluid div div img {
   width: 100%;
 }
-main .container-fluid div .column {
+.main .container-fluid div .column {
   flex-direction: column;
   line-height: 3vh;
 }
-main .container-fluid .C1 {
-  min-height: 70vh;
+.main .container-fluid .C1 {
+  min-height: 90vh;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/Home.jpg);
+  background-image: url(/src/HomeGood.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  overflow: hidden;
+  background-size: 100% 100%;
   transition: background-size 0.5s;
-  z-index: 1000;
 }
-main .container-fluid .C1 div {
+.main .container-fluid .C1 div {
   width: 60%;
   text-align: center;
   color: white;
+  margin-bottom: -25vh;
 }
-main .container-fluid .C1.scrolled {
-  background-size: 110%;
-  /* Adjust the background size for your desired zoom level */
-}
-main .container-fluid .C2 {
+.main .container-fluid .C2 {
   justify-content: space-around;
   align-items: center;
   min-height: 70vh;
 }
-main .container-fluid .C3 {
+.main .container-fluid .C2 img {
+  border-radius: 35%;
+}
+.main .container-fluid .C2 .column img {
+  width: 150px;
+  height: 150px;
+}
+.main .container-fluid .C2 a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.main .container-fluid .C2 #relative {
+  position: relative;
+  top: -10vh;
+}
+.main .container-fluid .C3 {
   justify-content: space-around;
   align-items: center;
   min-height: 70vh;
 }
-main .container-fluid .C4 {
+.main .container-fluid .C4 {
   justify-content: space-around;
   align-items: center;
   min-height: 70vh;
+}
+
+.mission .container-fluid {
+  margin-top: 10vh;
+}
+.mission .container-fluid p {
+  font-size: 16px;
+}
+.mission .container-fluid h2 {
+  margin-bottom: 4vh;
+}
+.mission .container-fluid .column {
+  max-width: 40vw;
+  justify-content: space-around;
+}
+.mission .container-fluid img {
+  max-height: 60vh;
+  margin-bottom: 10vh;
+  border-radius: 10px;
+}
+
+.crystals .container-fluid {
+  text-align: center;
+  margin-top: 10vh;
+}
+.crystals .container-fluid .title {
+  margin-bottom: 5vh;
+}
+.crystals .container-fluid div {
+  justify-content: center;
+  min-height: 40vh;
 }
 
 /*# sourceMappingURL=index.css.map */

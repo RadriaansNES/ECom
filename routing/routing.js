@@ -3,7 +3,6 @@ const router = express.Router();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const passport = require('passport');
 const { createUser } = require('../utils/dbhelper');
-const crypto = require('crypto');
 
 // Define the route on the router
 router.post('/create-checkout-session', async (req, res) => {
