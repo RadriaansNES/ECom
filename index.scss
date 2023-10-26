@@ -24,9 +24,7 @@
 header {
     display: flex;
     flex-direction: column;
-
 }
-
 
 nav .container-fluid {
     height: 15vh;
@@ -99,8 +97,6 @@ footer {
 
 body {
     font-family: 'Cinzel Decorative', serif;
-
-
 }
 
 .bg-body-tertiary,
@@ -133,6 +129,11 @@ body::before {
         margin-bottom: 2vh;
     }
 
+    h1 {
+        margin-top: 9vh;
+        font-size: 45px;
+    }
+
     div {
         margin: 0;
         display: flex;
@@ -162,6 +163,7 @@ body::before {
         background-repeat: no-repeat;
         background-size: 100% 100%;
         transition: background-size 0.5s;
+        
 
         div {
             width: 60%;
@@ -234,16 +236,136 @@ body::before {
     }
 }
 
-.crystals .container-fluid {
+.crystals .container-fluid,
+.footer .container-fluid {
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 15vh;
+    width: 60%;
+
+    h2 {
+        margin-bottom: 3vh;
+    }
 
     .title {
-        margin-bottom: 5vh;
+        margin-bottom: 10vh;
     }
 
     div {
         justify-content: center;
-        min-height: 40vh;
+        min-height: auto;
+        margin-bottom: 10vh;
+
+        h3 {
+            margin-bottom: 3vh;
+        }
+    }
+
+    .space-around {
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    .space-between {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        div {
+            max-width: 50%;
+        }
+
+        .fw {
+            width: 100%;
+        }
+
+        .db {
+            max-width: 50%;
+            min-width: 50%;
+        }
+
+        .d1 {
+            justify-content: flex-start;
+            max-width: 50%;
+            min-width: 50%;
+            padding: 2vh;
+
+            div {
+                min-width: 100%;
+            }
+        }
+    }
+
+    img {
+        max-height: 60vh;
+        margin-bottom: 10vh;
+        border-radius: 10px;
+        margin-left: 10vh;
+    }
+
+    h4 {
+        padding: 2vh 0;
+    }
+
+    .margintop {
+        margin-top: 3vh;
+    }
+
+}
+
+#sidebar {
+    width: 20vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    position: fixed;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 4%;
+    padding: 3vh 0;
+    height: auto;
+    border: 1px solid black;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+
+    &.collapsed {
+        width: 50px;
+        overflow: hidden;
+        left: -50px;
+
+        ul {
+            display: none;
+        }
+    }
+}
+
+#sidebar-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    transition: left 0.5s;
+
+    &.collapsed+main {
+        margin-left: 50px;
     }
 }
