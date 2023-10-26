@@ -163,7 +163,7 @@ body::before {
         background-repeat: no-repeat;
         background-size: 100% 100%;
         transition: background-size 0.5s;
-        
+
 
         div {
             width: 60%;
@@ -269,6 +269,7 @@ body::before {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
         div {
             max-width: 50%;
         }
@@ -368,4 +369,213 @@ body::before {
     &.collapsed+main {
         margin-left: 50px;
     }
+}
+
+.S1 p {
+    margin-top: 2vh;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+section {
+
+    div {
+        background-color: white;
+        padding: 2vh;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 370vh;
+
+    .ContainerCarousel1 {
+        position: absolute;
+        min-height: 40vh;
+        height: 40vh;
+        max-height: 40vh;
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+
+        div {
+            background-color: transparent;
+        }
+    }
+
+    .ContainerCarousel2 {
+        top: 82vh;
+        position: absolute;
+        min-height: 60vh !important;
+        max-height: 40vh;
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+        margin-bottom: 0 !important;
+
+        h3 {
+            padding-top: 3vh;
+        }
+
+        div {
+            background-color: transparent;
+        }
+
+        .prev-button,
+        .next-button {
+            top: 60%;
+        }
+    }
+
+    #prevButton2 {
+        top:112vh;
+        left: 25vh;
+    }
+
+    #nextButton2 {
+        top:112vh;
+        right: 25vh;
+    }
+
+    .ContainerCarousel3 {
+        top: 147vh;
+        position: absolute;
+        min-height: 60vh !important;
+        max-height: 40vh;
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+        margin-bottom: 0 !important;
+
+        h3 {
+            padding-top: 3vh;
+        }
+
+        div {
+            background-color: transparent;
+        }
+    }
+
+    #prevButton3 {
+        top:177vh;
+        left: 25vh;
+    }
+
+    #nextButton3 {
+        top:177vh;
+        right: 25vh;
+    }
+
+    .ContainerCarousel4 {
+        top: 212vh;
+        position: absolute;
+        min-height: 60vh !important;
+        max-height: 40vh;
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+        margin-bottom: 0 !important;
+
+        h3 {
+            padding-top: 3vh;
+        }
+
+        div {
+            background-color: transparent;
+        }
+    }
+
+    #prevButton4 {
+        top:242vh;
+        left: 25vh;
+    }
+
+    #nextButton4 {
+        top:242vh;
+        right: 25vh;
+    }
+
+    .ContainerCarousel5 {
+        top: 277vh;
+        position: absolute;
+        min-height: 60vh !important;
+        max-height: 40vh;
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+        margin-bottom: 0 !important;
+
+        h3 {
+            padding-top: 3vh;
+        }
+
+        div {
+            background-color: transparent;
+        }
+    }
+
+    #prevButton5 {
+        top:307vh;
+        left: 25vh;
+    }
+
+    #nextButton5 {
+        top:307vh;
+        right: 25vh;
+    }
+
+    .ContainerCarousel6 {
+        top: 342vh;
+        position: absolute;
+        min-height: 60vh !important;
+        max-height: 40vh;
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+        margin-bottom: 0 !important;
+
+        h3 {
+            padding-top: 3vh;
+        }
+
+        div {
+            background-color: transparent;
+        }
+    }
+
+    #prevButton6 {
+        top:372vh;
+        left: 25vh;
+    }
+
+    #nextButton6 {
+        top:372vh;
+        right: 25vh;
+    }
+}
+
+.prev-button,
+.next-button {
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0vh;
 }
