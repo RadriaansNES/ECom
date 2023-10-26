@@ -29,6 +29,8 @@ nav .container-fluid {
   height: 15vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 nav .container-fluid .nav1 {
   height: 15vh;
