@@ -313,24 +313,21 @@
 
   </main>
   <script>
-    // Define the carousel interval time (in milliseconds)
-    const carouselInterval = 30000; // Change this to your desired interval
+    
+    const carouselInterval = 30000; 
 
     function rotateCarousel(carouselId) {
       const $carousel = $(`#${carouselId}`);
       const $slides = $carousel.find('.carousel-slide');
       let currentIndex = 0;
 
-      // Function to show the current slide
       function showSlide(index) {
         $slides.hide();
         $slides.eq(index).fadeIn();
       }
 
-      // Show the first slide initially
       showSlide(currentIndex);
 
-      // Set up click handlers for previous and next buttons
       $(`#prevButton${carouselId.slice(-1)}`).on('click', function () {
         currentIndex = (currentIndex - 1 + $slides.length) % $slides.length;
         showSlide(currentIndex);
@@ -341,14 +338,13 @@
         showSlide(currentIndex);
       });
 
-      // Set up automatic rotation
+
       setInterval(() => {
         currentIndex = (currentIndex + 1) % $slides.length;
         showSlide(currentIndex);
       }, carouselInterval);
     }
 
-    // Initialize the carousels
     rotateCarousel('carousel1');
     rotateCarousel('carousel2');
     rotateCarousel('carousel3');
