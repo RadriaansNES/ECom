@@ -281,9 +281,16 @@ body::before {
 .crystals .container-fluid img,
 .footer .container-fluid img {
   max-height: 60vh;
+  max-width: 100%;
   margin-bottom: 10vh;
   border-radius: 10px;
   margin-left: 10vh;
+}
+.crystals .container-fluid #crystalmask,
+.footer .container-fluid #crystalmask {
+  margin: 0;
+  width: 90%;
+  margin-bottom: 2vh;
 }
 .crystals .container-fluid h4,
 .footer .container-fluid h4 {

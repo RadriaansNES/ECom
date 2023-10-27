@@ -317,9 +317,16 @@ body::before {
 
     img {
         max-height: 60vh;
+        max-width: 100%;
         margin-bottom: 10vh;
         border-radius: 10px;
         margin-left: 10vh;
+    }
+
+    #crystalmask {
+        margin: 0;
+        width: 90%;
+        margin-bottom: 2vh;
     }
 
     h4 {
