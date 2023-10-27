@@ -45,20 +45,27 @@ nav .container-fluid {
         }
 
         .column {
-            padding: 10px;
+            padding: 10px 5vh;
+            justify-content: center;
+            min-width: 249px;
         }
     }
 
     #logo {
         max-height: 15vh;
-        padding-bottom: 10px;
-        padding-left: 10px;
+        padding-bottom: 15px;
     }
 
     #cartlogo {
-        max-height: 50px;
-        height: 50px;
-        width: 50px;
+        max-height: 35px;
+        height: 35px;
+        width: 35px;
+        padding-left: 5px;
+    }
+
+    #cart {
+        height: 40px;
+        width: 40px;
     }
 
     .navbar-brand {
@@ -99,6 +106,13 @@ footer {
 
 body {
     font-family: 'Cinzel Decorative', serif;
+    p {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    strong {
+        font-weight: bold !important;
+    }
 }
 
 .bg-body-tertiary,
@@ -160,7 +174,7 @@ body::before {
         min-height: 90vh;
         justify-content: center;
         align-items: center;
-        background-image: url(/src/HomeGood.png);
+        background-image: url(/src/Graphic1..png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -206,6 +220,10 @@ body::before {
         justify-content: space-around;
         align-items: center;
         min-height: 70vh;
+
+        .bigger {
+            font-size: 20px;
+        }
     }
 
     .C4 {
@@ -314,7 +332,12 @@ body::before {
 
 }
 
-#sidebar {
+#sidebar2 {
+    top: 50% !important;
+    padding-right: 0 !important;
+}
+
+#sidebar, #sidebar2 {
     width: 20vh;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
@@ -373,9 +396,29 @@ body::before {
     }
 }
 
-.S1 p {
+.S1 {
+    p, button{
     margin-top: 2vh;
+    }
+
+    button  {
+        background-color: lightpink;
+        border-radius: 10px;
+        padding: 1.5vh 3vh;
+    }
+
+    .space-around {
+
+        align-items: flex-start !important;
+
+        div {
+            max-width: 50%;
+            padding: 3vh;
+        }
+
+    }
 }
+
 
 .carousel-slide {
     display: none;
@@ -384,7 +427,7 @@ body::before {
 section {
 
     div {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.4);
         padding: 2vh;
     }
 

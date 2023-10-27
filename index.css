@@ -43,17 +43,23 @@ nav .container-fluid .nav1 input {
   width: 100px;
 }
 nav .container-fluid .nav1 .column {
-  padding: 10px;
+  padding: 10px 5vh;
+  justify-content: center;
+  min-width: 249px;
 }
 nav .container-fluid #logo {
   max-height: 15vh;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding-bottom: 15px;
 }
 nav .container-fluid #cartlogo {
-  max-height: 50px;
-  height: 50px;
-  width: 50px;
+  max-height: 35px;
+  height: 35px;
+  width: 35px;
+  padding-left: 5px;
+}
+nav .container-fluid #cart {
+  height: 40px;
+  width: 40px;
 }
 nav .container-fluid .navbar-brand {
   margin: 0;
@@ -88,6 +94,12 @@ footer .column {
 
 body {
   font-family: "Cinzel Decorative", serif;
+}
+body p {
+  font-family: "Raleway", sans-serif;
+}
+body strong {
+  font-weight: bold !important;
 }
 
 .bg-body-tertiary,
@@ -141,7 +153,7 @@ body::before {
   min-height: 90vh;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/HomeGood.png);
+  background-image: url(/src/Graphic1..png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -178,6 +190,9 @@ body::before {
   justify-content: space-around;
   align-items: center;
   min-height: 70vh;
+}
+.main .container-fluid .C3 .bigger {
+  font-size: 20px;
 }
 .main .container-fluid .C4 {
   justify-content: space-around;
@@ -279,7 +294,12 @@ body::before {
   margin-top: 3vh;
 }
 
-#sidebar {
+#sidebar2 {
+  top: 50% !important;
+  padding-right: 0 !important;
+}
+
+#sidebar, #sidebar2 {
   width: 20vh;
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
@@ -291,26 +311,26 @@ body::before {
   height: auto;
   border: 1px solid black;
 }
-#sidebar ul {
+#sidebar ul, #sidebar2 ul {
   list-style: none;
   padding: 0;
 }
-#sidebar ul li {
+#sidebar ul li, #sidebar2 ul li {
   padding: 10px;
 }
-#sidebar ul a {
+#sidebar ul a, #sidebar2 ul a {
   text-decoration: none;
   color: black;
 }
-#sidebar ul a:hover {
+#sidebar ul a:hover, #sidebar2 ul a:hover {
   background-color: #555;
 }
-#sidebar.collapsed {
+#sidebar.collapsed, #sidebar2.collapsed {
   width: 50px;
   overflow: hidden;
   left: -50px;
 }
-#sidebar.collapsed ul {
+#sidebar.collapsed ul, #sidebar2.collapsed ul {
   display: none;
 }
 
@@ -331,8 +351,20 @@ body::before {
   margin-left: 50px;
 }
 
-.S1 p {
+.S1 p, .S1 button {
   margin-top: 2vh;
+}
+.S1 button {
+  background-color: lightpink;
+  border-radius: 10px;
+  padding: 1.5vh 3vh;
+}
+.S1 .space-around {
+  align-items: flex-start !important;
+}
+.S1 .space-around div {
+  max-width: 50%;
+  padding: 3vh;
 }
 
 .carousel-slide {
@@ -346,7 +378,7 @@ section {
   min-height: 370vh;
 }
 section div {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 2vh;
 }
 section .ContainerCarousel1 {
