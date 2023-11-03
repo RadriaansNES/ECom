@@ -153,7 +153,7 @@ body::before {
   min-height: 90vh;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/Graphic1..png);
+  background-image: url(../../src/Graphic1..png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;

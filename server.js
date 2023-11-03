@@ -7,24 +7,35 @@ const app = express();
 const PORT = process.env.PORT || 4242;
 const livereload = require('livereload');
 const server = livereload.createServer();
+const favicon = require('serve-favicon');
 
-// Serve static files with cache headers
-app.use(express.static(__dirname, {
-  maxAge: '7d', // Set cache max age to 7 days (604800 seconds)
-  etag: false, // Disable ETag to simplify caching behavior
+
+app.use(favicon(__dirname + '/view/pages/src/mermaid logo.png')); 
+app.use(express.static(__dirname + '/view/pages', {
+  maxAge: '7d', 
+  etag: false, 
 }));
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-// Initialize Passport
 app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session()); 
 
-// Import the routing file and use the router
 const router = require('./routing/routing');
 app.use('', router); 
+
+//Serve JavaScript files with correct MIME 
+app.use('/utils', express.static(__dirname + '/utils', {
+  maxAge: '7d',
+  etag: false,
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js')) {
+      res.type('application/javascript');
+    }
+  }
+}));
 
 server.watch(__dirname);
 
