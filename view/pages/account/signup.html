@@ -187,29 +187,19 @@
     crossorigin="anonymous"></script>
   <script src="../../utils/cart.js"></script>
   <script>
-    // Wait for the document to be fully loaded
     $(document).ready(function () {
-      // Get the form element by its ID
       const signupForm = $('#signup');
-      // Get the logalert element
       const logalert = $('#logalert');
 
-      // Add a submit event listener to the form
       signupForm.on('submit', function (event) {
-        // Get the values of the Password and Repeat Password fields
         const password = signupForm.find('input[name="psw"]').val();
         const repeatPassword = signupForm.find('input[name="repeat psw"]').val();
 
-        // Check if the passwords do not match
         if (password !== repeatPassword) {
-          // Prevent the form from submitting
           event.preventDefault();
-          // Show the logalert message
           logalert.text('Passwords do not match. Please try again.').show();
         } else if (password.length < 7 || !/\d/.test(password)) {
-          // Check if the password doesn't meet the requirements
           event.preventDefault();
-          // Show the logalert message with the different text
           logalert.text('Password requirements not met. Please use at least 7 characters with at least one number.').show();
         }
       });

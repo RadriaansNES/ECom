@@ -159,6 +159,13 @@
   <script src="../utils/authcheck.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      const cachedUserData = localStorage.getItem('userData');
+
+      if (cachedUserData) {
+        const userData = JSON.parse(cachedUserData);
+        updateUserContent(userData);
+      }
+
       fetch('/user-data')
         .then((response) => {
           if (response.ok) {
@@ -168,14 +175,20 @@
           }
         })
         .then((userData) => {
-          // Update the HTML content with the user's information
-          const firstNameElement = document.getElementById('firstName');
-          firstNameElement.textContent = `Hello ${userData.first_name}`;
+          updateUserContent(userData);
+
+          localStorage.setItem('userData', JSON.stringify(userData));
         })
         .catch((error) => {
           console.error(error);
         });
-    });</script>
+
+      function updateUserContent(userData) {
+        const firstNameElement = document.getElementById('firstName');
+        firstNameElement.textContent = `Hello ${userData.first_name}`;
+      }
+    });
+  </script>
 </body>
 
 </html>

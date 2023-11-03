@@ -4,7 +4,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const passport = require('passport');
 const { createUser } = require('../utils/dbhelper');
 
-// Define the route on the router
 router.post('/create-checkout-session', async (req, res) => {
 
   const cookieData = req.cookies.shoppingCart; // Adjust the cookie name as needed
@@ -26,13 +25,11 @@ router.post('/create-checkout-session', async (req, res) => {
   res.redirect(303, session.url);
 });
 
-// Route to handle login attempts
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/account/dashboard.html',
   failureRedirect: '/account/login.html?error=1', 
 }));
 
-// Logout
 router.post('/logout', function (req, res, next) {
   req.logout(function (err) {
     if (err) { return next(err); }
@@ -41,7 +38,6 @@ router.post('/logout', function (req, res, next) {
   });
 });
 
-//Signup
 router.post('/signup', async function (req, res, next) {
   const { username, psw, first_name, last_name, telephone, address, city, postal_code, country } = req.body;
 
@@ -53,12 +49,10 @@ router.post('/signup', async function (req, res, next) {
   }
 });
 
-// Route to access the accounts page if authenticated
 router.get('/account', ensureAuthenticated, (req, res) => {
   res.redirect('/account/dashboard.html');
 });
 
-// Route to check if user is authenticated
 router.get('/check-auth', (req, res) => {
   if (req.isAuthenticated()) {
     res.status(200).send('Authenticated');
@@ -76,7 +70,6 @@ router.get('/user-data', (req, res) => {
   }
 });
 
-// Function to check if user is authenticated
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
