@@ -66,7 +66,7 @@ nav .container-fluid .navbar-brand {
 }
 nav .container-fluid .nav2 {
   background-color: #ffb6c1;
-  width: 100vw;
+  width: 100%;
   min-height: 5vh;
   display: flex;
   justify-content: center;
@@ -100,6 +100,13 @@ body p {
 }
 body strong {
   font-weight: bold !important;
+}
+body main > .container-fluid {
+  min-height: 65vh;
+}
+body input {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }
 
 .bg-body-tertiary,
@@ -201,7 +208,8 @@ body::before {
   border-radius: 100px;
   z-index: -1;
 }
-.main .container-fluid .C2 #glowTrigger:hover > #absGlow, .main .container-fluid .C2 #relative > #absGlow {
+.main .container-fluid .C2 #glowTrigger:hover > #absGlow,
+.main .container-fluid .C2 #relative > #absGlow {
   background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
 }
 .main .container-fluid .C3 {
@@ -219,7 +227,8 @@ body::before {
 }
 
 .mission .container-fluid {
-  margin-top: 10vh;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
 }
 .mission .container-fluid p {
   font-size: 16px;
@@ -238,66 +247,80 @@ body::before {
 }
 
 .crystals .container-fluid,
-.footer .container-fluid {
+.footer .container-fluid,
+.registration .container-fluid {
   text-align: center;
   margin-top: 15vh;
+  margin-bottom: 5vh;
   width: 60%;
 }
 .crystals .container-fluid h2,
-.footer .container-fluid h2 {
+.footer .container-fluid h2,
+.registration .container-fluid h2 {
   margin-bottom: 3vh;
 }
 .crystals .container-fluid .title,
-.footer .container-fluid .title {
+.footer .container-fluid .title,
+.registration .container-fluid .title {
   margin-bottom: 10vh;
 }
 .crystals .container-fluid div,
-.footer .container-fluid div {
+.footer .container-fluid div,
+.registration .container-fluid div {
   justify-content: center;
   min-height: auto;
   margin-bottom: 10vh;
 }
 .crystals .container-fluid div h3,
-.footer .container-fluid div h3 {
+.footer .container-fluid div h3,
+.registration .container-fluid div h3 {
   margin-bottom: 3vh;
 }
 .crystals .container-fluid .space-around,
-.footer .container-fluid .space-around {
+.footer .container-fluid .space-around,
+.registration .container-fluid .space-around {
   margin-bottom: 0;
   align-items: center;
 }
 .crystals .container-fluid .space-between,
-.footer .container-fluid .space-between {
+.footer .container-fluid .space-between,
+.registration .container-fluid .space-between {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .crystals .container-fluid .space-between div,
-.footer .container-fluid .space-between div {
+.footer .container-fluid .space-between div,
+.registration .container-fluid .space-between div {
   max-width: 50%;
 }
 .crystals .container-fluid .space-between .fw,
-.footer .container-fluid .space-between .fw {
+.footer .container-fluid .space-between .fw,
+.registration .container-fluid .space-between .fw {
   width: 100%;
 }
 .crystals .container-fluid .space-between .db,
-.footer .container-fluid .space-between .db {
+.footer .container-fluid .space-between .db,
+.registration .container-fluid .space-between .db {
   max-width: 50%;
   min-width: 50%;
 }
 .crystals .container-fluid .space-between .d1,
-.footer .container-fluid .space-between .d1 {
+.footer .container-fluid .space-between .d1,
+.registration .container-fluid .space-between .d1 {
   justify-content: flex-start;
   max-width: 50%;
   min-width: 50%;
   padding: 2vh;
 }
 .crystals .container-fluid .space-between .d1 div,
-.footer .container-fluid .space-between .d1 div {
+.footer .container-fluid .space-between .d1 div,
+.registration .container-fluid .space-between .d1 div {
   min-width: 100%;
 }
 .crystals .container-fluid img,
-.footer .container-fluid img {
+.footer .container-fluid img,
+.registration .container-fluid img {
   max-height: 60vh;
   max-width: 100%;
   margin-bottom: 10vh;
@@ -305,18 +328,325 @@ body::before {
   margin-left: 10vh;
 }
 .crystals .container-fluid #crystalmask,
-.footer .container-fluid #crystalmask {
+.footer .container-fluid #crystalmask,
+.registration .container-fluid #crystalmask {
   margin: 0;
   width: 90%;
   margin-bottom: 2vh;
 }
 .crystals .container-fluid h4,
-.footer .container-fluid h4 {
+.footer .container-fluid h4,
+.registration .container-fluid h4 {
   padding: 2vh 0;
 }
 .crystals .container-fluid .margintop,
-.footer .container-fluid .margintop {
+.footer .container-fluid .margintop,
+.registration .container-fluid .margintop {
   margin-top: 3vh;
+}
+.crystals .container-fluid .S1 p,
+.crystals .container-fluid .S1 button,
+.footer .container-fluid .S1 p,
+.footer .container-fluid .S1 button,
+.registration .container-fluid .S1 p,
+.registration .container-fluid .S1 button {
+  margin-top: 2vh;
+}
+.crystals .container-fluid .S1 button,
+.footer .container-fluid .S1 button,
+.registration .container-fluid .S1 button {
+  background-color: lightpink;
+  border-radius: 10px;
+  padding: 1.5vh 3vh;
+}
+.crystals .container-fluid .S1 .space-around,
+.footer .container-fluid .S1 .space-around,
+.registration .container-fluid .S1 .space-around {
+  align-items: flex-start !important;
+}
+.crystals .container-fluid .S1 .space-around div,
+.footer .container-fluid .S1 .space-around div,
+.registration .container-fluid .S1 .space-around div {
+  max-width: 50%;
+  padding: 3vh;
+}
+.crystals .container-fluid .carousel-slide,
+.footer .container-fluid .carousel-slide,
+.registration .container-fluid .carousel-slide {
+  display: none;
+}
+.crystals .container-fluid section,
+.footer .container-fluid section,
+.registration .container-fluid section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 370vh;
+}
+.crystals .container-fluid section div,
+.footer .container-fluid section div,
+.registration .container-fluid section div {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 2vh;
+}
+.crystals .container-fluid section .ContainerCarousel1,
+.footer .container-fluid section .ContainerCarousel1,
+.registration .container-fluid section .ContainerCarousel1 {
+  position: absolute;
+  min-height: 40vh;
+  height: 40vh;
+  max-height: 40vh;
+  width: 55%;
+  max-width: 55%;
+  min-width: 55%;
+}
+.crystals .container-fluid section .ContainerCarousel1 div,
+.footer .container-fluid section .ContainerCarousel1 div,
+.registration .container-fluid section .ContainerCarousel1 div {
+  background-color: transparent;
+}
+.crystals .container-fluid section .ContainerCarousel2,
+.footer .container-fluid section .ContainerCarousel2,
+.registration .container-fluid section .ContainerCarousel2 {
+  top: 82vh;
+  position: absolute;
+  min-height: 60vh !important;
+  max-height: 40vh;
+  width: 55%;
+  max-width: 55%;
+  min-width: 55%;
+  margin-bottom: 0 !important;
+}
+.crystals .container-fluid section .ContainerCarousel2 h3,
+.footer .container-fluid section .ContainerCarousel2 h3,
+.registration .container-fluid section .ContainerCarousel2 h3 {
+  padding-top: 3vh;
+}
+.crystals .container-fluid section .ContainerCarousel2 div,
+.footer .container-fluid section .ContainerCarousel2 div,
+.registration .container-fluid section .ContainerCarousel2 div {
+  background-color: transparent;
+}
+.crystals .container-fluid section .ContainerCarousel2 .prev-button,
+.crystals .container-fluid section .ContainerCarousel2 .next-button,
+.footer .container-fluid section .ContainerCarousel2 .prev-button,
+.footer .container-fluid section .ContainerCarousel2 .next-button,
+.registration .container-fluid section .ContainerCarousel2 .prev-button,
+.registration .container-fluid section .ContainerCarousel2 .next-button {
+  top: 60%;
+}
+.crystals .container-fluid section #prevButton2,
+.footer .container-fluid section #prevButton2,
+.registration .container-fluid section #prevButton2 {
+  top: 112vh;
+  left: 25vh;
+}
+.crystals .container-fluid section #nextButton2,
+.footer .container-fluid section #nextButton2,
+.registration .container-fluid section #nextButton2 {
+  top: 112vh;
+  right: 25vh;
+}
+.crystals .container-fluid section .ContainerCarousel3,
+.footer .container-fluid section .ContainerCarousel3,
+.registration .container-fluid section .ContainerCarousel3 {
+  top: 147vh;
+  position: absolute;
+  min-height: 60vh !important;
+  max-height: 40vh;
+  width: 55%;
+  max-width: 55%;
+  min-width: 55%;
+  margin-bottom: 0 !important;
+}
+.crystals .container-fluid section .ContainerCarousel3 h3,
+.footer .container-fluid section .ContainerCarousel3 h3,
+.registration .container-fluid section .ContainerCarousel3 h3 {
+  padding-top: 3vh;
+}
+.crystals .container-fluid section .ContainerCarousel3 div,
+.footer .container-fluid section .ContainerCarousel3 div,
+.registration .container-fluid section .ContainerCarousel3 div {
+  background-color: transparent;
+}
+.crystals .container-fluid section #prevButton3,
+.footer .container-fluid section #prevButton3,
+.registration .container-fluid section #prevButton3 {
+  top: 177vh;
+  left: 25vh;
+}
+.crystals .container-fluid section #nextButton3,
+.footer .container-fluid section #nextButton3,
+.registration .container-fluid section #nextButton3 {
+  top: 177vh;
+  right: 25vh;
+}
+.crystals .container-fluid section .ContainerCarousel4,
+.footer .container-fluid section .ContainerCarousel4,
+.registration .container-fluid section .ContainerCarousel4 {
+  top: 212vh;
+  position: absolute;
+  min-height: 60vh !important;
+  max-height: 40vh;
+  width: 55%;
+  max-width: 55%;
+  min-width: 55%;
+  margin-bottom: 0 !important;
+}
+.crystals .container-fluid section .ContainerCarousel4 h3,
+.footer .container-fluid section .ContainerCarousel4 h3,
+.registration .container-fluid section .ContainerCarousel4 h3 {
+  padding-top: 3vh;
+}
+.crystals .container-fluid section .ContainerCarousel4 div,
+.footer .container-fluid section .ContainerCarousel4 div,
+.registration .container-fluid section .ContainerCarousel4 div {
+  background-color: transparent;
+}
+.crystals .container-fluid section #prevButton4,
+.footer .container-fluid section #prevButton4,
+.registration .container-fluid section #prevButton4 {
+  top: 242vh;
+  left: 25vh;
+}
+.crystals .container-fluid section #nextButton4,
+.footer .container-fluid section #nextButton4,
+.registration .container-fluid section #nextButton4 {
+  top: 242vh;
+  right: 25vh;
+}
+.crystals .container-fluid section .ContainerCarousel5,
+.footer .container-fluid section .ContainerCarousel5,
+.registration .container-fluid section .ContainerCarousel5 {
+  top: 277vh;
+  position: absolute;
+  min-height: 60vh !important;
+  max-height: 40vh;
+  width: 55%;
+  max-width: 55%;
+  min-width: 55%;
+  margin-bottom: 0 !important;
+}
+.crystals .container-fluid section .ContainerCarousel5 h3,
+.footer .container-fluid section .ContainerCarousel5 h3,
+.registration .container-fluid section .ContainerCarousel5 h3 {
+  padding-top: 3vh;
+}
+.crystals .container-fluid section .ContainerCarousel5 div,
+.footer .container-fluid section .ContainerCarousel5 div,
+.registration .container-fluid section .ContainerCarousel5 div {
+  background-color: transparent;
+}
+.crystals .container-fluid section #prevButton5,
+.footer .container-fluid section #prevButton5,
+.registration .container-fluid section #prevButton5 {
+  top: 307vh;
+  left: 25vh;
+}
+.crystals .container-fluid section #nextButton5,
+.footer .container-fluid section #nextButton5,
+.registration .container-fluid section #nextButton5 {
+  top: 307vh;
+  right: 25vh;
+}
+.crystals .container-fluid section .ContainerCarousel6,
+.footer .container-fluid section .ContainerCarousel6,
+.registration .container-fluid section .ContainerCarousel6 {
+  top: 342vh;
+  position: absolute;
+  min-height: 60vh !important;
+  max-height: 40vh;
+  width: 55%;
+  max-width: 55%;
+  min-width: 55%;
+  margin-bottom: 0 !important;
+}
+.crystals .container-fluid section .ContainerCarousel6 h3,
+.footer .container-fluid section .ContainerCarousel6 h3,
+.registration .container-fluid section .ContainerCarousel6 h3 {
+  padding-top: 3vh;
+}
+.crystals .container-fluid section .ContainerCarousel6 div,
+.footer .container-fluid section .ContainerCarousel6 div,
+.registration .container-fluid section .ContainerCarousel6 div {
+  background-color: transparent;
+}
+.crystals .container-fluid section #prevButton6,
+.footer .container-fluid section #prevButton6,
+.registration .container-fluid section #prevButton6 {
+  top: 372vh;
+  left: 25vh;
+}
+.crystals .container-fluid section #nextButton6,
+.footer .container-fluid section #nextButton6,
+.registration .container-fluid section #nextButton6 {
+  top: 372vh;
+  right: 25vh;
+}
+.crystals .container-fluid .prev-button,
+.crystals .container-fluid .next-button,
+.footer .container-fluid .prev-button,
+.footer .container-fluid .next-button,
+.registration .container-fluid .prev-button,
+.registration .container-fluid .next-button {
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+}
+.crystals .container-fluid .prev-button,
+.footer .container-fluid .prev-button,
+.registration .container-fluid .prev-button {
+  left: 0;
+}
+.crystals .container-fluid .next-button,
+.footer .container-fluid .next-button,
+.registration .container-fluid .next-button {
+  right: 0vh;
+}
+
+.login .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  padding: 0;
+}
+.login .container-fluid .space-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20vh;
+  width: auto;
+}
+.login .container-fluid .space-around div {
+  width: 35vh;
+}
+.login .container-fluid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  width: 60vh;
+  gap: 2vh;
+}
+.login .container-fluid p, .login .container-fluid h3, .login .container-fluid h2 {
+  text-align: center;
+}
+.login .container-fluid input {
+  width: 100%;
 }
 
 #sidebar2 {
@@ -381,197 +711,6 @@ body::before {
 }
 #sidebar-toggle.collapsed + main {
   margin-left: 50px;
-}
-
-.S1 p,
-.S1 button {
-  margin-top: 2vh;
-}
-.S1 button {
-  background-color: lightpink;
-  border-radius: 10px;
-  padding: 1.5vh 3vh;
-}
-.S1 .space-around {
-  align-items: flex-start !important;
-}
-.S1 .space-around div {
-  max-width: 50%;
-  padding: 3vh;
-}
-
-.carousel-slide {
-  display: none;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 370vh;
-}
-section div {
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 2vh;
-}
-section .ContainerCarousel1 {
-  position: absolute;
-  min-height: 40vh;
-  height: 40vh;
-  max-height: 40vh;
-  width: 55%;
-  max-width: 55%;
-  min-width: 55%;
-}
-section .ContainerCarousel1 div {
-  background-color: transparent;
-}
-section .ContainerCarousel2 {
-  top: 82vh;
-  position: absolute;
-  min-height: 60vh !important;
-  max-height: 40vh;
-  width: 55%;
-  max-width: 55%;
-  min-width: 55%;
-  margin-bottom: 0 !important;
-}
-section .ContainerCarousel2 h3 {
-  padding-top: 3vh;
-}
-section .ContainerCarousel2 div {
-  background-color: transparent;
-}
-section .ContainerCarousel2 .prev-button,
-section .ContainerCarousel2 .next-button {
-  top: 60%;
-}
-section #prevButton2 {
-  top: 112vh;
-  left: 25vh;
-}
-section #nextButton2 {
-  top: 112vh;
-  right: 25vh;
-}
-section .ContainerCarousel3 {
-  top: 147vh;
-  position: absolute;
-  min-height: 60vh !important;
-  max-height: 40vh;
-  width: 55%;
-  max-width: 55%;
-  min-width: 55%;
-  margin-bottom: 0 !important;
-}
-section .ContainerCarousel3 h3 {
-  padding-top: 3vh;
-}
-section .ContainerCarousel3 div {
-  background-color: transparent;
-}
-section #prevButton3 {
-  top: 177vh;
-  left: 25vh;
-}
-section #nextButton3 {
-  top: 177vh;
-  right: 25vh;
-}
-section .ContainerCarousel4 {
-  top: 212vh;
-  position: absolute;
-  min-height: 60vh !important;
-  max-height: 40vh;
-  width: 55%;
-  max-width: 55%;
-  min-width: 55%;
-  margin-bottom: 0 !important;
-}
-section .ContainerCarousel4 h3 {
-  padding-top: 3vh;
-}
-section .ContainerCarousel4 div {
-  background-color: transparent;
-}
-section #prevButton4 {
-  top: 242vh;
-  left: 25vh;
-}
-section #nextButton4 {
-  top: 242vh;
-  right: 25vh;
-}
-section .ContainerCarousel5 {
-  top: 277vh;
-  position: absolute;
-  min-height: 60vh !important;
-  max-height: 40vh;
-  width: 55%;
-  max-width: 55%;
-  min-width: 55%;
-  margin-bottom: 0 !important;
-}
-section .ContainerCarousel5 h3 {
-  padding-top: 3vh;
-}
-section .ContainerCarousel5 div {
-  background-color: transparent;
-}
-section #prevButton5 {
-  top: 307vh;
-  left: 25vh;
-}
-section #nextButton5 {
-  top: 307vh;
-  right: 25vh;
-}
-section .ContainerCarousel6 {
-  top: 342vh;
-  position: absolute;
-  min-height: 60vh !important;
-  max-height: 40vh;
-  width: 55%;
-  max-width: 55%;
-  min-width: 55%;
-  margin-bottom: 0 !important;
-}
-section .ContainerCarousel6 h3 {
-  padding-top: 3vh;
-}
-section .ContainerCarousel6 div {
-  background-color: transparent;
-}
-section #prevButton6 {
-  top: 372vh;
-  left: 25vh;
-}
-section #nextButton6 {
-  top: 372vh;
-  right: 25vh;
-}
-
-.prev-button,
-.next-button {
-  transform: translateY(-50%);
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  cursor: pointer;
-  outline: none;
-  position: absolute;
-}
-
-.prev-button {
-  left: 0;
-}
-
-.next-button {
-  right: 0vh;
 }
 
 /*# sourceMappingURL=index.css.map */

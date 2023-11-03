@@ -74,7 +74,7 @@ nav .container-fluid {
 
     .nav2 {
         background-color: #ffb6c1;
-        width: 100vw;
+        width: 100%;
         min-height: 5vh;
         display: flex;
         justify-content: center;
@@ -114,6 +114,15 @@ body {
     strong {
         font-weight: bold !important;
     }
+
+    main>.container-fluid {
+        min-height: 65vh;
+    }
+
+    input {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
 }
 
 .bg-body-tertiary,
@@ -137,7 +146,6 @@ body::before {
     width: 100%;
     z-index: -10;
 }
-
 .main .container-fluid {
     margin-top: 5vh;
     padding: 0;
@@ -216,7 +224,7 @@ body::before {
             top: -8vh;
             pointer-events: none;
         }
-        
+
         #glowTrigger {
             position: relative;
             top: 2vh;
@@ -231,11 +239,12 @@ body::before {
             transition: box-shadow 0.3s ease-in-out;
             border-radius: 100px;
             z-index: -1;
-          }
-          
-          #glowTrigger:hover > #absGlow, #relative > #absGlow {
+        }
+
+        #glowTrigger:hover>#absGlow,
+        #relative>#absGlow {
             background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
-          }
+        }
     }
 
     .C3 {
@@ -256,7 +265,8 @@ body::before {
 }
 
 .mission .container-fluid {
-    margin-top: 10vh;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
 
     p {
         font-size: 16px;
@@ -279,9 +289,11 @@ body::before {
 }
 
 .crystals .container-fluid,
-.footer .container-fluid {
+.footer .container-fluid, 
+.registration .container-fluid {
     text-align: center;
     margin-top: 15vh;
+    margin-bottom: 5vh;
     width: 60%;
 
     h2 {
@@ -359,6 +371,277 @@ body::before {
         margin-top: 3vh;
     }
 
+    .S1 {
+
+        p,
+        button {
+            margin-top: 2vh;
+        }
+
+        button {
+            background-color: lightpink;
+            border-radius: 10px;
+            padding: 1.5vh 3vh;
+        }
+
+        .space-around {
+
+            align-items: flex-start !important;
+
+            div {
+                max-width: 50%;
+                padding: 3vh;
+            }
+
+        }
+    }
+
+    .carousel-slide {
+        display: none;
+    }
+
+    section {
+
+        div {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 2vh;
+        }
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        min-height: 370vh;
+    
+        .ContainerCarousel1 {
+            position: absolute;
+            min-height: 40vh;
+            height: 40vh;
+            max-height: 40vh;
+            width: 55%;
+            max-width: 55%;
+            min-width: 55%;
+    
+            div {
+                background-color: transparent;
+            }
+        }
+    
+        .ContainerCarousel2 {
+            top: 82vh;
+            position: absolute;
+            min-height: 60vh !important;
+            max-height: 40vh;
+            width: 55%;
+            max-width: 55%;
+            min-width: 55%;
+            margin-bottom: 0 !important;
+    
+            h3 {
+                padding-top: 3vh;
+            }
+    
+            div {
+                background-color: transparent;
+            }
+    
+            .prev-button,
+            .next-button {
+                top: 60%;
+            }
+        }
+    
+        #prevButton2 {
+            top: 112vh;
+            left: 25vh;
+        }
+    
+        #nextButton2 {
+            top: 112vh;
+            right: 25vh;
+        }
+    
+        .ContainerCarousel3 {
+            top: 147vh;
+            position: absolute;
+            min-height: 60vh !important;
+            max-height: 40vh;
+            width: 55%;
+            max-width: 55%;
+            min-width: 55%;
+            margin-bottom: 0 !important;
+    
+            h3 {
+                padding-top: 3vh;
+            }
+    
+            div {
+                background-color: transparent;
+            }
+        }
+    
+        #prevButton3 {
+            top: 177vh;
+            left: 25vh;
+        }
+    
+        #nextButton3 {
+            top: 177vh;
+            right: 25vh;
+        }
+    
+        .ContainerCarousel4 {
+            top: 212vh;
+            position: absolute;
+            min-height: 60vh !important;
+            max-height: 40vh;
+            width: 55%;
+            max-width: 55%;
+            min-width: 55%;
+            margin-bottom: 0 !important;
+    
+            h3 {
+                padding-top: 3vh;
+            }
+    
+            div {
+                background-color: transparent;
+            }
+        }
+    
+        #prevButton4 {
+            top: 242vh;
+            left: 25vh;
+        }
+    
+        #nextButton4 {
+            top: 242vh;
+            right: 25vh;
+        }
+    
+        .ContainerCarousel5 {
+            top: 277vh;
+            position: absolute;
+            min-height: 60vh !important;
+            max-height: 40vh;
+            width: 55%;
+            max-width: 55%;
+            min-width: 55%;
+            margin-bottom: 0 !important;
+    
+            h3 {
+                padding-top: 3vh;
+            }
+    
+            div {
+                background-color: transparent;
+            }
+        }
+    
+        #prevButton5 {
+            top: 307vh;
+            left: 25vh;
+        }
+    
+        #nextButton5 {
+            top: 307vh;
+            right: 25vh;
+        }
+    
+        .ContainerCarousel6 {
+            top: 342vh;
+            position: absolute;
+            min-height: 60vh !important;
+            max-height: 40vh;
+            width: 55%;
+            max-width: 55%;
+            min-width: 55%;
+            margin-bottom: 0 !important;
+    
+            h3 {
+                padding-top: 3vh;
+            }
+    
+            div {
+                background-color: transparent;
+            }
+        }
+    
+        #prevButton6 {
+            top: 372vh;
+            left: 25vh;
+        }
+    
+        #nextButton6 {
+            top: 372vh;
+            right: 25vh;
+        }
+    }
+    
+    .prev-button,
+    .next-button {
+        transform: translateY(-50%);
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+    }
+    
+    .prev-button {
+        left: 0;
+    }
+    
+    .next-button {
+        right: 0vh;
+    }
+}
+
+.login .container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    padding: 0;
+
+    .space-around {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20vh;
+        width: auto;
+
+        div {
+            width: 35vh;
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        width: 60vh;
+        gap: 2vh;
+    }
+
+    p, h3, h2 {
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+    }
 }
 
 #sidebar2 {
@@ -424,235 +707,4 @@ body::before {
     &.collapsed+main {
         margin-left: 50px;
     }
-}
-
-.S1 {
-
-    p,
-    button {
-        margin-top: 2vh;
-    }
-
-    button {
-        background-color: lightpink;
-        border-radius: 10px;
-        padding: 1.5vh 3vh;
-    }
-
-    .space-around {
-
-        align-items: flex-start !important;
-
-        div {
-            max-width: 50%;
-            padding: 3vh;
-        }
-
-    }
-}
-
-
-.carousel-slide {
-    display: none;
-}
-
-section {
-
-    div {
-        background-color: rgba(255, 255, 255, 0.4);
-        padding: 2vh;
-    }
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    min-height: 370vh;
-
-    .ContainerCarousel1 {
-        position: absolute;
-        min-height: 40vh;
-        height: 40vh;
-        max-height: 40vh;
-        width: 55%;
-        max-width: 55%;
-        min-width: 55%;
-
-        div {
-            background-color: transparent;
-        }
-    }
-
-    .ContainerCarousel2 {
-        top: 82vh;
-        position: absolute;
-        min-height: 60vh !important;
-        max-height: 40vh;
-        width: 55%;
-        max-width: 55%;
-        min-width: 55%;
-        margin-bottom: 0 !important;
-
-        h3 {
-            padding-top: 3vh;
-        }
-
-        div {
-            background-color: transparent;
-        }
-
-        .prev-button,
-        .next-button {
-            top: 60%;
-        }
-    }
-
-    #prevButton2 {
-        top: 112vh;
-        left: 25vh;
-    }
-
-    #nextButton2 {
-        top: 112vh;
-        right: 25vh;
-    }
-
-    .ContainerCarousel3 {
-        top: 147vh;
-        position: absolute;
-        min-height: 60vh !important;
-        max-height: 40vh;
-        width: 55%;
-        max-width: 55%;
-        min-width: 55%;
-        margin-bottom: 0 !important;
-
-        h3 {
-            padding-top: 3vh;
-        }
-
-        div {
-            background-color: transparent;
-        }
-    }
-
-    #prevButton3 {
-        top: 177vh;
-        left: 25vh;
-    }
-
-    #nextButton3 {
-        top: 177vh;
-        right: 25vh;
-    }
-
-    .ContainerCarousel4 {
-        top: 212vh;
-        position: absolute;
-        min-height: 60vh !important;
-        max-height: 40vh;
-        width: 55%;
-        max-width: 55%;
-        min-width: 55%;
-        margin-bottom: 0 !important;
-
-        h3 {
-            padding-top: 3vh;
-        }
-
-        div {
-            background-color: transparent;
-        }
-    }
-
-    #prevButton4 {
-        top: 242vh;
-        left: 25vh;
-    }
-
-    #nextButton4 {
-        top: 242vh;
-        right: 25vh;
-    }
-
-    .ContainerCarousel5 {
-        top: 277vh;
-        position: absolute;
-        min-height: 60vh !important;
-        max-height: 40vh;
-        width: 55%;
-        max-width: 55%;
-        min-width: 55%;
-        margin-bottom: 0 !important;
-
-        h3 {
-            padding-top: 3vh;
-        }
-
-        div {
-            background-color: transparent;
-        }
-    }
-
-    #prevButton5 {
-        top: 307vh;
-        left: 25vh;
-    }
-
-    #nextButton5 {
-        top: 307vh;
-        right: 25vh;
-    }
-
-    .ContainerCarousel6 {
-        top: 342vh;
-        position: absolute;
-        min-height: 60vh !important;
-        max-height: 40vh;
-        width: 55%;
-        max-width: 55%;
-        min-width: 55%;
-        margin-bottom: 0 !important;
-
-        h3 {
-            padding-top: 3vh;
-        }
-
-        div {
-            background-color: transparent;
-        }
-    }
-
-    #prevButton6 {
-        top: 372vh;
-        left: 25vh;
-    }
-
-    #nextButton6 {
-        top: 372vh;
-        right: 25vh;
-    }
-}
-
-.prev-button,
-.next-button {
-    transform: translateY(-50%);
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-}
-
-.prev-button {
-    left: 0;
-}
-
-.next-button {
-    right: 0vh;
 }

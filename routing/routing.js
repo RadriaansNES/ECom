@@ -6,7 +6,7 @@ const { createUser } = require('../utils/dbhelper');
 
 // Define the route on the router
 router.post('/create-checkout-session', async (req, res) => {
- 
+
   const cookieData = req.cookies.shoppingCart; // Adjust the cookie name as needed
 
   // Parse the cookie data
@@ -28,8 +28,8 @@ router.post('/create-checkout-session', async (req, res) => {
 
 // Route to handle login attempts
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '../view/account/dashboard.html',
-  failureRedirect: '../view/account/login.html?error=1' // Redirect with an error parameter
+  successRedirect: '/account/dashboard.html',
+  failureRedirect: '/account/login.html?error=1', 
 }));
 
 // Logout
@@ -47,17 +47,15 @@ router.post('/signup', async function (req, res, next) {
 
   try {
     await createUser(username, psw, first_name, last_name, telephone, address, city, postal_code, country, req);
-    // User successfully inserted, can now redirect or send a response 
-    res.redirect('../view/account/login.html?success=1');
+    res.redirect('/account/login.html?success=1');
   } catch (error) {
-    return res.redirect('../view/account/signup.html?error=1');
+    return res.redirect('/account/signup.html?error=1');
   }
 });
 
 // Route to access the accounts page if authenticated
 router.get('/account', ensureAuthenticated, (req, res) => {
-  // Redirect to the dashboard if authenticated
-  res.redirect('../view/account/dashboard.html');
+  res.redirect('/account/dashboard.html');
 });
 
 // Route to check if user is authenticated
@@ -69,12 +67,21 @@ router.get('/check-auth', (req, res) => {
   }
 });
 
+router.get('/user-data', (req, res) => {
+  if (req.isAuthenticated()) {
+    const userData = req.user;
+    res.json(userData);
+  } else {
+    res.status(401).json({ message: 'Unauthorized' });
+  }
+});
+
 // Function to check if user is authenticated
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect('../view/account/login.html');
+  res.redirect('/account/login.html');
 }
 
 function generateRandomOrderID(length) {
