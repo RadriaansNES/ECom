@@ -403,6 +403,7 @@ body::before {
     }
 
     section {
+        height: 75vh;
 
         div {
             background-color: rgba(255, 255, 255, 0.4);
@@ -413,27 +414,14 @@ body::before {
         flex-direction: column;
         align-items: center;
 
-        min-height: 370vh;
-
-        .ContainerCarousel1 {
-            position: absolute;
-            min-height: 40vh;
-            height: 40vh;
-            max-height: 40vh;
-            width: 55%;
-            max-width: 55%;
-            min-width: 55%;
-
-            div {
-                background-color: transparent;
-            }
-        }
-
         .ContainerCarousel2 {
-            top: 82vh;
+            top: 40vh;
             position: absolute;
-            min-height: 60vh !important;
-            max-height: 40vh;
+            min-height: 60vh;
+            max-height: 60vh;
+
+            border-radius: 5vh;
+
             width: 55%;
             max-width: 55%;
             min-width: 55%;
@@ -445,138 +433,17 @@ body::before {
 
             div {
                 background-color: transparent;
-            }
-
-            .prev-button,
-            .next-button {
-                top: 60%;
             }
         }
 
         #prevButton2 {
-            top: 112vh;
-            left: 25vh;
+            top: 70vh;
+            left: 20vh;
         }
 
         #nextButton2 {
-            top: 112vh;
-            right: 25vh;
-        }
-
-        .ContainerCarousel3 {
-            top: 147vh;
-            position: absolute;
-            min-height: 60vh !important;
-            max-height: 40vh;
-            width: 55%;
-            max-width: 55%;
-            min-width: 55%;
-            margin-bottom: 0 !important;
-
-            h3 {
-                padding-top: 3vh;
-            }
-
-            div {
-                background-color: transparent;
-            }
-        }
-
-        #prevButton3 {
-            top: 177vh;
-            left: 25vh;
-        }
-
-        #nextButton3 {
-            top: 177vh;
-            right: 25vh;
-        }
-
-        .ContainerCarousel4 {
-            top: 212vh;
-            position: absolute;
-            min-height: 60vh !important;
-            max-height: 40vh;
-            width: 55%;
-            max-width: 55%;
-            min-width: 55%;
-            margin-bottom: 0 !important;
-
-            h3 {
-                padding-top: 3vh;
-            }
-
-            div {
-                background-color: transparent;
-            }
-        }
-
-        #prevButton4 {
-            top: 242vh;
-            left: 25vh;
-        }
-
-        #nextButton4 {
-            top: 242vh;
-            right: 25vh;
-        }
-
-        .ContainerCarousel5 {
-            top: 277vh;
-            position: absolute;
-            min-height: 60vh !important;
-            max-height: 40vh;
-            width: 55%;
-            max-width: 55%;
-            min-width: 55%;
-            margin-bottom: 0 !important;
-
-            h3 {
-                padding-top: 3vh;
-            }
-
-            div {
-                background-color: transparent;
-            }
-        }
-
-        #prevButton5 {
-            top: 307vh;
-            left: 25vh;
-        }
-
-        #nextButton5 {
-            top: 307vh;
-            right: 25vh;
-        }
-
-        .ContainerCarousel6 {
-            top: 342vh;
-            position: absolute;
-            min-height: 60vh !important;
-            max-height: 40vh;
-            width: 55%;
-            max-width: 55%;
-            min-width: 55%;
-            margin-bottom: 0 !important;
-
-            h3 {
-                padding-top: 3vh;
-            }
-
-            div {
-                background-color: transparent;
-            }
-        }
-
-        #prevButton6 {
-            top: 372vh;
-            left: 25vh;
-        }
-
-        #nextButton6 {
-            top: 372vh;
-            right: 25vh;
+            top: 70vh;
+            right: 20vh;
         }
     }
 
@@ -595,16 +462,8 @@ body::before {
         position: absolute;
     }
 
-    .prev-button {
-        left: 0;
-    }
-
-    .next-button {
-        right: 0vh;
-    }
-
     #mask {
-        margin-top: 5vh; 
+        margin-top: 5vh;
         margin-bottom: 0;
     }
 }
@@ -772,6 +631,7 @@ body::before {
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
+
     .crystals .container-fluid {
 
         .space-around {
@@ -787,8 +647,9 @@ body::before {
             }
         }
     }
+
     #mask {
-        margin-top: 0vh !important; 
+        margin-top: 0vh !important;
     }
 
     #sidebar2 {
@@ -796,21 +657,27 @@ body::before {
         padding: 0;
     }
 
-    #prevButton2, #prevButton3,#prevButton4,#prevButton5,#prevButton6 {
+    #prevButton2,
+    #prevButton3,
+    #prevButton4,
+    #prevButton5,
+    #prevButton6 {
         left: 20vh !important;
     }
 
-    #nextButton2, #nextButton3, #nextButton4, #nextButton5, #nextButton6 {
+    #nextButton2,
+    #nextButton3,
+    #nextButton4,
+    #nextButton5,
+    #nextButton6 {
         right: 20vh !important;
     }
-    
 
-    .carousel {
-        max-height: 490px;
-        overflow: hidden;
-        p {
-            max-height: 490px;
-        overflow: hidden;
+
+
+    .ContainerCarousel2 {
+          h3 {
+            padding-top: 0 !important;
         }
     }
 }
