@@ -73,7 +73,7 @@ nav .container-fluid {
     }
 
     .nav2 {
-        background-color: #ffb6c1;
+        background-color: var(--2nd-colour);
         width: 100%;
         min-height: 5vh;
         display: flex;
@@ -379,7 +379,7 @@ body::before {
         }
 
         button {
-            background-color: lightpink;
+            background-color: var(--2nd-colour);
             border-radius: 10px;
             padding: 1.5vh 3vh;
         }
@@ -622,6 +622,8 @@ body::before {
 
         div {
             width: 35vh;
+            height:auto;
+            flex: 1;
         }
     }
 
@@ -645,13 +647,13 @@ body::before {
 }
 
 #sidebar2 {
-    top: 50% !important;
+    top: 55% !important;
     padding-right: 0 !important;
 }
 
 #sidebar,
 #sidebar2 {
-    width: 20vh;
+    width: 15vh;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
     position: fixed;
@@ -675,7 +677,7 @@ body::before {
             color: black;
 
             &:hover {
-                background-color: #555;
+                color: #ffb6c1;
             }
         }
     }
