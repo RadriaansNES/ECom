@@ -155,6 +155,7 @@ body::before {
 .main .container-fluid div .column {
   flex-direction: column;
   line-height: 3vh;
+  justify-content: center;
 }
 .main .container-fluid .C1 {
   min-height: 90vh;
@@ -221,9 +222,11 @@ body::before {
   font-size: 20px;
 }
 .main .container-fluid .C4 {
+  margin-top: -10vh;
   justify-content: space-around;
   align-items: center;
   min-height: 70vh;
+  font-size: larger;
 }
 
 .mission .container-fluid {
@@ -280,7 +283,14 @@ body::before {
 .footer .container-fluid .space-around,
 .registration .container-fluid .space-around {
   margin-bottom: 0;
+  gap: 2vh;
   align-items: center;
+  flex: 1;
+}
+.crystals .container-fluid .space-around .column p,
+.footer .container-fluid .space-around .column p,
+.registration .container-fluid .space-around .column p {
+  min-width: 100%;
 }
 .crystals .container-fluid .space-between,
 .footer .container-fluid .space-between,
@@ -321,18 +331,11 @@ body::before {
 .crystals .container-fluid img,
 .footer .container-fluid img,
 .registration .container-fluid img {
-  max-height: 60vh;
-  max-width: 100%;
-  margin-bottom: 10vh;
+  max-height: 560px;
+  max-width: 420px;
+  height: 560px;
+  width: 420px;
   border-radius: 10px;
-  margin-left: 10vh;
-}
-.crystals .container-fluid #crystalmask,
-.footer .container-fluid #crystalmask,
-.registration .container-fluid #crystalmask {
-  margin: 0;
-  width: 90%;
-  margin-bottom: 2vh;
 }
 .crystals .container-fluid h4,
 .footer .container-fluid h4,
@@ -351,13 +354,6 @@ body::before {
 .registration .container-fluid .S1 p,
 .registration .container-fluid .S1 button {
   margin-top: 2vh;
-}
-.crystals .container-fluid .S1 button,
-.footer .container-fluid .S1 button,
-.registration .container-fluid .S1 button {
-  background-color: var(--2nd-colour);
-  border-radius: 10px;
-  padding: 1.5vh 3vh;
 }
 .crystals .container-fluid .S1 .space-around,
 .footer .container-fluid .S1 .space-around,
@@ -611,6 +607,12 @@ body::before {
 .registration .container-fluid .next-button {
   right: 0vh;
 }
+.crystals .container-fluid #mask,
+.footer .container-fluid #mask,
+.registration .container-fluid #mask {
+  margin-top: 5vh;
+  margin-bottom: 0;
+}
 
 .login .container-fluid {
   display: flex;
@@ -644,56 +646,92 @@ body::before {
   width: 60vh;
   gap: 2vh;
 }
-.login .container-fluid p, .login .container-fluid h3, .login .container-fluid h2 {
+.login .container-fluid p,
+.login .container-fluid h3,
+.login .container-fluid h2 {
   text-align: center;
 }
 .login .container-fluid input {
   width: 100%;
 }
-
-#sidebar2 {
-  top: 55% !important;
-  padding-right: 0 !important;
+.login .container-fluid #signup p {
+  text-align: left;
+}
+.login .container-fluid #signup h2 {
+  text-align: left;
+  margin-bottom: 2vh;
+}
+.login .container-fluid #signup div {
+  margin-bottom: 2vh;
 }
 
-#sidebar,
-#sidebar2 {
+#sidebar {
   width: 15vh;
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
   position: fixed;
   top: 45%;
   transform: translateY(-50%);
-  left: 4%;
+  left: 2%;
   padding: 3vh 0;
   height: auto;
   border: 1px solid black;
 }
-#sidebar ul,
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+#sidebar ul li {
+  padding: 10px;
+}
+#sidebar ul a {
+  text-decoration: none;
+  color: black;
+}
+#sidebar ul a:hover {
+  color: #ffb6c1;
+}
+#sidebar.collapsed {
+  width: 50px;
+  overflow: hidden;
+  left: -50px;
+}
+#sidebar.collapsed ul {
+  display: none;
+}
+
+#sidebar2 {
+  top: 50%;
+  padding-right: 0;
+  width: 15vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  position: fixed;
+  transform: translateY(-50%);
+  left: 2%;
+  padding: 3vh 0;
+  height: auto;
+  border: 1px solid black;
+}
 #sidebar2 ul {
   list-style: none;
   padding: 0;
 }
-#sidebar ul li,
 #sidebar2 ul li {
   padding: 10px;
 }
-#sidebar ul a,
 #sidebar2 ul a {
   text-decoration: none;
   color: black;
 }
-#sidebar ul a:hover,
 #sidebar2 ul a:hover {
   color: #ffb6c1;
 }
-#sidebar.collapsed,
 #sidebar2.collapsed {
   width: 50px;
   overflow: hidden;
   left: -50px;
 }
-#sidebar.collapsed ul,
 #sidebar2.collapsed ul {
   display: none;
 }
@@ -713,6 +751,39 @@ body::before {
 }
 #sidebar-toggle.collapsed + main {
   margin-left: 50px;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .crystals .container-fluid .space-around div {
+    display: flex;
+    max-width: 45% !important;
+  }
+  .crystals .container-fluid .space-around div img {
+    margin-top: 50px;
+    max-height: 454px;
+    max-width: 265px;
+  }
+  #mask {
+    margin-top: 0vh !important;
+  }
+  #sidebar2 {
+    top: 55%;
+    padding: 0;
+  }
+  #prevButton2, #prevButton3, #prevButton4, #prevButton5, #prevButton6 {
+    left: 20vh !important;
+  }
+  #nextButton2, #nextButton3, #nextButton4, #nextButton5, #nextButton6 {
+    right: 20vh !important;
+  }
+  .carousel {
+    max-height: 490px;
+    overflow: hidden;
+  }
+  .carousel p {
+    max-height: 490px;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
