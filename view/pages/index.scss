@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+.navbar-nav .dropdown-menu {
+    background-color: var(--1st-colour);
+}
+
 .column {
     display: flex;
     flex-direction: column;
@@ -72,13 +76,18 @@ nav .container-fluid {
         margin: 0;
     }
 
-    .nav2 {
+    .nav2, .nav3 {
         background-color: var(--2nd-colour);
         width: 100%;
         min-height: 5vh;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .nav3 {
+        display: none;
+        position: relative;
     }
 
     a {
@@ -544,6 +553,7 @@ body::before {
     padding: 3vh 0;
     height: auto;
     border: 1px solid black;
+    z-index: -1;
 
     ul {
         list-style: none;
@@ -586,6 +596,7 @@ body::before {
     padding: 3vh 0;
     height: auto;
     border: 1px solid black;
+    z-index: -1;
 
     ul {
         list-style: none;
@@ -660,27 +671,33 @@ body::before {
         padding: 0;
     }
 
-    #prevButton2,
-    #prevButton3,
-    #prevButton4,
-    #prevButton5,
-    #prevButton6 {
+    #prevButton2 {
         left: 20vh !important;
     }
 
-    #nextButton2,
-    #nextButton3,
-    #nextButton4,
-    #nextButton5,
-    #nextButton6 {
+    #nextButton2 {
         right: 20vh !important;
     }
-
-
 
     .ContainerCarousel2 {
           h3 {
             padding-top: 0 !important;
         }
     }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {}
+
+@media (max-width: 767px) {}
+
+
+@media (max-width: 1023px) {
+    .nav2 {
+        display: none !important;
+    }
+
+    .nav3 {
+        display: block !important;
+    }
+
 }

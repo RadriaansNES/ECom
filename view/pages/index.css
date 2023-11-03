@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.navbar-nav .dropdown-menu {
+  background-color: var(--1st-colour);
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -64,13 +68,17 @@ nav .container-fluid #cart {
 nav .container-fluid .navbar-brand {
   margin: 0;
 }
-nav .container-fluid .nav2 {
+nav .container-fluid .nav2, nav .container-fluid .nav3 {
   background-color: var(--2nd-colour);
   width: 100%;
   min-height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+nav .container-fluid .nav3 {
+  display: none;
+  position: relative;
 }
 nav .container-fluid a {
   color: black;
@@ -512,6 +520,7 @@ body::before {
   padding: 3vh 0;
   height: auto;
   border: 1px solid black;
+  z-index: -1;
 }
 #sidebar ul {
   list-style: none;
@@ -548,6 +557,7 @@ body::before {
   padding: 3vh 0;
   height: auto;
   border: 1px solid black;
+  z-index: -1;
 }
 #sidebar2 ul {
   list-style: none;
@@ -605,22 +615,22 @@ body::before {
     top: 55%;
     padding: 0;
   }
-  #prevButton2,
-  #prevButton3,
-  #prevButton4,
-  #prevButton5,
-  #prevButton6 {
+  #prevButton2 {
     left: 20vh !important;
   }
-  #nextButton2,
-  #nextButton3,
-  #nextButton4,
-  #nextButton5,
-  #nextButton6 {
+  #nextButton2 {
     right: 20vh !important;
   }
   .ContainerCarousel2 h3 {
     padding-top: 0 !important;
+  }
+}
+@media (max-width: 1023px) {
+  .nav2 {
+    display: none !important;
+  }
+  .nav3 {
+    display: block !important;
   }
 }
 
