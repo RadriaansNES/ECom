@@ -68,7 +68,8 @@ nav .container-fluid #cart {
 nav .container-fluid .navbar-brand {
   margin: 0;
 }
-nav .container-fluid .nav2, nav .container-fluid .nav3 {
+nav .container-fluid .nav2,
+nav .container-fluid .nav3 {
   background-color: var(--2nd-colour);
   width: 100%;
   min-height: 5vh;
@@ -421,6 +422,16 @@ body::before {
 .registration .container-fluid section .ContainerCarousel2 div {
   background-color: transparent;
 }
+.crystals .container-fluid section .ContainerCarousel2 h3,
+.footer .container-fluid section .ContainerCarousel2 h3,
+.registration .container-fluid section .ContainerCarousel2 h3 {
+  padding-top: 0 !important;
+}
+.crystals .container-fluid section .ContainerCarousel2 .carousel,
+.footer .container-fluid section .ContainerCarousel2 .carousel,
+.registration .container-fluid section .ContainerCarousel2 .carousel {
+  padding-top: 0;
+}
 .crystals .container-fluid section #prevButton2,
 .footer .container-fluid section #prevButton2,
 .registration .container-fluid section #prevButton2 {
@@ -625,12 +636,179 @@ body::before {
     padding-top: 0 !important;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    width: 100% !important;
+  }
+  p,
+  strong,
+  em,
+  a {
+    font-size: 13px !important;
+  }
+  h1 {
+    font-size: 35px !important;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  #reduce {
+    font-size: 11.5px !important;
+  }
+  .mission .container-fluid img {
+    max-width: 100%;
+  }
+  .crystals .container-fluid .space-around div {
+    display: flex;
+    max-width: 45% !important;
+  }
+  .crystals .container-fluid .space-around div img {
+    max-height: 300px;
+    max-width: 196px;
+  }
+  #sidebar2 {
+    top: 55%;
+    padding-bottom: 0;
+  }
+  #prevButton2 {
+    left: 12vh !important;
+  }
+  #nextButton2 {
+    right: 12vh !important;
+  }
+  #Login {
+    font-size: 20px !important;
+  }
+  .login .space-around {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  .nav1 .column {
+    padding: 0 !important;
+    width: 33% !important;
+    min-width: 0 !important;
+  }
+  #absGlow {
+    display: none;
+  }
+  #shellB,
+  #relative {
+    height: 0;
+    display: none;
+  }
+  p,
+  strong,
+  em,
+  a {
+    font-size: 10px !important;
+  }
+  h1 {
+    font-size: 25px !important;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  #reduce {
+    font-size: 8.5px !important;
+  }
+  .mission .container-fluid img {
+    max-width: 100%;
+  }
+  .crystals .container-fluid .space-around div {
+    display: flex;
+    max-width: 100% !important;
+  }
+  .crystals .container-fluid .space-around div img {
+    max-height: 0px;
+    max-width: 0px;
+  }
+  .ContainerCarousel2 {
+    padding: 0 !important;
+    max-width: 80% !important;
+    width: 80% !important;
+    max-height: 45vh !important;
+    min-height: 45vh !important;
+  }
+  section {
+    width: 100% !important;
+    height: 55vh !important;
+  }
+  .C2,
+  .C3 {
+    min-height: 50vh !important;
+  }
+  .C4 {
+    min-height: 60vh !important;
+  }
+  #sidebar2 {
+    top: 55%;
+    padding-bottom: 0;
+  }
+  #prevButton2 {
+    top: 93vh !important;
+    left: 8vh !important;
+  }
+  #nextButton2 {
+    top: 93vh !important;
+    right: 8vh !important;
+  }
+  #Login {
+    font-size: 16px !important;
+  }
+  nav .container-fluid #cartlogo {
+    max-height: 25px;
+    height: 25px;
+    width: 25px;
+    padding-left: 5px;
+  }
+  nav .container-fluid #cart {
+    height: 30px;
+    width: 30px;
+  }
+  .login .container-fluid form,
+  .login .container-fluid form div,
+  #toggle,
+  #toggle2,
+  .login .container-fluid div {
+    width: 375px !important;
+    max-width: 375px !important;
+  }
+  .login .container-fluid #signup h2 {
+    margin-left: 5vh;
+    margin-bottom: 5vh;
+  }
+  input {
+    max-width: 250px !important;
+    width: 250px !important;
+  }
+  body::before {
+    max-width: 100vh !important;
+  }
+  .login .container-fluid .space-around {
+    gap: 0vh !important;
+    width: auto;
+  }
+}
 @media (max-width: 1023px) {
   .nav2 {
     display: none !important;
   }
   .nav3 {
     display: block !important;
+  }
+  .crystals .container-fluid {
+    width: 80%;
+  }
+  #sidebar,
+  #sidebar2 {
+    display: none !important;
   }
 }
 
