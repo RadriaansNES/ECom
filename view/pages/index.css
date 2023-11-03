@@ -274,6 +274,11 @@ body::before {
   min-height: auto;
   margin-bottom: 10vh;
 }
+.crystals .container-fluid div .d2,
+.footer .container-fluid div .d2,
+.registration .container-fluid div .d2 {
+  margin-bottom: 0;
+}
 .crystals .container-fluid div h3,
 .footer .container-fluid div h3,
 .registration .container-fluid div h3 {
@@ -590,7 +595,6 @@ body::before {
     max-width: 45% !important;
   }
   .crystals .container-fluid .space-around div img {
-    margin-top: 50px;
     max-height: 454px;
     max-width: 265px;
   }

@@ -313,6 +313,10 @@ body::before {
         min-height: auto;
         margin-bottom: 10vh;
 
+        .d2 {
+            margin-bottom: 0;
+        }
+
         h3 {
             margin-bottom: 3vh;
         }
@@ -640,7 +644,6 @@ body::before {
                 max-width: 45% !important;
 
                 img {
-                    margin-top: 50px;
                     max-height: 454px;
                     max-width: 265px;
                 }
