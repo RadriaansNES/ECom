@@ -184,7 +184,25 @@ body::before {
 }
 .main .container-fluid .C2 #relative {
   position: relative;
-  top: -10vh;
+  top: -8vh;
+  pointer-events: none;
+}
+.main .container-fluid .C2 #glowTrigger {
+  position: relative;
+  top: 2vh;
+}
+.main .container-fluid .C2 #absGlow {
+  position: absolute;
+  top: -3.5vh;
+  left: -4.5vh;
+  height: 220px;
+  width: 240px;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 100px;
+  z-index: -1;
+}
+.main .container-fluid .C2 #glowTrigger:hover > #absGlow, .main .container-fluid .C2 #relative > #absGlow {
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
 }
 .main .container-fluid .C3 {
   justify-content: space-around;
@@ -306,7 +324,8 @@ body::before {
   padding-right: 0 !important;
 }
 
-#sidebar, #sidebar2 {
+#sidebar,
+#sidebar2 {
   width: 20vh;
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
@@ -318,26 +337,32 @@ body::before {
   height: auto;
   border: 1px solid black;
 }
-#sidebar ul, #sidebar2 ul {
+#sidebar ul,
+#sidebar2 ul {
   list-style: none;
   padding: 0;
 }
-#sidebar ul li, #sidebar2 ul li {
+#sidebar ul li,
+#sidebar2 ul li {
   padding: 10px;
 }
-#sidebar ul a, #sidebar2 ul a {
+#sidebar ul a,
+#sidebar2 ul a {
   text-decoration: none;
   color: black;
 }
-#sidebar ul a:hover, #sidebar2 ul a:hover {
+#sidebar ul a:hover,
+#sidebar2 ul a:hover {
   background-color: #555;
 }
-#sidebar.collapsed, #sidebar2.collapsed {
+#sidebar.collapsed,
+#sidebar2.collapsed {
   width: 50px;
   overflow: hidden;
   left: -50px;
 }
-#sidebar.collapsed ul, #sidebar2.collapsed ul {
+#sidebar.collapsed ul,
+#sidebar2.collapsed ul {
   display: none;
 }
 
@@ -358,7 +383,8 @@ body::before {
   margin-left: 50px;
 }
 
-.S1 p, .S1 button {
+.S1 p,
+.S1 button {
   margin-top: 2vh;
 }
 .S1 button {

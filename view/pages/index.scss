@@ -30,7 +30,7 @@ nav .container-fluid {
     height: 15vh;
     display: flex;
     flex-direction: column;
-    margin:0;
+    margin: 0;
     padding: 0;
 
     .nav1 {
@@ -106,6 +106,7 @@ footer {
 
 body {
     font-family: 'Cinzel Decorative', serif;
+
     p {
         font-family: 'Raleway', sans-serif;
     }
@@ -212,8 +213,29 @@ body::before {
 
         #relative {
             position: relative;
-            top: -10vh;
+            top: -8vh;
+            pointer-events: none;
         }
+        
+        #glowTrigger {
+            position: relative;
+            top: 2vh;
+        }
+
+        #absGlow {
+            position: absolute;
+            top: -3.5vh;
+            left: -4.5vh;
+            height: 220px;
+            width: 240px;
+            transition: box-shadow 0.3s ease-in-out;
+            border-radius: 100px;
+            z-index: -1;
+          }
+          
+          #glowTrigger:hover > #absGlow, #relative > #absGlow {
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
+          }
     }
 
     .C3 {
@@ -344,7 +366,8 @@ body::before {
     padding-right: 0 !important;
 }
 
-#sidebar, #sidebar2 {
+#sidebar,
+#sidebar2 {
     width: 20vh;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
@@ -404,11 +427,13 @@ body::before {
 }
 
 .S1 {
-    p, button{
-    margin-top: 2vh;
+
+    p,
+    button {
+        margin-top: 2vh;
     }
 
-    button  {
+    button {
         background-color: lightpink;
         border-radius: 10px;
         padding: 1.5vh 3vh;
@@ -483,12 +508,12 @@ section {
     }
 
     #prevButton2 {
-        top:112vh;
+        top: 112vh;
         left: 25vh;
     }
 
     #nextButton2 {
-        top:112vh;
+        top: 112vh;
         right: 25vh;
     }
 
@@ -512,12 +537,12 @@ section {
     }
 
     #prevButton3 {
-        top:177vh;
+        top: 177vh;
         left: 25vh;
     }
 
     #nextButton3 {
-        top:177vh;
+        top: 177vh;
         right: 25vh;
     }
 
@@ -541,12 +566,12 @@ section {
     }
 
     #prevButton4 {
-        top:242vh;
+        top: 242vh;
         left: 25vh;
     }
 
     #nextButton4 {
-        top:242vh;
+        top: 242vh;
         right: 25vh;
     }
 
@@ -570,12 +595,12 @@ section {
     }
 
     #prevButton5 {
-        top:307vh;
+        top: 307vh;
         left: 25vh;
     }
 
     #nextButton5 {
-        top:307vh;
+        top: 307vh;
         right: 25vh;
     }
 
@@ -599,12 +624,12 @@ section {
     }
 
     #prevButton6 {
-        top:372vh;
+        top: 372vh;
         left: 25vh;
     }
 
     #nextButton6 {
-        top:372vh;
+        top: 372vh;
         right: 25vh;
     }
 }
