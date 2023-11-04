@@ -33,6 +33,6 @@ Backend: Express.js with Node.js
 Database: PostgreSQL
 User Authentication: Passport.js
 
-## How to run locally:
+## How To Run Locally:
 
 Simply clone the repository and run npm start from the root directory. This will require a connection_string, stripe_secret_key and session_secret to boot via an .env file. 
