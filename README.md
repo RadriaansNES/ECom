@@ -35,4 +35,4 @@ User Authentication: Passport.js
 
 ## How To Run Locally:
 
-Simply clone the repository and run npm start from the root directory. This will require a connection_string, stripe_secret_key and session_secret to boot via an .env file. 
+Simply clone the repository to your local machine and then run 'npm install' from the root directory. Next, run 'npm start' from the root directory. This will require a connection_string, stripe_secret_key and session_secret to boot via an .env file. 
