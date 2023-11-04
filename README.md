@@ -28,7 +28,7 @@ Optimized page load times and performance provide an exceptional user experience
 
 ## Technologies Used:
 
-Frontend: Static HTML, CSS, JavaScript
+Frontend: Static HTML, SCSS, JavaScript
 Backend: Express.js with Node.js
 Database: PostgreSQL
 User Authentication: Passport.js
