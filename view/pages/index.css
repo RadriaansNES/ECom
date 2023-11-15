@@ -76,6 +76,7 @@ nav .container-fluid .nav3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 nav .container-fluid .nav2.fixed, nav .container-fluid .nav3.fixed {
   background-color: rgb(255, 182, 193);

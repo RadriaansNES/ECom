@@ -83,6 +83,7 @@ nav .container-fluid {
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 1000;
     }
 
     .nav2.fixed, .nav3.fixed {
