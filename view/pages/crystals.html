@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mermagikal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid navigation">
+        <div class="column" style="width: 100%;">
+          <div class="nav1">
+            <div class="column">
+              <a class="navbar-brand" href="/account" id="Login">Login</a>
+            </div>
+            <a class="navbar-brand" href="index.html">
+              <img src="src/mermaid logo.png" alt="Logo" id="logo" class="d-inline-block align-text-center">
+            </a>
+            <div class="column">
+              <div>
+                <a class="navbar-brand" href="https://www.instagram.com/mermagickal/">
+                  <img src="src/bam.png" alt="Instagram" id="cartlogo">
+                </a>
+                <a class="navbar-brand" href="https://www.facebook.com/Mermagickal">
+                  <img src="src/facebookraw.png" alt="Facebook" id="cartlogo">
+                </a>
+                <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <img src="src/2111601.png" alt="Cart" id="cart">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav2">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="crystals.html">Crystal Creations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="services.html">Healing Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2vh">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="crystals.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Crystal Creations
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="crystals.html#">Channels</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Bracelets</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Necklaces</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#masks">Eye Masks</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#crystals">Crystals</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Healing Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
+                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a></li>
+                    <li><a class="dropdown-item" href="services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
+                    <li><a class="dropdown-item" href="services.html#Medium30">Med Readings</a></li>
+                    <li><a class="dropdown-item" href="services.html#OracleEmail">Oracle Card Reading</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+  <button id="sidebar-toggle" style="display: none;">
+    P<br />
+    R<br />
+    O<br />
+    D<br />
+    U<br />
+    C<br />
+    T<br />
+    S<br />
+  </button>
+  <div id="sidebar" style="display: block;">
+    <ul>
+      <li><a href="#">Channels</a></li>
+      <li><a href="#">Bracelets</a></li>
+      <li><a href="#">Necklaces</a></li>
+      <li><a href="#masks">Eye Masks</a></li>
+      <li><a href="#crystals">Crystals</a></li>
+    </ul>
+  </div>
+  <main class="crystals">
+    <div class="container-fluid">
+      <h2>Crystal Creations</h2>
+      <p class="title">What makes Mermagickal unique? Crystal creations that are infused with the power of
+        intention, Reiki energy, and Spirit, and cleansed through Mother Earth’s elements! Let
+        me explain…</p>
+      <div class="d1 column">
+        <h3>Setting and Manifesting Intentions
+        </h3>
+        <p>Mermagickal crystal creations focus on the power of intentions. What are intentions?
+          Intentions are our soul’s deepest desires, or the dreams that we can make come true in
+          our lives.</p>
+        <p>
+          As powerful, magickal, Divine beings, we can choose to set and release our intentions
+          into the universe. In doing so, they act as seeds of change in manifesting our desired
+          reality (with inspired action and in Divine timing, of course). Think of it in terms of
+          energy, as energy flows where intention goes. For example, if you’re looking to attract
+          self-love, setting this intention signals to the universe that you are ready to receive it.</p>
+        <p>
+          Each of Mermagickal’s crystal creations focuses on setting a specific intention. I do this
+          by using a combination of intuitively chosen crystals, all of which have a specific
+          connection to amplify the intention. I then program the intention into the crystals so that
+          the crystals’ energy is focused. This ensures that the crystals are much more powerful
+          and effective in cultivating the intention when they reach you.</p>
+        <p>
+          Mermagickal writes out each of the crystals’ connections to the specific intention. This
+          description is provided to you keep you focused on your intention. Why? Because the
+          universe loves and thrives on detailed, specific requests... and I want to optimize its
+          manifestation power for you</p>
+      </div>
+      <h3>Charging with Reiki Energy
+      </h3>
+      <div class="space-around" style="margin-bottom: 10vh; margin-top: 5vh;">
+        <div class="d2 column">
+          <p>Reiki is a universal life force energy with limitless healing properties. It targets where a
+            human’s life force energy needs it most, removing stagnant energy while raising life
+            force energy. The result is healing on all levels; mind, body, and spirit.</p>
+          <p>
+            Mermagickal crystal creations are charged and permanently infused with Reiki energy.
+            This works beautifully as crystals absorb, store, and generate energy and it is important
+            to keep them charged. This is because they are no longer naturally replenished from
+            Mother Earth’s energy once they are harvested from her</p>
+          <p>
+            Reiki is also infused to balance the owner’s energy with the Reiki energy to create a
+            deeper sense of peace and serenity while using the crystal creation.</p>
+        </div>
+        <div class='d2' style="display: flex; justify-content: center;">
+          <img src="src/cats.jpg" />
+        </div>
+      </div>
+      <div class="d3 column">
+        <h3>Healing from the Spirit Realm
+        </h3>
+        <p>To add extra healing during the Reiki charging, Mermagickal intuitively invokes a unique
+          Spirit Guide to amplify the intention of the creation.</p>
+        <p>
+          Spirit Guides can include Angels and Archangels, Ascended Masters, Cosmic and
+          Elemental Guides, Gods and Goddesses, Spirit Animals, and many more magickal
+          Guides from the Spirit realm.</p>
+        <p>
+          A description is provided explaining which Spirit Guide was chosen and why, allowing
+          you to develop and strengthen your spiritual relationship with them. </p>
+      </div>
+      <div class="d4 column">
+        <h3>Cleansing through Mother Earth’s Elements
+        </h3>
+        <p>It is beneficial to cleanse and charge your crystals regularly to restore them to their
+          natural state, releasing any energy that they’ve absorbed. </p>
+        <p>
+          Before arriving to you, Mermagickal creations are cleansed with the smoke from Mother
+          Earth’s palo santo, as well as the sound from Eastern singing bowls. </p>
+        <p>
+          I then provide you with instructions detailing the various methods to cleanse and charge
+          your crystals, so that the crystals’ intentions and energy can remain optimized in your
+          healing space.</p>
+        <p>
+          Mermagickal writes out each of the crystals’ connections to the specific intention. This
+          description is provided to you keep you focused on your intention. Why? Because the
+          universe loves and thrives on detailed, specific requests... and I want to optimize its
+          manifestation power for you</p>
+      </div>
+      <div class="d5 column" id="masks">
+        <h3>Crystal Eye Masks
+        </h3>
+        <p> Introducing Mermagickal’s handmade, scented crystal eye masks!
+        </p>
+        <p>
+          These masks are Reiki energy infused and fridge or freezer ready, making them the
+          perfect soothing, self-care gift for yourself or the Earthly angels in your life. </p>
+        <div class="space-around" id='mask'>
+          <div class='column' style="margin-bottom: 0;">
+            <p class="margintop">
+              Four intentions to choose from: <br /><br />
+              - Attract and enhance love<br /><br />
+              - Emotion and energy cleanse<br /><br />
+              - Intuition and manifest boost<br /><br />
+              - Relax and rid anxiety</p>
+            <p class="margintop">
+              Each created uniquely with the love of: <br /><br />
+              - A trio of healing crystals <br /><br />
+              - doTERRA essential oil <br /><br />
+              - A Goddess or Elemental Guide (Mermaids or Unicorns)</p>
+          </div>
+          <div class="column" style="margin-bottom: 0;">
+            <img src="src/crystalmask.jpg"/>
+          </div>
+        </div>
+        <p class="margintop" style="font-size: larger;"><strong><em>Investment = $33.33</em></strong></p>
+      </div>
+      <div class="d6 column" style="margin-bottom: 10vh;" id="crystals">
+        <h3>Crystals
+        </h3>
+        <p> Mermagickal knows the importance of attracting the desired energy into one’s life, as
+          well as that of releasing energy that no longer serves. These high quality crystal
+          treasures won’t be re-stocked as they are from Rachel’s personal collection, but rest
+          assured that they are happy to splash their way into their new home!
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="column">
+        <a href="footer.html#F1">Disclaimer</a>
+        <a href="footer.html#F2">Shipping</a>
+        <a href="footer.html#F3">Returns</a>
+      </div>
+      <div>
+        <a href="footer.html#F4">Contact</a>
+      </div>
+    </footer>
+
+    <!-- Popup Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+          </div>
+          <div class="modal-body">
+            <div id="emptyCartMessage" class="alert alert-info text-center">
+              Your shopping cart is currently empty.
+            </div>
+
+            <div id="cartTableContainer" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="/create-checkout-session" method="POST">
+              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const nav2 = document.querySelector('.nav2');
+    const nav1 = document.querySelector('.nav1');
+    const nav3 = document.querySelector('.nav3');
+    const nav1Height = nav1.clientHeight;
+
+    // Function to toggle the 'fixed' class on .nav2
+    function toggleNav2Fixed() {
+      if (window.scrollY > nav1Height) {
+        nav2.classList.add('fixed');
+        nav3.classList.add('fixed');
+      } else {
+        nav2.classList.remove('fixed');
+        nav3.classList.remove('fixed');
+      }
+    }
+
+    // Initial call to set the initial state
+    toggleNav2Fixed();
+
+    // Add scroll event listener to update when scrolling
+    window.addEventListener('scroll', toggleNav2Fixed);
+  });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="utils/cart.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="utils/authcheck.js"></script>
+</body>
+
+</html>

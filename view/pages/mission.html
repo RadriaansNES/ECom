@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mermagikal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid navigation">
+        <div class="column" style="width: 100%;">
+          <div class="nav1">
+            <div class="column">
+              <a class="navbar-brand" href="/account" id="Login">Login</a>
+            </div>
+            <a class="navbar-brand" href="index.html">
+              <img src="src/mermaid logo.png" alt="Logo" id="logo" class="d-inline-block align-text-center">
+            </a>
+            <div class="column">
+              <div>
+                <a class="navbar-brand" href="https://www.instagram.com/mermagickal/">
+                  <img src="src/bam.png" alt="Instagram" id="cartlogo">
+                </a>
+                <a class="navbar-brand" href="https://www.facebook.com/Mermagickal">
+                  <img src="src/facebookraw.png" alt="Facebook" id="cartlogo">
+                </a>
+                <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <img src="src/2111601.png" alt="Cart" id="cart">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav2">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="crystals.html">Crystal Creations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="services.html">Healing Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2vh">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="crystals.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Crystal Creations
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="crystals.html#">Channels</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Bracelets</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Necklaces</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#masks">Eye Masks</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#crystals">Crystals</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Healing Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
+                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a></li>
+                    <li><a class="dropdown-item" href="services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
+                    <li><a class="dropdown-item" href="services.html#Medium30">Med Readings</a></li>
+                    <li><a class="dropdown-item" href="services.html#OracleEmail">Oracle Card Reading</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+  <main class="mission">
+    <div class="container-fluid">
+      <div class="space-around">
+        <div class="column">
+          <img src="/src/thumbnail_IMG_3642.jpg">
+          <img src="/src/Rac-diamonds.jpg">
+        </div>
+        <div class="column">
+          <h2>Mermission</h2>
+              <p>Hi, I’m Rachel, owner of Mermagickal. When I ponder how best to introduce myself to
+                you, the words that immediately come to mind are: Intuitive channel. Crystal and energy
+                healer. Medium. Mystic. Oracle card reader. Spiritual teacher. But they cannot possibly
+                capture the entire essence of who I am, a multifaceted being who deserves more than
+                labels meant to fit me into a box. So instead, I’ll share a glimpse into the waters that led
+                me here today and shaped who I am but, unlike labels, do not define me. </p>
+              <p>
+                I have been diving into the realm of mermaids since childhood, which is not surprising
+                considering how many lifetimes I have spent as one. I have navigated through the
+                stormy seas of chronic pain, anxiety, and depression. I have been engulfed by the tidal
+                waves of grief. And for as long as I can remember, I felt different. Different because I felt
+                so deeply. Even if I blended in, no camouflage could prevent me from absorbing the
+                emotions and energy of those surrounding me. Or prevent me from feeling less of my
+                own.</p>
+              <p>
+                I was seeking a way to flourish in a world that said I was too sensitive. Too emotional.
+                Too much. Meanwhile, I had the most magickal team of Spirit Guides secretly steering
+                me to do the opposite. To flow and remain soft while life cracks my heart wide open. To
+                tend to the ocean of my emotions and energy while fully embracing the human
+                experience. To embody my authenticity with the force of a waterfall. My Mum believes
+                that these Spirit Guides are glistening here in this picture with me. I too feel that they
+                were, shining their light as a message for me to do the same.</p>
+              <p>
+                I first answered my Guides’ call, and the call of my soul, when I dove into the world of
+                crystal healing. The magickal healing of these stones awakened me to the knowing that
+                I have the ability to foster the joy and health I crave. I became focused on using gems to
+                improve my health, which quickly led me to discover and incorporate Reiki energy
+                healing into my practice. It was then that my health started to alchemize like a pearl in
+                an oyster.</p>
+              <p>
+                At the same time, the waters of my life were becoming salty, murky, and dark with the
+                loss of my father. Through the ebbs and flows of grief, I swam to my new healing
+                practice to keep me afloat. Somewhere along the shore, I found mediumship. Or
+                mediumship found me. I believe that we always intended to meet, in order to help heal
+                my grieving heart. Mediumship not only reunited me with my passed loved ones in
+                Spirit, but nudged me to explore connections with many other magickal,
+                multidimensional Spirit Guides.</p>
+              <p>
+                In diving deep into the realms of Spirit and my soul, I realized that I was destined to
+                develop my own channeling and mediumship abilities. After a few years of allowing my
+                soul to guide me as I embarked on this journey, I blossomed into my truest self. I finally
+                accepted my truth and decided to set aside the judgment and opinions of society. I
+                came to unconditionally love myself, an intuitive empath who feels everything so deeply.
+                A blessing and a curse, society says. But how can one not view this solely as a
+                blessing?</p>
+              <p>
+                For when we open the portal to our hearts, we open the gateway to our soul. We invite
+                in the magick of our human experience, accompanied by the knowing that we are a soul
+                in a physical body. We embrace health and happiness in every area of our lives. We
+                step into our power and we cultivate our dreams. We own the beauty of loving fiercely
+                and we radiate this love back into the collective. We begin to feel truly alive as we re-align into
+                harmony with our mind, body, heart, and soul.</p>
+              <p>
+                This is my mermission. Let’s face it, life on Earth is short. While we’re here, we all
+                deserve to feel the utmost unconditional love and connection to ourselves, those on
+                Earth, and those in Spirit. We deserve to heal as we bloom outwards from the infinite
+                potential within us. We deserve to have the radiance of our unique soul shine. We
+                deserve to sing our own unique siren song. And like a lighthouse, I’m here to help lead
+                you into the light.
+              </p>
+        </div>
+      </div>
+    </div>
+
+    <footer style="margin-top: 5vh;">
+      <div class="column">
+        <a href="footer.html#F1">Disclaimer</a>
+        <a href="footer.html#F2">Shipping</a>
+        <a href="footer.html#F3">Returns</a>
+      </div>
+      <div>
+        <a href="footer.html#F4">Contact</a>
+      </div>
+    </footer>
+
+    <!-- Popup Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+          </div>
+          <div class="modal-body">
+            <div id="emptyCartMessage" class="alert alert-info text-center">
+              Your shopping cart is currently empty.
+            </div>
+
+            <div id="cartTableContainer" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="/create-checkout-session" method="POST">
+              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const nav2 = document.querySelector('.nav2');
+    const nav1 = document.querySelector('.nav1');
+    const nav3 = document.querySelector('.nav3');
+    const nav1Height = nav1.clientHeight;
+
+    // Function to toggle the 'fixed' class on .nav2
+    function toggleNav2Fixed() {
+      if (window.scrollY > nav1Height) {
+        nav2.classList.add('fixed');
+        nav3.classList.add('fixed');
+      } else {
+        nav2.classList.remove('fixed');
+        nav3.classList.remove('fixed');
+      }
+    }
+
+    // Initial call to set the initial state
+    toggleNav2Fixed();
+
+    // Add scroll event listener to update when scrolling
+    window.addEventListener('scroll', toggleNav2Fixed);
+  });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="utils/cart.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="utils/authcheck.js"></script>
+</body>
+
+</html>

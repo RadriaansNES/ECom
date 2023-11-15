@@ -28,16 +28,14 @@ passport.use(
         }
 
         const user = userResult.rows[0];
-        const salt = user.salt; // Get the stored salt
+        const salt = user.salt; 
 
-        // Hash the entered password with the stored salt
         crypto.pbkdf2(password, salt, 310000, 32, 'sha256', (err, hashedPassword) => {
             if (err) {
                 console.error('Error hashing password:', err);
                 return done(err);
             }
 
-            // Compare the hashed passwords
             if (user.hashed_password.toString('hex') !== hashedPassword.toString('hex')) {
                 console.log('Incorrect password for username:', username);
                 return done(null, false, { message: 'Incorrect password.' });

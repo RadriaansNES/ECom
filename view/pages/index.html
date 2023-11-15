@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mermagikal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid navigation">
+        <div class="column" style="width: 100%;">
+          <div class="nav1">
+            <div class="column">
+              <a class="navbar-brand" href="/account" id="Login">Login</a>
+            </div>
+            <a class="navbar-brand" href="index.html">
+              <img src="src/mermaid logo.png" alt="Logo" id="logo" class="d-inline-block align-text-center">
+            </a>
+            <div class="column">
+              <div>
+                <a class="navbar-brand" href="https://www.instagram.com/mermagickal/">
+                  <img src="src/bam.png" alt="Instagram" id="cartlogo">
+                </a>
+                <a class="navbar-brand" href="https://www.facebook.com/Mermagickal">
+                  <img src="src/facebookraw.png" alt="Facebook" id="cartlogo">
+                </a>
+                <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <img src="src/2111601.png" alt="Cart" id="cart">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav2">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="crystals.html">Crystal Creations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="services.html">Healing Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2vh">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="crystals.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Crystal Creations
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="crystals.html#">Channels</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Bracelets</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Necklaces</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#masks">Eye Masks</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#crystals">Crystals</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Healing Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
+                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a>
+                    </li>
+                    <li><a class="dropdown-item" href="services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
+                    <li><a class="dropdown-item" href="services.html#Medium30">Med Readings</a></li>
+                    <li><a class="dropdown-item" href="services.html#OracleEmail">Oracle Card Reading</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+  <main class="main">
+    <div class="container-fluid">
+      <div class='C0' id="stars"></div>
+      <div class="C1">
+        <div>
+          <h1>Leading You Into The Light As You Wade Through The Waters Of Your Soul</h1>
+        </div>
+      </div>
+      <div class="C2 space-around">
+        <div>
+          <img src="src/HomeRachel.jpg" style="width: 100%; max-height: auto;" />
+        </div>
+        <div class="column">
+          <h2>Meet Rachel</h2>
+          <p>Meet Rachel, an intuitive channel, healer, medium, mystic, and teacher. Discover her soul mission’s behind
+            Mermagickal.</p>
+          <a href="mission.html" id="glowTrigger">
+            <img src="src/ShellG.png" alt="Logo" id="shellB" class="d-inline-block align-text-center">
+            <div id="absGlow"></div>
+          </a>
+          <a href="mission.html" id="relative">Let's Dive Deep</a>
+        </div>
+      </div>
+      <div class="C3 space-around">
+        <div class="column" id="lineHeight">
+          <h2>To My Dear</h2>
+          <p>Dreamers. Doers.<br />
+            Free Spirits. Wanderers.<br />
+            Lovers. Romantics.<br />
+            Healers. Empaths.<br />
+            Intuitives. Channels.<br />
+            Mediums. Witches.<br />
+            Starseeds. Lightworkers.<br />
+            Artists. Alchemists.<br />
+            Revolutionists. Visionaries.
+          </p>
+        </div>
+        <div class="column" id="calcHeight">
+          <h2>I Dare You</h2>
+          <p>Dare to drum to your heartbeat.<br />
+            Dare to be different.<br />
+            Dare to dance.<br />
+            Dare to dream.<br />
+            Pave your own path.<br />
+            Because the world needs you.<br />
+            The collective craves your frequency.<br />
+            Your unique energetic signature.<br />
+            Your authenticity.<br />
+            For we are all one.<br />
+            But there is no soul like yours.<br />
+            You matter.<br />
+            You are magick.<br />
+            You are the change.</p>
+        </div>
+      </div>
+      <div class="C4 space-around">
+        <div class="column bigger">
+          <p>
+            If you felt called to swim here today, it is no
+            coincidence.
+          </p>
+          <p>
+            I hope you drift away with all that your soul
+            craves.
+          </p>
+          <p>
+            Until then, here is a message from my heart to
+            yours…
+          </p>
+          <p>
+            As always, take what resonates and leave the
+            rest.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <footer>
+      <div class="column">
+        <a href="footer.html#F1">Disclaimer</a>
+        <a href="footer.html#F2">Shipping</a>
+        <a href="footer.html#F3">Returns</a>
+      </div>
+      <div>
+        <a href="footer.html#F4">Contact</a>
+      </div>
+    </footer>
+
+    <!-- Popup Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+          </div>
+          <div class="modal-body">
+            <div id="emptyCartMessage" class="alert alert-info text-center">
+              Your shopping cart is currently empty.
+            </div>
+
+            <div id="cartTableContainer" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="/create-checkout-session" method="POST">
+              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script>
+    // Get references to the div elements
+    const calcHeightDiv = document.getElementById('calcHeight');
+    const lineHeightDiv = document.getElementById('lineHeight');
+
+    // Calculate the height of the #calcHeight div
+    const calcHeight = calcHeightDiv.clientHeight / 10;
+
+    // Set the line height of #lineHeight to match #calcHeight
+    lineHeightDiv.style.lineHeight = `${calcHeight}px`;
+  </script>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+      const nav2 = document.querySelector('.nav2');
+      const nav1 = document.querySelector('.nav1');
+      const nav3 = document.querySelector('.nav3');
+      const nav1Height = nav1.clientHeight;
+
+      // Function to toggle the 'fixed' class on .nav2
+      function toggleNav2Fixed() {
+        if (window.scrollY > nav1Height) {
+          nav2.classList.add('fixed');
+          nav3.classList.add('fixed');
+        } else {
+          nav2.classList.remove('fixed');
+          nav3.classList.remove('fixed');
+        }
+      }
+
+      // Initial call to set the initial state
+      toggleNav2Fixed();
+
+      // Add scroll event listener to update when scrolling
+      window.addEventListener('scroll', toggleNav2Fixed);
+    });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="../../utils/cart.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="utils/authcheck.js"></script>
+  
+</body>
+
+</html>

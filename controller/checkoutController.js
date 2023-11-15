@@ -2,14 +2,14 @@ const pricingController = require('./pricingController');
 
 async function createCheckoutSession() {
   try {
-    const priceId = await pricingController.createPrice(); // Get the Price ID
+    const priceId = await pricingController.createPrice(); // Get Price ID
     const session = await stripe.checkout.sessions.create({
       success_url: 'https://example.com/success',
       cancel_url: 'https://example.com/cancel',
       payment_method_types: ['card'],
       line_items: [
         {
-          price: priceId, // Use the Price ID obtained from pricingController
+          price: priceId, 
         },
       ],
       mode: 'payment',

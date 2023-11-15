@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mermagikal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid navigation">
+        <div class="column" style="width: 100%;">
+          <div class="nav1">
+            <div class="column">
+              <a class="navbar-brand" href="/account" id="Login">Login</a>
+            </div>
+            <a class="navbar-brand" href="index.html">
+              <img src="src/mermaid logo.png" alt="Logo" id="logo" class="d-inline-block align-text-center">
+            </a>
+            <div class="column">
+              <div>
+                <a class="navbar-brand" href="https://www.instagram.com/mermagickal/">
+                  <img src="src/bam.png" alt="Instagram" id="cartlogo">
+                </a>
+                <a class="navbar-brand" href="https://www.facebook.com/Mermagickal">
+                  <img src="src/facebookraw.png" alt="Facebook" id="cartlogo">
+                </a>
+                <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <img src="src/2111601.png" alt="Cart" id="cart">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav2">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="crystals.html">Crystal Creations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="services.html">Healing Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2vh">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="crystals.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Crystal Creations
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="crystals.html#">Channels</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Bracelets</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Necklaces</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#masks">Eye Masks</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#crystals">Crystals</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Healing Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
+                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a></li>
+                    <li><a class="dropdown-item" href="services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
+                    <li><a class="dropdown-item" href="services.html#Medium30">Med Readings</a></li>
+                    <li><a class="dropdown-item" href="services.html#OracleEmail">Oracle Card Reading</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+  <main class="crystals">
+    <div class="container-fluid">
+      <h2 style="margin-bottom: 5vh;">Frequently Asked Questions</h2>
+      <div>
+        <h3>How does Reiki energy heal?</h3>
+        <p>The word Reiki is combined from the Japanese “rei” meaning “higher power” and “ki” 
+          meaning “life force energy”. Reiki has personally improved Rachel’s mood, emotional 
+          well-being, sleep, and quality of life and decreased her anxiety, depression, pain, and 
+          stress. <br/><br/>
+          In fact, Reiki has been healing humans, animals, and plants since ancient times. Our 
+          ancestors discovered that health and positive life circumstances result from an innate 
+          flow of balanced energy within one’s physical and energetic bodies (the energy layers 
+          around the body contained in the aura). Essentially, when stagnant energy is removed 
+          and life force energy is raised, the result is healing of the mind, body, and spirit. 
+          Reiki energy is activated the instant the practitioner sets the intention for it to begin 
+          flowing. But they don’t cause the healing themselves. They become the channel for this 
+          magickal life force energy, simply guiding the energy to flow through an individual for 
+          their highest good. <br/><br/>
+          Once flowing, a practitioner such as Rachel uses their hands to guide energy through 
+          the physical body and aura. This causes deep relaxation, giving the body a break and 
+          enhancing and accelerating one’s own natural healing process because they are no 
+          longer stressed. <br/><br/>
+          Reiki energy can be infused into inanimate objects and is perfect for charging crystals 
+          as they absorb, store, and generate energy. Rachel especially loves infusing it into 
+          jewellery because it balances the wearer’s energy with the Reiki energy to create a 
+          sense of peace and serenity while wearing. <br/><br/>
+          Reiki is magickal. It transcends time and space, which is why it can be sent remotely. It 
+          flows to where it is needed and heals, never causing any harm or negative side effects. 
+          It does what it wants. It functions similar to Spirit that way. We can ask Spirit to help us 
+          with an intention or to deliver a message, but, like Reiki, we cannot force the outcome of 
+          how this happens. <br/><br/>
+          I keep this in mind when I invoke a Spirit Guide into the Reiki infusion to help manifest 
+          the set intention. Then I surrender it to the universe. It’s that simple. When we have faith 
+          and trust that everything will unfold the way it is meant to, we bear witness to beautiful, 
+          healing magick. </p>
+      </div>
+      <div>
+        <h3>How do crystals heal?</h3>
+        <p>If you’re wondering how crystal healing actually, scientifically works, let me explain. 
+          Believe it or not, we’re already living in the Crystal Age. Crystals have played a huge 
+          part in advancing the technological world we live in because they focus, store, transmit, 
+          and transform energy. <br/><br/>
+          In the words of Albert Einstein, “Everything in life is a vibration”. This means that what 
+          we perceive as our physical, material world is composed of particles vibrating at 
+          different frequencies. These frequencies, aka vibrations, influence our perspectives, 
+          thoughts, and emotions since we’re always interacting with our environment as energy. 
+          Human beings have an atomic structure and frequency that is unstable, continuously 
+          healing and transforming. Our energy tunes into our world through entrainment, a 
+          process in which we synchronize with an external influence that affects how we feel, 
+          act, and move. An example is when your mood is lifted by a song, or darkened because 
+          of someone else’s crummy mood. <br/><br/>
+          Through this process, crystals use their stable, constant frequency to realign and 
+          recalibrate our unstable energy. Their powerful vibrations from Mother Earth provide a 
+          physical, tangible way for us to feel, connect with, and benefit from the crystals’ 
+          vibrations. They can raise our energy where there is a lower frequency, balance our 
+          energy if unbalanced, and help keep us in a higher vibrational state. <br/><br/>
+          Crystals can also assist with moving past stagnant physical, mental, emotional, and 
+          spiritual energy; especially when a crystal is paired with an intention, akin to a personal 
+          goal, as the crystal’s energy amplifies the intention. When we unlock the power of 
+          healing crystals, we bring our intentions to life and become the most evolved, 
+          empowered versions of ourselves. Isn’t that what we came to Earth for?</p>
+      </div>
+      <div>
+        <h3>Mermagickal works with a variety of Guides from Spirit. Are they gender specific?</h3>
+        <p>While it is true that Rachel works with various Divine Masculine and Feminine Spirit 
+          Guides, such as Gods and Goddesses, she views them as gender neutral and instead 
+          focuses on their energy. <br/><br/>
+          Essentially, Divine Masculine energy is action-based, focusing on logic, assertiveness, 
+          and confidence, whereas Divine Feminine energy is focused on being rather than doing, 
+          including being intuitive, sensual, and emotional. <br/><br/>
+          Rachel believes that these yin-yang energies can be accessed by anyone, regardless of 
+          gender, and need to be balanced in order for us to be happy and healthy. This is why 
+          Mermagickal promotes the harmony of these gender neutral energies, noting that the 
+          right balance can vary for individuals.<br/><br/>
+          In light of this, even when a Spirit Guide is given a male or female name or title, such as 
+          God or Goddess, Rachel does this to honour the Divine Masculine or Feminine energy 
+          that they exude, not their gender. <br/><br/>
+          The intent is truly to make Mermagickal an inclusive space, as that’s what each and 
+          every one of us deserves.</p>
+      </div>
+      <div>
+        <h3>What happens in a mediumship reading?</h3>
+        <p>Evidential mediumship is a form of communication between a medium and an 
+          individual’s loved one(s) in Spirit. The intent of the reading is to allow the individual to 
+          re-connect to and feel the presence of their departed loved ones. <br/><br/>
+          In a reading, information is received through Rachel’s intuitive senses and is delivered 
+          to the individual. This can be information about the loved one(s) in Spirit, such as their 
+          physical appearance or personality. It can also be information tied to the individual 
+          receiving the reading, or their family. An example could be a fond memory that was 
+          once shared. Healing messages are often brought through a reading, and signs and 
+          ways for the individual to maintain their spiritual connection to their loved ones after the 
+          reading.</p>
+      </div>
+      <div>
+        <h3>What can I expect in an oracle card reading?
+        </h3>
+        <p>Oracle cards are a divination tool that have been used since ancient times. They are a 
+          powerful way to receive guidance from Spirit and receive clarity and perspective shifts 
+          about one’s life. <br/><br/>
+          In a reading, Rachel intuitively chooses a deck of oracle cards to provide guidance to an 
+          individual. This guidance can be general or the individual can request that Rachel ask 
+          specific questions. Questions often revolve around themes like health, career, etc. 
+          Rachel pulls oracle cards from the deck, intuitively interpreting their words and imagery 
+          while channeling messages from Spirit. </p>
+      </div>
+
+    </div>
+    <footer>
+      <div class="column">
+        <a href="footer.html#F1">Disclaimer</a>
+        <a href="footer.html#F2">Shipping</a>
+        <a href="footer.html#F3">Returns</a>
+      </div>
+      <div>
+        <a href="footer.html#F4">Contact</a>
+      </div>
+    </footer>
+
+    <!-- Popup Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+          </div>
+          <div class="modal-body">
+            <div id="emptyCartMessage" class="alert alert-info text-center">
+              Your shopping cart is currently empty.
+            </div>
+
+            <div id="cartTableContainer" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Cart items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="/create-checkout-session" method="POST">
+              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="utils/cart.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="utils/authcheck.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const nav2 = document.querySelector('.nav2');
+    const nav1 = document.querySelector('.nav1');
+    const nav3 = document.querySelector('.nav3');
+    const nav1Height = nav1.clientHeight;
+
+    // Function to toggle the 'fixed' class on .nav2
+    function toggleNav2Fixed() {
+      if (window.scrollY > nav1Height) {
+        nav2.classList.add('fixed');
+        nav3.classList.add('fixed');
+      } else {
+        nav2.classList.remove('fixed');
+        nav3.classList.remove('fixed');
+      }
+    }
+
+    // Initial call to set the initial state
+    toggleNav2Fixed();
+
+    // Add scroll event listener to update when scrolling
+    window.addEventListener('scroll', toggleNav2Fixed);
+  });</script>
+</body>
+
+</html>
