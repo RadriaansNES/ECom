@@ -190,13 +190,11 @@
           description is provided to you keep you focused on your intention. Why? Because the
           universe loves and thrives on detailed, specific requests... and I want to optimize its
           manifestation power for you</p>
-        <div style="display: flex; flex-direction: row; gap: 5vh">
-          <button type="button" class="btn btn-primary addToCartButton" data-price-id='price_1OCoFnJyZz5ri1G4UikRA5Im'
-            data-product-name="Crystal Bracelet
-          " data-product-price="155.00">ADD BRACELET TO CART</button>
-          <button type="button" class="btn btn-primary addToCartButton" data-price-id='price_1OCoG1JyZz5ri1G46KKfip6z'
-            data-product-name="Crystal Mala Mask" data-product-price="333.00">ADD NECKLACE TO CART</button>
-        </div>
+        <button type="button" class="btn btn-primary addToCartButton" data-price-id='price_1OCoFnJyZz5ri1G4UikRA5Im'
+          data-product-name="Crystal Bracelet
+          " data-product-price="155.00" style="margin-bottom: 0;">ADD BRACELET TO CART</button>
+        <button type="button" class="btn btn-primary addToCartButton" data-price-id='price_1OCoG1JyZz5ri1G46KKfip6z'
+          data-product-name="Crystal Mala Mask" data-product-price="333.00">ADD NECKLACE TO CART</button>
       </div>
       <div class="column" id="DistanceReiki" style="margin-bottom: 0;">
         <h3>Distance Reiki Energy Healing</h3>
@@ -471,25 +469,25 @@
   <script src="http://localhost:35729/livereload.js"></script>
   <script src="utils/authcheck.js"></script>
   <script>document.addEventListener('DOMContentLoaded', () => {
-    const nav2 = document.querySelector('.nav2');
-    const nav1 = document.querySelector('.nav1');
-    const nav3 = document.querySelector('.nav3');
-    const nav1Height = nav1.clientHeight;
+      const nav2 = document.querySelector('.nav2');
+      const nav1 = document.querySelector('.nav1');
+      const nav3 = document.querySelector('.nav3');
+      const nav1Height = nav1.clientHeight;
 
-    function toggleNav2Fixed() {
-      if (window.scrollY > nav1Height) {
-        nav2.classList.add('fixed');
-        nav3.classList.add('fixed');
-      } else {
-        nav2.classList.remove('fixed');
-        nav3.classList.remove('fixed');
+      function toggleNav2Fixed() {
+        if (window.scrollY > nav1Height) {
+          nav2.classList.add('fixed');
+          nav3.classList.add('fixed');
+        } else {
+          nav2.classList.remove('fixed');
+          nav3.classList.remove('fixed');
+        }
       }
-    }
 
-    toggleNav2Fixed();
+      toggleNav2Fixed();
 
-    window.addEventListener('scroll', toggleNav2Fixed);
-  });</script>
+      window.addEventListener('scroll', toggleNav2Fixed);
+    });</script>
 </body>
 
 </html>

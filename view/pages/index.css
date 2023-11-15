@@ -201,7 +201,7 @@ body::before {
   min-height: 90vh;
   justify-content: center;
   align-items: center;
-  background-image: url(../../src/Graphic1..png);
+  background-image: url(../../src/formattedRaw.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -820,6 +820,15 @@ body::before {
     margin-left: 5vh;
     margin-bottom: 5vh;
   }
+  .modal-body input {
+    max-width: 3vh !important;
+  }
+  .modal-body .hidePrice {
+    display: none;
+  }
+  .modal-body th, .modal-body td {
+    font-size: 10px;
+  }
   input {
     max-width: 250px !important;
     width: 250px !important;
@@ -859,6 +868,9 @@ body::before {
   #sidebar,
   #sidebar2 {
     display: none !important;
+  }
+  .C1 {
+    background-size: 300% 100% !important;
   }
 }
 @media (max-height: 750px) {
