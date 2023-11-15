@@ -89,6 +89,15 @@ nav .container-fluid {
     .nav3 {
         display: none;
         position: relative;
+
+        button {
+            margin: 1vh 1vh;
+        }
+
+        ul {
+            margin-bottom: 0 !important;
+            padding: 0 2vh !important;
+        }
     }
 
     a {
@@ -552,7 +561,7 @@ body::before {
 }
 
 #sidebar {
-    width: 15vh;
+    width: 15vw;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
     position: fixed;
@@ -562,11 +571,12 @@ body::before {
     padding: 3vh 0;
     height: auto;
     border: 1px solid black;
-    z-index: -1;
+    z-index: 100;
 
     ul {
         list-style: none;
         padding: 0;
+        margin:0;
 
         li {
             padding: 10px;
@@ -594,22 +604,23 @@ body::before {
 }
 
 #sidebar2 {
-    top: 50%;
+    top: 55%;
     padding-right: 0;
-    width: 15vh;
+    min-width: 15vw;
+    width: 15vw;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
     position: fixed;
     transform: translateY(-50%);
     left: 2%;
-    padding: 3vh 0;
     height: auto;
     border: 1px solid black;
-    z-index: -1;
+    z-index: 100;
 
     ul {
         list-style: none;
         padding: 0;
+        margin:0;
 
         li {
             padding: 10px;
@@ -924,5 +935,11 @@ body::before {
     #sidebar,
     #sidebar2 {
         display: none !important;
+    }
+}
+
+@media (max-height: 835px) {
+    .carousel-slide p {
+        font-size: 9px !important;
     }
 }

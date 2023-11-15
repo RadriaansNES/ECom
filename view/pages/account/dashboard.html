@@ -14,6 +14,66 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap"
     rel="stylesheet">
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const cachedUserData = localStorage.getItem('userData');
+
+    // Attempt to use cached data if available
+    if (cachedUserData) {
+      const userData = JSON.parse(cachedUserData);
+      updateUserContent(userData);
+    }
+
+    // Check if the user is authenticated
+    fetch('/check-auth')
+      .then((response) => {
+        if (response.status === 200) {
+          updateHeader(true);
+        } else {
+          updateHeader(false);
+        }
+      })
+      .catch((error) => {
+        console.error('Authentication check error:', error);
+      });
+
+    // If cached data is not available or needs to be updated, fetch fresh user data
+    if (!cachedUserData) {
+      fetch('/user-data')
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Failed to retrieve user data');
+          }
+        })
+        .then((userData) => {
+          updateUserContent(userData);
+
+          // Store the latest user data in local storage
+          localStorage.setItem('userData', JSON.stringify(userData));
+        })
+        .catch((error) => {
+          console.error('User data retrieval error:', error);
+        });
+    }
+
+    function updateUserContent(userData) {
+      const firstNameElement = document.getElementById('firstName');
+      firstNameElement.textContent = `Hello ${userData.first_name}`;
+    }
+
+    function updateHeader(authenticated) {
+      const loginLink = document.querySelector('.navbar-brand[href="/account"]');
+      if (authenticated) {
+        loginLink.textContent = 'Account';
+      } else {
+        loginLink.textContent = 'Login';
+      }
+    }
+  });
+</script>
+
 </head>
 
 <body>
@@ -70,57 +130,51 @@
           <div class="nav3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation" style="
-                  position: relative;
-                  padding: 0;
-                  top: 0.6vh;
-                  width: 10vh;
-                  left: 1vh;
-              ">
+              aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 2vh">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../mission.html">Mermission</a>
+                  <a class="nav-link active" aria-current="page" href="mission.html">Mermission</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="../crystals.html" role="button" data-bs-toggle="dropdown"
+                  <a class="nav-link dropdown-toggle" href="crystals.html" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Crystal Creations
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../crystals.html#">Channels</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#">Bracelets</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#">Necklaces</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#masks">Eye Masks</a></li>
-                    <li><a class="dropdown-item" href="../crystals.htmlcrystals">Necklaces</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Channels</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Bracelets</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#">Necklaces</a></li>
+                    <li><a class="dropdown-item" href="crystals.html#masks">Eye Masks</a></li>
+                    <li><a class="dropdown-item" href="crystals.htmlcrystals">Necklaces</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="../services.html" role="button" data-bs-toggle="dropdown"
+                  <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Healing Services
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
-                    <li><a class="dropdown-item" href="../services.html#DistanceReiki">Distance Reiki Energy Healing</a></li>
-                    <li><a class="dropdown-item" href="../services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
-                    <li><a class="dropdown-item" href="../services.html#Medium30">Med Readings</a></li>
-                    <li><a class="dropdown-item" href="../services.html#OracleEmail">Oracle Card Reading</a></li>
+                    <li><a class="dropdown-item" href="services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
+                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a></li>
+                    <li><a class="dropdown-item" href="services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
+                    <li><a class="dropdown-item" href="services.html#Medium30">Med Readings</a></li>
+                    <li><a class="dropdown-item" href="services.html#OracleEmail">Oracle Card Reading</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../shops.html">Workshops</a>
+                  <a class="nav-link active" aria-current="page" href="shops.html">Workshops</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../test.html">Testimonials</a>
+                  <a class="nav-link active" aria-current="page" href="test.html">Testimonials</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../faq.html">FAQ</a>
+                  <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
                 </li>
               </ul>
             </div>
@@ -216,39 +270,7 @@
     crossorigin="anonymous"></script>
   <script src="../utils/cart.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
-  <script src="../utils/authcheck.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const cachedUserData = localStorage.getItem('userData');
-
-      if (cachedUserData) {
-        const userData = JSON.parse(cachedUserData);
-        updateUserContent(userData);
-      }
-
-      fetch('/user-data')
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error('Failed to retrieve user data');
-          }
-        })
-        .then((userData) => {
-          updateUserContent(userData);
-
-          localStorage.setItem('userData', JSON.stringify(userData));
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-
-      function updateUserContent(userData) {
-        const firstNameElement = document.getElementById('firstName');
-        firstNameElement.textContent = `Hello ${userData.first_name}`;
-      }
-    });
-  </script>
+  <script src="../utils/authcheck.js"></script>  
 </body>
 
 </html>
