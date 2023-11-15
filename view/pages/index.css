@@ -78,7 +78,7 @@ nav .container-fluid .nav3 {
   align-items: center;
 }
 nav .container-fluid .nav2.fixed, nav .container-fluid .nav3.fixed {
-  background-color: rgba(255, 182, 193, 0.7);
+  background-color: rgb(255, 182, 193);
   position: fixed;
 }
 nav .container-fluid .nav3 {
@@ -453,14 +453,14 @@ body::before {
 .crystals .container-fluid section #prevButton2,
 .footer .container-fluid section #prevButton2,
 .registration .container-fluid section #prevButton2 {
-  top: 70vh;
-  left: 20vh;
+  top: 32vh;
+  left: -10vh;
 }
 .crystals .container-fluid section #nextButton2,
 .footer .container-fluid section #nextButton2,
 .registration .container-fluid section #nextButton2 {
-  top: 70vh;
-  right: 20vh;
+  top: 32vh;
+  right: -10vh;
 }
 .crystals .container-fluid .prev-button,
 .crystals .container-fluid .next-button,
@@ -647,12 +647,6 @@ body::before {
     top: 55%;
     padding: 0;
   }
-  #prevButton2 {
-    left: 20vh !important;
-  }
-  #nextButton2 {
-    right: 20vh !important;
-  }
   .ContainerCarousel2 h3 {
     padding-top: 0 !important;
   }
@@ -693,12 +687,6 @@ body::before {
   #sidebar2 {
     top: 55%;
     padding-bottom: 0;
-  }
-  #prevButton2 {
-    left: 12vh !important;
-  }
-  #nextButton2 {
-    right: 12vh !important;
   }
   #Login {
     font-size: 20px !important;
@@ -774,12 +762,12 @@ body::before {
     padding-bottom: 0;
   }
   #prevButton2 {
-    top: 93vh !important;
-    left: 8vh !important;
+    top: 50vh !important;
+    left: 5vh !important;
   }
   #nextButton2 {
-    top: 93vh !important;
-    right: 8vh !important;
+    top: 50vh !important;
+    right: 5vh !important;
   }
   #Login {
     font-size: 16px !important;
@@ -874,7 +862,7 @@ body::before {
 #stars:after {
   content: "";
   position: absolute;
-  top: 1%;
+  top: 350vh;
   width: 1px;
   height: 1px;
   background: transparent;
