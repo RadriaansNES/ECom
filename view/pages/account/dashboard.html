@@ -263,7 +263,29 @@
     </div>
 
   </main>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const nav2 = document.querySelector('.nav2');
+    const nav1 = document.querySelector('.nav1');
+    const nav3 = document.querySelector('.nav3');
+    const nav1Height = nav1.clientHeight;
 
+    // Function to toggle the 'fixed' class on .nav2
+    function toggleNav2Fixed() {
+      if (window.scrollY > nav1Height) {
+        nav2.classList.add('fixed');
+        nav3.classList.add('fixed');
+      } else {
+        nav2.classList.remove('fixed');
+        nav3.classList.remove('fixed');
+      }
+    }
+
+    // Initial call to set the initial state
+    toggleNav2Fixed();
+
+    // Add scroll event listener to update when scrolling
+    window.addEventListener('scroll', toggleNav2Fixed);
+  });</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
