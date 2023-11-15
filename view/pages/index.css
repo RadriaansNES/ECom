@@ -468,7 +468,6 @@ body::before {
 .footer .container-fluid .next-button,
 .registration .container-fluid .prev-button,
 .registration .container-fluid .next-button {
-  transform: translateY(-50%);
   background-color: #007bff;
   color: white;
   border: none;
