@@ -4,7 +4,6 @@
     --background-gradient: linear-gradient(0deg, rgba(0, 139, 139, 1) 0%, rgba(222, 245, 245, 1) 98%);
 }
 
-
 .navbar {
     padding: 0;
 }
@@ -177,6 +176,20 @@ body::before {
     z-index: -10;
 }
 
+#success-banner {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .main .container-fluid {
     margin-top: 5vh;
     padding: 0;
@@ -340,7 +353,7 @@ body::before {
     }
 
     .title {
-        margin-bottom: 10vh;
+        margin-bottom: 15vh;
     }
 
     div {
@@ -493,6 +506,7 @@ body::before {
             right: -10vh;
         }
     }
+    
 
     .prev-button,
     .next-button {
@@ -511,6 +525,15 @@ body::before {
     #mask {
         margin-top: 5vh;
         margin-bottom: 0;
+    }
+}
+
+.crystals .services div {
+    margin-bottom: 0;
+
+    button {
+        margin-top: 2vh;
+        margin-bottom: 15vh;
     }
 }
 
@@ -678,6 +701,12 @@ body::before {
 
     &.collapsed+main {
         margin-left: 50px;
+    }
+}
+
+.modal-body {
+    input {
+        max-width: 10vh;
     }
 }
 
@@ -964,7 +993,7 @@ body::before {
     }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 750px) {
     .carousel-slide p {
         font-size: 9px !important;
     }

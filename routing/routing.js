@@ -6,20 +6,18 @@ const { createUser } = require('../utils/dbhelper');
 
 router.post('/create-checkout-session', async (req, res) => {
 
-  const cookieData = req.cookies.shoppingCart; // Adjust the cookie name as needed
+  const cookieData = req.cookies.shoppingCart;
 
-  // Parse the cookie data
   const cartItems = JSON.parse(cookieData);
 
-  // Create a checkout session with the dynamically generated line_items
   const session = await stripe.checkout.sessions.create({
     line_items: cartItems.map(item => ({
-      price: item["price-id"], // Use the 'price-id' from the cookie as the price ID
-      quantity: item.quantity, // Use the quantity from the cookie
+      price: item["price-id"],
+      quantity: item.quantity, 
     })),
     mode: 'payment',
     success_url: 'https://www.google.ca',           // GOTTTTTA UPDDDAAAAAAAAAATE
-    cancel_url: 'https://www.facebook.com',
+    cancel_url: 'https://ecom-server-5e1g.onrender.com',
   });
 
   res.redirect(303, session.url);

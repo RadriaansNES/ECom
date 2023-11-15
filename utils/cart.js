@@ -40,8 +40,18 @@ function addToCart(productName, productPrice, quantity, priceId) {
     shoppingCart.push(cartItem);
   }
 
+  showSuccessBanner();
   updateCartDisplay();
   saveCartToCookie();
+}
+
+function showSuccessBanner() {
+  const banner = document.getElementById('success-banner');
+  banner.style.display = 'block';
+
+  setTimeout(function() {
+    banner.style.display = 'none';
+  }, 2000);
 }
 
 function updateCartDisplay() {
@@ -61,7 +71,6 @@ function updateCartDisplay() {
     emptyCartMessage.show();
     $('#initTotal').attr('style', 'display:none !important');
     checkout.hide();
-
   } else {
     cartTableContainer.show();
     emptyCartMessage.hide();
@@ -81,25 +90,30 @@ function updateCartDisplay() {
       const qtyInput = $('<input>')
         .attr('type', 'number')
         .attr('value', item.quantity)
-        .data('index', index); 
+        .data('index', index);
 
       qtyInput.addClass('custom-qty-input');
 
       qtyInputCell.append(qtyInput);
 
-      const totalCell = $('<td>').text(`${item.price * item.quantity}$`);
+      const itemTotal = $('<td>').text(`${(item.quantity * item.price).toFixed(2)}$`);
 
       const actionsCell = $('<td>');
-      const removeButton = $('<button>').text('Remove').addClass('btn btn-danger btn-sm');
+      const removeButton = $('<button>').text('X').addClass('btn btn-danger btn-sm');
       removeButton.on('click', () => removeItemFromCart(index));
+
+
+      actionsCell.css('text-align', 'center');
+
       actionsCell.append(removeButton);
 
-      newRow.append(productCell, priceCell, qtyInputCell, totalCell, actionsCell);
+      newRow.append(productCell, priceCell, qtyInputCell, itemTotal, actionsCell);
       cartTableBody.append(newRow);
     });
   }
 
-  cartTotal.text(`${total}$`);
+  const formattedTotal = total.toFixed(2);
+  cartTotal.text(`${formattedTotal}$`);
 }
 
 function removeItemFromCart(index) {

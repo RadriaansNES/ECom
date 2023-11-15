@@ -157,7 +157,8 @@
           </p>
 
           <p>Are you ready to fully step into your magick?! </p>
-          <button class="btn btn-primary">Add To Cart</button>
+          <button type="button" class="btn btn-primary addToCartButton" data-price-id='price_1OCoJHJyZz5ri1G4ZtjaDKzo'
+          data-product-name="Manifesting Workshop" data-product-price="44.44">ADD TO CART</button>
         </div>
       </div>
     </div>
@@ -215,6 +216,9 @@
         </div>
       </div>
     </div>
+    <div id="success-banner"
+    style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background-color: red; color: white; padding: 10px; border-radius: 5px;">
+    Successfully added!</div>
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -230,7 +234,6 @@
     const nav3 = document.querySelector('.nav3');
     const nav1Height = nav1.clientHeight;
 
-    // Function to toggle the 'fixed' class on .nav2
     function toggleNav2Fixed() {
       if (window.scrollY > nav1Height) {
         nav2.classList.add('fixed');
@@ -241,10 +244,8 @@
       }
     }
 
-    // Initial call to set the initial state
     toggleNav2Fixed();
 
-    // Add scroll event listener to update when scrolling
     window.addEventListener('scroll', toggleNav2Fixed);
   });</script>
 </body>

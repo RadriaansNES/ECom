@@ -228,8 +228,7 @@
       const nav1 = document.querySelector('.nav1');
       const nav3 = document.querySelector('.nav3');
       const nav1Height = nav1.clientHeight;
-
-      // Function to toggle the 'fixed' class on .nav2
+  
       function toggleNav2Fixed() {
         if (window.scrollY > nav1Height) {
           nav2.classList.add('fixed');
@@ -239,11 +238,9 @@
           nav3.classList.remove('fixed');
         }
       }
-
-      // Initial call to set the initial state
+  
       toggleNav2Fixed();
-
-      // Add scroll event listener to update when scrolling
+  
       window.addEventListener('scroll', toggleNav2Fixed);
     });</script>
 </body>

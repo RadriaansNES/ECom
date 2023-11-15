@@ -101,7 +101,8 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="services.html#CrystalJewlery">Channeled Crystal Jewlery</a></li>
-                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a></li>
+                    <li><a class="dropdown-item" href="services.html#DistanceReiki">Distance Reiki Energy Healing</a>
+                    </li>
                     <li><a class="dropdown-item" href="services.html#ReikiOracleCards">Reiki Oracle Cards</a></li>
                     <li><a class="dropdown-item" href="services.html#Medium30">Med Readings</a></li>
                     <li><a class="dropdown-item" href="services.html#OracleEmail">Oracle Card Reading</a></li>
@@ -247,11 +248,12 @@
               - A Goddess or Elemental Guide (Mermaids or Unicorns)</p>
           </div>
           <div class="column" style="margin-bottom: 0;">
-            <img src="src/crystalmask.jpg"/>
+            <img src="src/crystalmask.jpg" />
           </div>
         </div>
         <p class="margintop" style="font-size: larger;"><strong><em>Investment = $33.33</em></strong></p>
-        <button class="btn btn-primary">Add To Cart</button>
+        <button type="button" class="btn btn-primary addToCartButton" data-price-id='price_1OCoDdJyZz5ri1G4gRU3sQ59'
+          data-product-name="Crystal Mask" data-product-price="33.33">ADD TO CART</button>
       </div>
       <div class="d6 column" style="margin-bottom: 10vh;" id="crystals">
         <h3>Crystals
@@ -317,6 +319,10 @@
         </div>
       </div>
     </div>
+    <div id="success-banner"
+      style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background-color: red; color: white; padding: 10px; border-radius: 5px;">
+      Successfully added!</div>
+
 
   </main>
   <script>document.addEventListener('DOMContentLoaded', () => {
@@ -325,7 +331,6 @@
     const nav3 = document.querySelector('.nav3');
     const nav1Height = nav1.clientHeight;
 
-    // Function to toggle the 'fixed' class on .nav2
     function toggleNav2Fixed() {
       if (window.scrollY > nav1Height) {
         nav2.classList.add('fixed');
@@ -336,10 +341,8 @@
       }
     }
 
-    // Initial call to set the initial state
     toggleNav2Fixed();
 
-    // Add scroll event listener to update when scrolling
     window.addEventListener('scroll', toggleNav2Fixed);
   });</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
