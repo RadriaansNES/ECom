@@ -91,7 +91,7 @@ router.post('/stripe-webhook', async (req, res) => {
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object;
 
-      // Generate a random order_id
+      // Need to check DB for exisiting order number, reroll if exisiting
       const order_id = generateRandomOrderID(8);
 
       // Insert the order details into the database here

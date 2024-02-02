@@ -201,7 +201,7 @@ body::before {
   min-height: 90vh;
   justify-content: center;
   align-items: center;
-  background-image: url(../../src/formattedRaw.png);
+  background-image: url(../../src/formattedRaw-min.JPEG);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
