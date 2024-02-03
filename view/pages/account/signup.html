@@ -24,7 +24,6 @@
     rel="stylesheet">
 
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 </head>
 
@@ -100,8 +99,6 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="../crystals.html#">Channels</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#">Bracelets</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#">Necklaces</a></li>
                     <li><a class="dropdown-item" href="../crystals.html#masks">Eye Masks</a></li>
                     <li><a class="dropdown-item" href="../crystals.html#crystals">Crystals</a></li>
                   </ul>
@@ -185,6 +182,9 @@
         <div class="alert alert-danger" id='emailalert' role="alert" style="display:none; margin-top: 30px;">
           Email already in use. Please use another or recover the existing.
         </div>
+        <div class="alert alert-danger" id='invalidEmailalert' role="alert" style="display:none; margin-top: 30px;">
+          Please provide a proper email.
+        </div>
         <div style="padding-top: 30px; display: flex; flex-direction: row;">
           <button type="submit" class="signupbtn btn btn-primary">Sign Up</button>
           <a href="../index.html">
@@ -230,7 +230,6 @@
                   </tr>
                 </thead>
                 <tbody id="cartTableBody">
-                  <!-- Cart items will be dynamically added here -->
                 </tbody>
               </table>
             </div>
@@ -260,17 +259,26 @@
     $(document).ready(function () {
       const signupForm = $('#signup');
       const logalert = $('#logalert');
-
+      const invalidEmailalert = $('#invalidEmailalert');
+  
       signupForm.on('submit', function (event) {
         const password = signupForm.find('input[name="psw"]').val();
         const repeatPassword = signupForm.find('input[name="repeat psw"]').val();
-
+        const emailInput = signupForm.find('input[name="username"]');
+        const email = emailInput.val();
+  
         if (password !== repeatPassword) {
           event.preventDefault();
           logalert.text('Passwords do not match. Please try again.').show();
         } else if (password.length < 7 || !/\d/.test(password)) {
           event.preventDefault();
           logalert.text('Password requirements not met. Please use at least 7 characters with at least one number.').show();
+        }
+  
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          event.preventDefault();
+          invalidEmailalert.text('Please provide a proper email.').show();
         }
       });
     });

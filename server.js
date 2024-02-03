@@ -11,12 +11,16 @@ const livereload = require('livereload');
 const server = livereload.createServer();
 const favicon = require('serve-favicon');
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Permissions-Policy', 'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()');
+  next();
+});
+
 app.use(favicon(__dirname + '/view/pages/src/mermaid logo.png'));
 
-// Use compression middleware
 app.use(compression());
 
-// Set security headers using Helmet middleware
 app.use(helmet({
   contentSecurityPolicy: false, 
 }));

@@ -24,7 +24,6 @@
     rel="stylesheet">
 
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 </head>
 
@@ -100,8 +99,6 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="../crystals.html#">Channels</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#">Bracelets</a></li>
-                    <li><a class="dropdown-item" href="../crystals.html#">Necklaces</a></li>
                     <li><a class="dropdown-item" href="../crystals.html#masks">Eye Masks</a></li>
                     <li><a class="dropdown-item" href="../crystals.html#crystals">Crystals</a></li>
                   </ul>
@@ -202,7 +199,6 @@
                   </tr>
                 </thead>
                 <tbody id="cartTableBody">
-                  <!-- Cart items will be dynamically added here -->
                 </tbody>
               </table>
             </div>
@@ -228,6 +224,7 @@
   <script src="http://localhost:35729/livereload.js"></script>
   <script src="../../utils/cart.js"></script>
   <script src="../../utils/authcheck.js"></script>
+  <script src="../../utils/scrollHelp.js"></script>
   <script>
     $(document).ready(function () {
       const logalert = $('#logalert');
@@ -252,26 +249,6 @@
       });
     });
   </script>
-  <script>document.addEventListener('DOMContentLoaded', () => {
-      const nav2 = document.querySelector('.nav2');
-      const nav1 = document.querySelector('.nav1');
-      const nav3 = document.querySelector('.nav3');
-      const nav1Height = nav1.clientHeight;
-
-      function toggleNav2Fixed() {
-        if (window.scrollY > nav1Height) {
-          nav2.classList.add('fixed');
-          nav3.classList.add('fixed');
-        } else {
-          nav2.classList.remove('fixed');
-          nav3.classList.remove('fixed');
-        }
-      }
-
-      toggleNav2Fixed();
-
-      window.addEventListener('scroll', toggleNav2Fixed);
-    });</script>
 </body>
 
 </html>
