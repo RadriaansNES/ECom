@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const passport = require('./utils/passportConfig');
 const { sessionMiddleware } = require('./models/db');
 const helmet = require('helmet');
-const compression = require('compression'); // Import compression
+const compression = require('compression');
 const app = express();
 const PORT = process.env.PORT || 4242;
 const livereload = require('livereload');
@@ -15,6 +15,11 @@ app.use(favicon(__dirname + '/view/pages/src/mermaid logo.png'));
 
 // Use compression middleware
 app.use(compression());
+
+// Set security headers using Helmet middleware
+app.use(helmet({
+  contentSecurityPolicy: false, 
+}));
 
 app.use(express.static(__dirname + '/view/pages', {
   maxAge: '7d',
@@ -27,8 +32,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use(helmet());
 
 const router = require('./routing/routing');
 app.use('', router);

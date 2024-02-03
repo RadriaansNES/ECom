@@ -1,17 +1,15 @@
 function updateHeader(authenticated) {
-  const loginLink = document.querySelector('.navbar-brand[href="/account"]');
+  const loginLink = document.getElementById('Login');
   if (authenticated) {
     loginLink.textContent = 'Account';
   } else {
     loginLink.textContent = 'Login';
   }
+  loginLink.style.display = 'block';  
 }
 
 fetch('/check-auth')
   .then((response) => {
-    if (response.status === 200) {
-      updateHeader(true);
-    } else {
-      updateHeader(false);
-    }
+    const isAuthenticated = response.status === 200;
+    updateHeader(isAuthenticated);
   });

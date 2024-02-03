@@ -129,7 +129,7 @@ footer {
     }
 
     .column {
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
@@ -709,6 +709,10 @@ body::before {
     input {
         max-width: 10vh;
     }
+}
+
+#Login {
+    display: none;
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {

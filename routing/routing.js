@@ -16,8 +16,8 @@ router.post('/create-checkout-session', async (req, res) => {
       quantity: item.quantity, 
     })),
     mode: 'payment',
-    success_url: 'https://www.google.ca',           // GOTTTTTA UPDDDAAAAAAAAAATE
-    cancel_url: 'https://ecom-server-5e1g.onrender.com',
+    success_url: 'mermagickal.ca',           // Add success lander?
+    cancel_url: 'mermagickal.ca',
   });
 
   res.redirect(303, session.url);

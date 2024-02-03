@@ -6,17 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mermagickal</title>
   <link rel="icon" href="src/favicon.ico" type="image/x-icon">
-  <meta name="description" content="Explore healing crystals, holistic medicine, and the mystical world at Mermagickal. Discover crystal creations, healing services, workshops, and testimonials.">
+  <meta name="description"
+    content="Explore healing crystals, energy healing, intuitive readings and the world of Mermagickal. Discover crystal creations, healing services, workshops, and testimonials.">
+
+  <meta property="og:title" content="Mermagikal - Energy Healing and Holistic Medicine">
+  <meta property="og:description"
+    content="Discover healing crystals and holistic medicine at Mermagikal.">
+  <meta property="og:image" content="src/mermaid logo.png">
+  <meta property="og:url" content="mermagickal.ca">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap"
     rel="stylesheet">
 
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
 </head>
 
 <body>
@@ -29,18 +38,18 @@
               <a class="navbar-brand" href="/account" id="Login">Login</a>
             </div>
             <a class="navbar-brand" href="index.html">
-              <img src="src/mermaid logo.png" alt="Logo" id="logo" class="d-inline-block align-text-center">
+              <img src="src/mermaid logo.png" alt="Mermagickal Logo" id="logo" class="d-inline-block align-text-center">
             </a>
             <div class="column">
               <div>
                 <a class="navbar-brand" href="https://www.instagram.com/mermagickal/">
-                  <img src="src/bam.png" alt="Instagram" id="cartlogo">
+                  <img src="src/bam.png" alt="Instagram Logo" id="cartlogo">
                 </a>
                 <a class="navbar-brand" href="https://www.facebook.com/Mermagickal">
-                  <img src="src/facebookraw.png" alt="Facebook" id="cartlogo">
+                  <img src="src/facebookraw.png" alt="Facebook Logo" id="cartlogo">
                 </a>
                 <a class="navbar-brand" id="cart" data-bs-toggle="modal" data-bs-target="#cartModal">
-                  <img src="src/2111601.png" alt="Cart" id="cart">
+                  <img src="src/2111601.png" alt="Cart Logo" id="cart">
                 </a>
               </div>
             </div>
@@ -138,14 +147,14 @@
       </div>
       <div class="C2 space-around">
         <div>
-          <img src="src/HomeRachel.jpg" style="width: 100%; max-height: auto;" />
+          <img src="src/HomeRachel.jpg" alt="Mermagickal home banner" style="width: 100%; max-height: auto;" />
         </div>
         <div class="column">
           <h2>Meet Rachel</h2>
           <p>Meet Rachel, an intuitive channel, healer, medium, mystic, and teacher. Discover her soul mission’s behind
             Mermagickal.</p>
           <a href="mission.html" id="glowTrigger">
-            <img src="src/ShellG.png" alt="Logo" id="shellB" class="d-inline-block align-text-center">
+            <img src="src/ShellG.png" alt="Mermagickal redirect" id="shellB" class="d-inline-block align-text-center">
             <div id="absGlow"></div>
           </a>
           <a href="mission.html" id="relative">Let's Dive Deep</a>
@@ -211,7 +220,8 @@
         <a href="footer.html#F2">Shipping</a>
         <a href="footer.html#F3">Returns</a>
       </div>
-      <div>
+      <div class="column">
+        <a href="privacy.html">Privacy</a>
         <a href="footer.html#F4">Contact</a>
       </div>
     </footer>
@@ -261,6 +271,7 @@
     </div>
 
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     // Get references to the div elements
     const calcHeightDiv = document.getElementById('calcHeight');
@@ -292,13 +303,10 @@
 
       window.addEventListener('scroll', toggleNav2Fixed);
     });</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="http://localhost:35729/livereload.js"></script>
   <script src="../../utils/cart.js"></script>
-  <script src="utils/authcheck.js"></script>
+  <script src="../../utils/authcheck.js"></script>
 
 </body>
 
