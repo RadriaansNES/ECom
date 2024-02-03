@@ -16,8 +16,8 @@ router.post('/create-checkout-session', async (req, res) => {
       quantity: item.quantity, 
     })),
     mode: 'payment',
-    success_url: 'mermagickal.ca',           // Add success lander?
-    cancel_url: 'mermagickal.ca',
+    success_url: 'http://mermagickal.ca',           // Add success lander?
+    cancel_url: 'http://mermagickal.ca',
   });
 
   res.redirect(303, session.url);
