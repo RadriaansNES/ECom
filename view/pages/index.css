@@ -106,7 +106,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   min-height: 15vh;
-  background-color: var(--2nd-colour);
+  background-color: #df7e8d;
   align-items: center;
 }
 footer a {
@@ -303,16 +303,16 @@ body::before {
 .footer .container-fluid h2,
 .registration .container-fluid h2 {
   margin-bottom: 3vh;
+  font-size: 45px;
 }
 .crystals .container-fluid .title,
 .footer .container-fluid .title,
 .registration .container-fluid .title {
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 .crystals .container-fluid div,
 .footer .container-fluid div,
 .registration .container-fluid div {
-  justify-content: center;
   min-height: auto;
   margin-bottom: 10vh;
 }
@@ -344,12 +344,8 @@ body::before {
 .registration .container-fluid .space-between {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-}
-.crystals .container-fluid .space-between div,
-.footer .container-fluid .space-between div,
-.registration .container-fluid .space-between div {
-  max-width: 50%;
 }
 .crystals .container-fluid .space-between .fw,
 .footer .container-fluid .space-between .fw,
@@ -375,14 +371,42 @@ body::before {
 .registration .container-fluid .space-between .d1 div {
   min-width: 100%;
 }
+.crystals .container-fluid .space-between .d1 h4,
+.footer .container-fluid .space-between .d1 h4,
+.registration .container-fluid .space-between .d1 h4 {
+  min-height: 100px;
+}
+.crystals .container-fluid .space-between .d2,
+.footer .container-fluid .space-between .d2,
+.registration .container-fluid .space-between .d2 {
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+}
+.crystals .container-fluid .space-between .investment,
+.footer .container-fluid .space-between .investment,
+.registration .container-fluid .space-between .investment {
+  min-width: 40%;
+}
+.crystals .container-fluid .space-between .investment p,
+.footer .container-fluid .space-between .investment p,
+.registration .container-fluid .space-between .investment p {
+  text-align: center !important;
+}
+.crystals .container-fluid .maskBigger,
+.footer .container-fluid .maskBigger,
+.registration .container-fluid .maskBigger {
+  font-size: 17px;
+}
 .crystals .container-fluid img,
 .footer .container-fluid img,
 .registration .container-fluid img {
   max-height: 560px;
   max-width: 420px;
-  height: 560px;
-  width: 420px;
+  height: auto;
+  width: auto;
   border-radius: 10px;
+  overflow: hidden;
 }
 .crystals .container-fluid h4,
 .footer .container-fluid h4,
@@ -499,6 +523,11 @@ body::before {
 .registration .container-fluid #mask {
   margin-top: 5vh;
   margin-bottom: 0;
+}
+.crystals .container-fluid p,
+.footer .container-fluid p,
+.registration .container-fluid p {
+  text-align: justify !important;
 }
 
 .crystals .services div {
@@ -657,8 +686,23 @@ body::before {
   max-width: 10vh;
 }
 
+.accordion .accordion-item {
+  margin-bottom: 0 !important;
+}
+
 #Login {
   display: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -667,8 +711,8 @@ body::before {
     max-width: 45% !important;
   }
   .crystals .container-fluid .space-around div img {
-    max-height: 454px;
-    max-width: 265px;
+    max-height: 45% !important;
+    max-width: 45% !important;
   }
   #mask {
     margin-top: 0vh !important;

@@ -120,7 +120,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     min-height: 15vh;
-    background-color: var(--2nd-colour);
+    background-color: #df7e8d;
     align-items: center;
 
     a {
@@ -351,14 +351,15 @@ body::before {
 
     h2 {
         margin-bottom: 3vh;
+        font-size: 45px;
     }
 
     .title {
-        margin-bottom: 15vh;
+        margin-bottom: 10vh;
     }
 
     div {
-        justify-content: center;
+       
         min-height: auto;
         margin-bottom: 10vh;
 
@@ -387,11 +388,8 @@ body::before {
     .space-between {
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-
-        div {
-            max-width: 50%;
-        }
 
         .fw {
             width: 100%;
@@ -411,15 +409,39 @@ body::before {
             div {
                 min-width: 100%;
             }
+
+            h4 {
+                min-height: 100px;
+            }
+        }
+
+        .d2 {
+            max-width: 45%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .investment {
+            p {
+                text-align: center !important;
+            }
+            min-width: 40%;
         }
     }
+
+    .maskBigger {
+        font-size: 17px;
+    }
+
+
 
     img {
         max-height: 560px;
         max-width: 420px;
-        height: 560px;
-        width: 420px;
+        height: auto;
+        width: auto;
         border-radius: 10px;
+        overflow: hidden;
     }
 
     h4 {
@@ -526,6 +548,10 @@ body::before {
     #mask {
         margin-top: 5vh;
         margin-bottom: 0;
+    }
+
+    p {
+        text-align: justify !important;
     }
 }
 
@@ -711,9 +737,26 @@ body::before {
     }
 }
 
+.accordion {
+    .accordion-item {
+        margin-bottom: 0 !important;
+    }
+}
+
 #Login {
     display: none;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
 
@@ -725,8 +768,8 @@ body::before {
                 max-width: 45% !important;
 
                 img {
-                    max-height: 454px;
-                    max-width: 265px;
+                    max-height: 45% !important;
+                    max-width: 45% !important;
                 }
             }
         }
