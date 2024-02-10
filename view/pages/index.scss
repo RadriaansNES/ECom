@@ -86,10 +86,11 @@ nav .container-fluid {
         z-index: 1000;
     }
 
-    .nav2.fixed, .nav3.fixed {
+    .nav2.fixed,
+    .nav3.fixed {
         background-color: rgba(255, 182, 193, 1);
         position: fixed;
-      }
+    }
 
     .nav3 {
         display: none;
@@ -178,7 +179,8 @@ body::before {
 }
 
 #success-banner {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -327,11 +329,13 @@ body::before {
 
     h2 {
         margin-bottom: 4vh;
+        font-size: 45px;
     }
 
     .column {
         max-width: 40vw;
         justify-content: space-around;
+        text-align: justify;
     }
 
     img {
@@ -359,7 +363,7 @@ body::before {
     }
 
     div {
-       
+
         min-height: auto;
         margin-bottom: 10vh;
 
@@ -425,6 +429,7 @@ body::before {
             p {
                 text-align: center !important;
             }
+
             min-width: 40%;
         }
     }
@@ -436,8 +441,8 @@ body::before {
 
 
     img {
-        max-height: 560px;
-        max-width: 420px;
+        max-height: 100%;
+        max-width: 100%;
         height: auto;
         width: auto;
         border-radius: 10px;
@@ -529,7 +534,7 @@ body::before {
             right: -10vh;
         }
     }
-    
+
 
     .prev-button,
     .next-button {
@@ -737,28 +742,34 @@ body::before {
     }
 }
 
-.accordion {
-    .accordion-item {
-        margin-bottom: 0 !important;
-    }
-}
-
 #Login {
     display: none;
 }
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px); 
+    transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .fade-in.active {
+}
+
+.fade-in.active {
     opacity: 1;
     transform: translateY(0);
-  }
+}
+
+#oracleSpacing {
+    gap: 5vh;
+}
+
+.mobile  {
+    display: none !important;
+}
 
 @media (min-width: 1024px) and (max-width: 1439px) {
+
+    .C1>div>h1 {
+        margin-top: 17vh !important;
+    }
 
     .crystals .container-fluid {
 
@@ -782,6 +793,13 @@ body::before {
     #sidebar2 {
         top: 55%;
         padding: 0;
+        min-width: 12vw;
+        width: 12vw;
+    }
+
+    #sidebar {
+        min-width: 12vw;
+        width: 12vw;
     }
 
     .ContainerCarousel2 {
@@ -879,7 +897,7 @@ body::before {
     .bigger {
         p {
             width: 100%;
-            font-size: 14px !important;
+            font-size: 16px !important;
         }
     }
 
@@ -887,19 +905,24 @@ body::before {
     strong,
     em,
     a {
-        font-size: 10px !important;
+        font-size: 16px !important;
     }
 
     h1 {
-        font-size: 25px !important;
+        margin-top: 20vh !important;
+        font-size: 32px !important;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 40px !important;
     }
 
     h3 {
-        font-size: 19px;
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
     }
 
     #reduce {
@@ -988,11 +1011,13 @@ body::before {
         input {
             max-width: 3vh !important;
         }
+
         .hidePrice {
             display: none;
         }
 
-        th, td {
+        th,
+        td {
             font-size: 10px;
         }
     }
@@ -1032,8 +1057,52 @@ body::before {
         padding: 0;
     }
 
-    
+    #oracleSpacing {
+        gap: 0vh;
+    }
 
+    .pc {
+        display: none !important;
+    }
+
+    .mobile {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: justify !important;
+        max-height: 90vh !important;
+        min-height: 90vh !important;
+        margin-top: 10vh !important;
+
+        div {
+            min-width: 80% !important;
+        }
+    }
+
+    .mission .mobile, .crystals .mobile {
+        max-height: none !important;
+    }
+
+    #missionMOBILE {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            padding: 5vh 0;
+            border-radius: 20%;
+            margin-bottom: 0;
+        }
+    }
+
+    .mobile .investment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .crystals .services div button {
+        margin-bottom: 5vh;
+    }
 }
 
 
@@ -1054,7 +1123,7 @@ body::before {
     #sidebar2 {
         display: none !important;
     }
-    
+
     .C1 {
         background-size: 300% 100% !important;
     }
@@ -1072,13 +1141,14 @@ body::before {
 
 @keyframes animStar {
     from {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
+
     to {
-      transform: translateY(-2000px);
+        transform: translateY(-2000px);
     }
-  }
-  
+}
+
 #stars {
     width: 1px;
     height: 1px;
