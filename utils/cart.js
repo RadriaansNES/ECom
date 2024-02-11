@@ -17,8 +17,8 @@ function loadCartFromCookie() {
   const cookieData = document.cookie.split(';').find(cookie => cookie.trim().startsWith('shoppingCart='));
   if (cookieData) {
     const cartJSON = cookieData.split('=')[1];
-    shoppingCart.length = 0; 
-    shoppingCart.push(...JSON.parse(cartJSON)); 
+    shoppingCart.length = 0;
+    shoppingCart.push(...JSON.parse(cartJSON));
   }
 }
 
@@ -29,28 +29,20 @@ function addToCart(productName, productPrice, quantity, priceId) {
     existingItem.quantity += quantity;
   } else {
     const cartItem = {
-      'price-id': priceId, 
+      'price-id': priceId,
       name: productName,
-      price: productPrice, 
+      price: productPrice,
       quantity,
     };
 
     shoppingCart.push(cartItem);
   }
 
-  showSuccessBanner();
   updateCartDisplay();
   saveCartToCookie();
+  $('#cartModal').modal('show');
 }
 
-function showSuccessBanner() {
-  const banner = document.getElementById('success-banner');
-  banner.style.display = 'block';
-
-  setTimeout(function() {
-    banner.style.display = 'none';
-  }, 2000);
-}
 
 function updateCartDisplay() {
   const cartTableBody = $('#cartTableBody');
@@ -82,7 +74,7 @@ function updateCartDisplay() {
 
       const productCell = $('<td>').text(item.name);
 
-      const priceCell = $('<td>').text(`${item.price}$`);
+      const priceCell = $('<td>').text(`$${item.price}`);
 
       const qtyInputCell = $('<td class="qty">');
       const qtyInput = $('<input>')
@@ -94,7 +86,7 @@ function updateCartDisplay() {
 
       qtyInputCell.append(qtyInput);
 
-      const itemTotal = $('<td>').text(`${(item.quantity * item.price).toFixed(2)}$`);
+      const itemTotal = $('<td>').text(`$${(item.quantity * item.price).toFixed(2)}`);
 
       const actionsCell = $('<td>');
       const removeButton = $('<button>').text('X').addClass('btn btn-danger btn-sm');
@@ -111,7 +103,7 @@ function updateCartDisplay() {
   }
 
   const formattedTotal = total.toFixed(2);
-  cartTotal.text(`${formattedTotal}$`);
+  cartTotal.text(`$${formattedTotal}`);
 }
 
 function removeItemFromCart(index) {
@@ -125,7 +117,7 @@ $('.addToCartButton').on('click', function () {
   const productPrice = $(this).data('product-price');
   const priceId = $(this).data('price-id');
   const quantity = 1;
-  addToCart(productName, productPrice, quantity, priceId); 
+  addToCart(productName, productPrice, quantity, priceId);
 });
 
 $('#cartTableBody').on('focusout', '.custom-qty-input', function () {
@@ -140,7 +132,7 @@ $('#cartTableBody').on('keydown', '.custom-qty-input', function (e) {
 });
 
 function updateCartQuantity(inputField) {
-  const index = $(inputField).data('index'); 
+  const index = $(inputField).data('index');
   const newValue = parseInt($(inputField).val());
 
   if (!isNaN(index) && index >= 0 && index < shoppingCart.length) {
