@@ -78,7 +78,7 @@
               </li>
             </ul>
           </div>
-          <div class="nav3"> 
+          <div class="nav3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -110,7 +110,8 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="services.html">Healing Services</a></li>
-                    <li><a class="dropdown-item" href="services.html#CrystalJewlery2">Channeled Crystal Jewelery</a></li>
+                    <li><a class="dropdown-item" href="services.html#CrystalJewlery2">Channeled Crystal Jewelery</a>
+                    </li>
                     <li><a class="dropdown-item" href="services.html#DistanceReiki2">Distance Reiki Energy Healing</a>
                     </li>
                     <li><a class="dropdown-item" href="services.html#ReikiOracleCards2">Reiki Oracle Cards</a></li>
@@ -438,7 +439,7 @@
           <div class="space-between" style="width: auto; gap: 5vh">
             <div class="investment" style="min-width:0 !important;">
               <p style="font-size: larger; text-align: center !important; line-height: 0.7;">
-                <strong><em>30 Minutes<br/><br/>$111 CAD</em></strong>
+                <strong><em>30 Minutes<br /><br />$111 CAD</em></strong>
               </p>
               <button type="button" class="btn btn-primary addToCartButton"
                 data-price-id='price_1OCoGoJyZz5ri1G4GVL7HFoE' data-product-name="Mediumship Reading (30 Minutes)
@@ -446,7 +447,7 @@
             </div>
             <div class="investment" style="min-width:0 !important;">
               <p style="font-size: larger; text-align: center !important; line-height: 0.7;">
-                <strong><em>One Hour<br/><br/>$222 CAD</em></strong>
+                <strong><em>One Hour<br /><br />$222 CAD</em></strong>
               </p>
               <button type="button" class="btn btn-primary addToCartButton"
                 data-price-id='price_1OCoH0JyZz5ri1G44bmXOotl' data-product-name="Mediumship Reading (60 Minutes)
@@ -515,7 +516,7 @@
           </div>
         </div>
       </div>
-      <div class="d1 column fade-in mobile" id="OracleEmail"
+      <div class="d1 column fade-in pc" id="OracleEmail"
         style="margin-top: 10vh; margin-bottom: 0; scroll-margin-top: 75px;">
         <h3>Oracle Card Reading</h3>
         <p>Splash along with Spirit as they guide you through oracle cards!</p>
@@ -534,60 +535,54 @@
       </div>
     </footer>
 
-    <!-- Popup Cart -->
     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-bottom-0">
-            <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+        </div>
+        <div class="modal-body">
+          <div id="emptyCartMessage" class="alert alert-info text-center">
+            Your shopping cart is currently empty.
           </div>
-          <div class="modal-body">
-            <div id="emptyCartMessage" class="alert alert-info text-center">
-              Your shopping cart is currently empty.
-            </div>
 
-            <div id="cartTableContainer" style="display: none;">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Actions</th>
-                  </tr>
-                </thead>
-                <tbody id="cartTableBody">
-                </tbody>
-              </table>
-            </div>
+          <div id="cartTableContainer" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Qty</th>
+      
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="cartTableBody">
+              </tbody>
+            </table>
+          </div>
 
-            <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
-              <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
-            </div>
+          <div class="d-flex justify-content-end" id="initTotal" style="display: none !important;">
+            <h5>Total: <span id="cartTotal" class="price text-success">0$</span></h5>
           </div>
-          <div class="modal-footer border-top-0 d-flex justify-content-between">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <form action="/create-checkout-session" method="POST">
-              <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
-            </form>
-          </div>
+        </div>
+        <div class="modal-footer border-top-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <form action="/create-checkout-session" method="POST">
+            <button id="checkout" type="submit" class="btn btn-success" style="display: none;">Checkout</button>
+          </form>
         </div>
       </div>
     </div>
-    <div id="success-banner"
-      style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background-color: red; color: white; padding: 10px; border-radius: 5px;">
-      Successfully added!</div>
+  </div>
 
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
-    $(document).ready(function() {
-      // Listen for click events on dropdown items
-      $('.dropdown-menu a').click(function() {
-        // Remove the 'show' class from the navbar-collapse
+    $(document).ready(function () {
+      $('.dropdown-item').click(function () {
         $('#navbarSupportedContent').removeClass('show');
       });
     });

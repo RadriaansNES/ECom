@@ -157,21 +157,6 @@ body::before {
   z-index: -10;
 }
 
-#success-banner {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  background-color: red;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
 .main .container-fluid {
   margin-top: 5vh;
   padding: 0;
@@ -200,7 +185,7 @@ body::before {
   justify-content: center;
 }
 .main .container-fluid .C1 {
-  min-height: 90vh;
+  min-height: 95vh;
   justify-content: center;
   align-items: center;
   background-image: url(../../src/formattedRaw-min.JPEG);
@@ -238,10 +223,6 @@ body::before {
   top: -8vh;
   pointer-events: none;
 }
-.main .container-fluid .C2 #glowTrigger {
-  position: relative;
-  top: 2vh;
-}
 .main .container-fluid .C2 #absGlow {
   position: absolute;
   top: -3.5vh;
@@ -252,7 +233,12 @@ body::before {
   border-radius: 100px;
   z-index: -1;
 }
+.main .container-fluid .C2 #glowTrigger, .main .container-fluid .C2 #glowTrigger2 {
+  position: relative;
+  top: 2vh;
+}
 .main .container-fluid .C2 #glowTrigger:hover > #absGlow,
+.main .container-fluid .C2 #relative > #absGlow, .main .container-fluid .C2 #glowTrigger2:hover > #absGlow,
 .main .container-fluid .C2 #relative > #absGlow {
   background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
 }
@@ -302,6 +288,7 @@ body::before {
   margin-top: 15vh;
   margin-bottom: 5vh;
   width: 60%;
+  /*Next mpve onstagram logo, fb, leave cart solo? animation of item?*/
 }
 .crystals .container-fluid h2,
 .footer .container-fluid h2,
@@ -445,6 +432,24 @@ body::before {
 .footer .container-fluid .carousel-slide,
 .registration .container-fluid .carousel-slide {
   display: none;
+  margin: 0 !important;
+}
+.crystals .container-fluid .carousel,
+.footer .container-fluid .carousel,
+.registration .container-fluid .carousel {
+  padding: 2vh 2vh 0 2vh !important;
+  margin-bottom: 0vh !important;
+}
+.crystals .container-fluid .carousel p,
+.footer .container-fluid .carousel p,
+.registration .container-fluid .carousel p {
+  margin-bottom: 0vh !important;
+}
+.crystals .container-fluid .crystals .testes .container-fluid,
+.footer .container-fluid .crystals .testes .container-fluid,
+.registration .container-fluid .crystals .testes .container-fluid {
+  max-height: auto !important;
+  height: auto !important;
 }
 .crystals .container-fluid section,
 .footer .container-fluid section,
@@ -465,13 +470,12 @@ body::before {
 .registration .container-fluid section .ContainerCarousel2 {
   top: 40vh;
   position: absolute;
-  min-height: 60vh;
-  max-height: 60vh;
+  padding: 2vh !important;
   border-radius: 5vh;
   width: 55%;
   max-width: 55%;
   min-width: 55%;
-  margin-bottom: 0 !important;
+  margin-bottom: -10vh !important;
 }
 .crystals .container-fluid section .ContainerCarousel2 h3,
 .footer .container-fluid section .ContainerCarousel2 h3,
@@ -717,6 +721,12 @@ body::before {
   display: none !important;
 }
 
+@media (min-width: 1025px) {
+  #twaked {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .C1 > div > h1 {
     margin-top: 17vh !important;
@@ -745,6 +755,10 @@ body::before {
   .ContainerCarousel2 h3 {
     padding-top: 0 !important;
   }
+  #twaked {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
@@ -754,19 +768,16 @@ body::before {
   strong,
   em,
   a {
-    font-size: 13px !important;
-  }
-  h1 {
-    font-size: 35px !important;
+    font-size: 16px !important;
   }
   h2 {
-    font-size: 25px;
+    font-size: 40px !important;
   }
   h3 {
-    font-size: 22px;
+    font-size: 28px;
   }
-  #reduce {
-    font-size: 11.5px !important;
+  h4 {
+    font-size: 22px;
   }
   .mission .container-fluid img {
     max-width: 100%;
@@ -792,6 +803,10 @@ body::before {
   .C4 .bigger p {
     width: 100%;
     font-size: 16px !important;
+  }
+  #twaked {
+    min-height: 130vh !important;
+    max-height: 130vh !important;
   }
 }
 @media (max-width: 767px) {
@@ -849,8 +864,6 @@ body::before {
     padding: 0 !important;
     max-width: 80% !important;
     width: 80% !important;
-    max-height: 45vh !important;
-    min-height: 45vh !important;
   }
   section {
     width: 100% !important;
@@ -861,12 +874,12 @@ body::before {
     padding-bottom: 0;
   }
   #prevButton2 {
-    top: 50vh !important;
-    left: 5vh !important;
+    top: 20vh !important;
+    left: -4.5vh !important;
   }
   #nextButton2 {
-    top: 50vh !important;
-    right: 5vh !important;
+    top: 20vh !important;
+    right: -4.5vh !important;
   }
   #Login {
     font-size: 16px !important;
@@ -970,6 +983,13 @@ body::before {
   .main .container-fluid .C3 {
     align-items: center !important;
   }
+  #twaked {
+    min-height: 140vh !important;
+    max-height: 140vh !important;
+  }
+  .carousel-slide, .carousel {
+    padding: 0 !important;
+  }
 }
 @media (max-width: 1023px) {
   .nav2 {
@@ -987,14 +1007,6 @@ body::before {
   }
   .C1 {
     background-size: 300% 100% !important;
-  }
-}
-@media (max-height: 750px) {
-  .carousel-slide p {
-    font-size: 9px !important;
-  }
-  #reduce {
-    font-size: 8px !important;
   }
 }
 @keyframes animStar {

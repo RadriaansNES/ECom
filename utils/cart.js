@@ -97,7 +97,7 @@ function updateCartDisplay() {
 
       actionsCell.append(removeButton);
 
-      newRow.append(productCell, priceCell, qtyInputCell, itemTotal, actionsCell);
+      newRow.append(productCell, priceCell, qtyInputCell, actionsCell);
       cartTableBody.append(newRow);
     });
   }
