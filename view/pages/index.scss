@@ -60,15 +60,16 @@ nav .container-fluid {
     }
 
     #cartlogo {
-        max-height: 35px;
-        height: 35px;
-        width: 35px;
+        max-height: 40px;
+        height: 40px;
+        width: 40px;
         padding-left: 5px;
     }
 
     #cart {
-        height: 40px;
-        width: 40px;
+        height: 45px;
+        width: 45px;
+        margin: 1vh;
     }
 
     .navbar-brand {
@@ -998,15 +999,15 @@ body::before {
     }
 
     nav .container-fluid #cartlogo {
-        max-height: 25px;
-        height: 25px;
-        width: 25px;
+        max-height: 30px;
+        height: 30px;
+        width: 30px;
         padding-left: 5px;
     }
 
     nav .container-fluid #cart {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
     }
 
     .login .container-fluid form,
@@ -1141,7 +1142,13 @@ body::before {
     }
 
     .nav3 {
-        display: block !important;
+        display: flex !important;
+        width: 100vw;
+        justify-content: space-between !important;
+
+        #cart {
+            position: sticky;
+        }
     }
 
     .crystals .container-fluid {

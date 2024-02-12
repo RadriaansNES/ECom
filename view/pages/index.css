@@ -56,14 +56,15 @@ nav .container-fluid #logo {
   padding-bottom: 15px;
 }
 nav .container-fluid #cartlogo {
-  max-height: 35px;
-  height: 35px;
-  width: 35px;
+  max-height: 40px;
+  height: 40px;
+  width: 40px;
   padding-left: 5px;
 }
 nav .container-fluid #cart {
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
+  margin: 1vh;
 }
 nav .container-fluid .navbar-brand {
   margin: 0;
@@ -885,14 +886,14 @@ body::before {
     font-size: 16px !important;
   }
   nav .container-fluid #cartlogo {
-    max-height: 25px;
-    height: 25px;
-    width: 25px;
+    max-height: 30px;
+    height: 30px;
+    width: 30px;
     padding-left: 5px;
   }
   nav .container-fluid #cart {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
   .login .container-fluid form,
   .login .container-fluid form div,
@@ -996,7 +997,12 @@ body::before {
     display: none !important;
   }
   .nav3 {
-    display: block !important;
+    display: flex !important;
+    width: 100vw;
+    justify-content: space-between !important;
+  }
+  .nav3 #cart {
+    position: sticky;
   }
   .crystals .container-fluid {
     width: 80%;
