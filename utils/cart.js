@@ -120,8 +120,11 @@ $('.addToCartButton').on('click', function () {
   addToCart(productName, productPrice, quantity, priceId);
 });
 
-$('#cartTableBody').on('input', '.custom-qty-input', function () {
-  updateCartQuantity(this);
+$('#cartTableBody').on('keydown', '.custom-qty-input', function (e) {
+  if (e.key === 'Enter' || e.key === 'Return') { // Check if Enter key or Return key is pressed
+    e.preventDefault();
+    updateCartQuantity(this);
+  }
 });
 
 function updateCartQuantity(inputField) {

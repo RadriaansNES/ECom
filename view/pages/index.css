@@ -992,6 +992,12 @@ body::before {
     padding: 0 !important;
   }
 }
+@media (max-width: 415px) {
+  #twaked {
+    min-height: 160vh !important;
+    max-height: 160vh !important;
+  }
+}
 @media (max-width: 1023px) {
   .nav2 {
     display: none !important;

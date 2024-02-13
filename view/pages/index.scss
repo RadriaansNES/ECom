@@ -1135,6 +1135,13 @@ body::before {
     }
 }
 
+@media (max-width: 415px) {
+    #twaked {
+        min-height: 160vh !important;
+        max-height: 160vh !important;
+    }
+}
+
 
 @media (max-width: 1023px) {
     .nav2 {
