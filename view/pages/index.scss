@@ -1172,6 +1172,16 @@ body::before {
     }
 }
 
+@media (min-width: 1400px) {
+   .C3 {
+    margin-top: 20vh !important;
+   }
+
+   .bigger {
+    margin-left: 20vh !important;
+   }
+}
+
 
 @keyframes animStar {
     from {
