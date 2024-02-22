@@ -271,13 +271,15 @@ body::before {
             z-index: -1;
         }
 
-        #glowTrigger, #glowTrigger2 {
+        #glowTrigger,
+        #glowTrigger2 {
             position: relative;
             top: 2vh;
         }
 
         #glowTrigger:hover>#absGlow,
-        #relative>#absGlow, #glowTrigger2:hover>#absGlow,
+        #relative>#absGlow,
+        #glowTrigger2:hover>#absGlow,
         #relative>#absGlow {
             background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
         }
@@ -471,15 +473,17 @@ body::before {
     }
 
     .carousel {
-        padding: 2vh 2vh 0 2vh !important; 
+        padding: 2vh 2vh 0 2vh !important;
         margin-bottom: 0vh !important;
+
         p {
             margin-bottom: 0vh !important;
         }
     }
+
     /*Next mpve onstagram logo, fb, leave cart solo? animation of item?*/
 
-    .crystals .testes .container-fluid{
+    .crystals .testes .container-fluid {
         max-height: auto !important;
         height: auto !important;
     }
@@ -765,7 +769,7 @@ body::before {
     gap: 5vh;
 }
 
-.mobile  {
+.mobile {
     display: none !important;
 }
 
@@ -779,6 +783,22 @@ body::before {
         max-height: 100vh !important;
     }
 }
+
+@media (min-width: 725px) {
+
+    #varP {
+        width: 100% !important;
+        margin-left: 5vh !important;
+        p {
+            font-size: 24px !important;
+            display: flex;
+            justify-content: center;
+            max-width: 50%;
+            line-height: 5vh;
+        }
+    }
+}
+
 
 @media (min-width: 1024px) and (max-width: 1439px) {
 
@@ -830,7 +850,7 @@ body::before {
 
     .C4 {
         margin-top: -20vh !important;
-       }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -846,7 +866,7 @@ body::before {
         font-size: 16px !important;
     }
 
- 
+
     h2 {
         font-size: 40px !important;
     }
@@ -904,7 +924,7 @@ body::before {
 
     .C4 {
         margin-top: -20vh !important;
-       }
+    }
 }
 
 @media (max-width: 767px) {
@@ -1106,7 +1126,8 @@ body::before {
         }
     }
 
-    .mission .mobile, .crystals .mobile {
+    .mission .mobile,
+    .crystals .mobile {
         max-height: none !important;
     }
 
@@ -1114,6 +1135,7 @@ body::before {
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
             padding: 5vh 0;
             border-radius: 20%;
@@ -1141,7 +1163,8 @@ body::before {
         max-height: 140vh !important;
     }
 
-    .carousel-slide, .carousel {
+    .carousel-slide,
+    .carousel {
         padding: 0 !important;
     }
 }
@@ -1184,53 +1207,54 @@ body::before {
 }
 
 @media (min-width: 1400px) {
-   .C3 {
-    margin-top: 10vh !important;
-   }
+    .C3 {
+        margin-top: 10vh !important;
+    }
 
-   .C4 {
-    margin-top: -20vh !important;
-   }
+    .C4 {
+        margin-top: -20vh !important;
+    }
 
-   .C2 img {
-    max-width: 60vh;
-    max-height: 60vh;
-   }
+    .C2 img {
+        max-width: 60vh;
+        max-height: 60vh;
+    }
 
-   nav .container-fluid #logo {
-    padding-bottom: 0 !important;
-    max-height: 22vh;
-   }
+    nav .container-fluid #logo {
+        padding-bottom: 0 !important;
+        max-height: 22vh;
+    }
 
-   .nav1 a {
-    display: flex;
-    align-items: center;
-   }
+    .nav1 a {
+        display: flex;
+        align-items: center;
+    }
 
 
-   nav .container-fluid .nav1 {
-    height: 25vh !important;
-   }
-   
-   nav .container-fluid .nav2 {
-    min-height: 7vh !important;
-   }
+    nav .container-fluid .nav1 {
+        height: 25vh !important;
+    }
 
-   .navbar>.container-fluid {
-    min-height: 26vh !important;
-   }
+    nav .container-fluid .nav2 {
+        min-height: 7vh !important;
+    }
 
-   .nav2 a, footer a {
-    font-size: 19px;
-   }
+    .navbar>.container-fluid {
+        min-height: 26vh !important;
+    }
 
-   .crystals .container-fluid section .ContainerCarousel2 {
-    top: 55vh;
-   }
+    .nav2 a,
+    footer a {
+        font-size: 19px;
+    }
 
-   .bigger {
-    margin-left: 20vh !important;
-   }
+    .crystals .container-fluid section .ContainerCarousel2 {
+        top: 55vh;
+    }
+
+    .bigger {
+        margin-left: 20vh !important;
+    }
 }
 
 

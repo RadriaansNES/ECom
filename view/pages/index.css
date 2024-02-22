@@ -233,12 +233,14 @@ body::before {
   border-radius: 100px;
   z-index: -1;
 }
-.main .container-fluid .C2 #glowTrigger, .main .container-fluid .C2 #glowTrigger2 {
+.main .container-fluid .C2 #glowTrigger,
+.main .container-fluid .C2 #glowTrigger2 {
   position: relative;
   top: 2vh;
 }
 .main .container-fluid .C2 #glowTrigger:hover > #absGlow,
-.main .container-fluid .C2 #relative > #absGlow, .main .container-fluid .C2 #glowTrigger2:hover > #absGlow,
+.main .container-fluid .C2 #relative > #absGlow,
+.main .container-fluid .C2 #glowTrigger2:hover > #absGlow,
 .main .container-fluid .C2 #relative > #absGlow {
   background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 100%);
 }
@@ -731,6 +733,19 @@ body::before {
     max-height: 100vh !important;
   }
 }
+@media (min-width: 725px) {
+  #varP {
+    width: 100% !important;
+    margin-left: 5vh !important;
+  }
+  #varP p {
+    font-size: 24px !important;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    line-height: 5vh;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .C1 > div > h1 {
     margin-top: 17vh !important;
@@ -968,7 +983,8 @@ body::before {
   .mobile div {
     min-width: 80% !important;
   }
-  .mission .mobile, .crystals .mobile {
+  .mission .mobile,
+  .crystals .mobile {
     max-height: none !important;
   }
   #missionMOBILE {
@@ -997,7 +1013,8 @@ body::before {
     min-height: 140vh !important;
     max-height: 140vh !important;
   }
-  .carousel-slide, .carousel {
+  .carousel-slide,
+  .carousel {
     padding: 0 !important;
   }
 }
@@ -1058,7 +1075,8 @@ body::before {
   .navbar > .container-fluid {
     min-height: 26vh !important;
   }
-  .nav2 a, footer a {
+  .nav2 a,
+  footer a {
     font-size: 19px;
   }
   .crystals .container-fluid section .ContainerCarousel2 {
