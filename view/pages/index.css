@@ -159,7 +159,6 @@ body::before {
 }
 
 .main .container-fluid {
-  margin-top: 5vh;
   padding: 0;
 }
 .main .container-fluid h2 {
@@ -610,7 +609,7 @@ body::before {
   position: fixed;
   top: 55%;
   transform: translateY(-50%);
-  left: 2%;
+  left: 0.5%;
   padding: 3vh 0;
   height: auto;
   border: 1px solid black;
@@ -641,7 +640,7 @@ body::before {
 }
 
 #sidebar2 {
-  top: 55%;
+  top: 58%;
   padding-right: 0;
   min-width: 15vw;
   width: 15vw;
@@ -649,7 +648,7 @@ body::before {
   color: #fff;
   position: fixed;
   transform: translateY(-50%);
-  left: 2%;
+  left: 0.5%;
   height: auto;
   border: 1px solid black;
   z-index: 100;
@@ -722,6 +721,10 @@ body::before {
   display: none !important;
 }
 
+.navbar > .container-fluid {
+  margin-bottom: 1vh;
+}
+
 @media (min-width: 1025px) {
   #twaked {
     min-height: 100vh !important;
@@ -744,7 +747,7 @@ body::before {
     margin-top: 0vh !important;
   }
   #sidebar2 {
-    top: 55%;
+    top: 58%;
     padding: 0;
     min-width: 12vw;
     width: 12vw;
@@ -759,6 +762,9 @@ body::before {
   #twaked {
     min-height: 100vh !important;
     max-height: 100vh !important;
+  }
+  .C4 {
+    margin-top: -20vh !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -792,7 +798,7 @@ body::before {
     max-width: 196px;
   }
   #sidebar2 {
-    top: 55%;
+    top: 58%;
     padding-bottom: 0;
   }
   #Login {
@@ -871,7 +877,7 @@ body::before {
     height: 55vh !important;
   }
   #sidebar2 {
-    top: 55%;
+    top: 58%;
     padding-bottom: 0;
   }
   #prevButton2 {
@@ -1023,7 +1029,37 @@ body::before {
 }
 @media (min-width: 1400px) {
   .C3 {
-    margin-top: 20vh !important;
+    margin-top: 10vh !important;
+  }
+  .C4 {
+    margin-top: -20vh !important;
+  }
+  .C2 img {
+    max-width: 60vh;
+    max-height: 60vh;
+  }
+  nav .container-fluid #logo {
+    padding-bottom: 0 !important;
+    max-height: 22vh;
+  }
+  .nav1 a {
+    display: flex;
+    align-items: center;
+  }
+  nav .container-fluid .nav1 {
+    height: 25vh !important;
+  }
+  nav .container-fluid .nav2 {
+    min-height: 7vh !important;
+  }
+  .navbar > .container-fluid {
+    min-height: 26vh !important;
+  }
+  .nav2 a, footer a {
+    font-size: 19px;
+  }
+  .crystals .container-fluid section .ContainerCarousel2 {
+    top: 55vh;
   }
   .bigger {
     margin-left: 20vh !important;

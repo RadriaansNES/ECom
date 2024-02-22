@@ -74,7 +74,7 @@
                 <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
               </li>
               <li>
-                <a class="nav-link active" id="cart0" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <a class="nav-link active" id="cart0" data-bs-toggle="modal" data-bs-target="#cartModal" style="cursor: pointer;">
                   Cart
                 </a>
               </li>
@@ -391,47 +391,57 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     const carouselInterval = 15000;
-  
+
     function rotateCarousel(carouselId) {
       const $carousel = $(`#${carouselId}`);
       const $slides = $carousel.find('.carousel-slide');
-      let currentIndex = 1;
+      let currentIndex = 0; // Start with the first slide
       let intervalId;
-  
+
       function showSlide(index) {
         $slides.hide();
         $slides.eq(index).fadeIn();
       }
-  
+
       function startInterval() {
         intervalId = setInterval(() => {
           currentIndex = (currentIndex + 1) % $slides.length;
           showSlide(currentIndex);
         }, carouselInterval);
       }
-  
+
       function stopInterval() {
         clearInterval(intervalId);
       }
-  
+
       showSlide(currentIndex);
-  
-      $(document).on('click', `#${carouselId} .ContainerCarousel2, #${carouselId} .carousel-slide, #${carouselId} .carousel`, function () {
-        currentIndex = (currentIndex + 1) % $slides.length;
+
+      $carousel.on('click', function (event) {
+        const carouselWidth = $carousel.width();
+        const clickX = event.pageX - $carousel.offset().left;
+
+        if (clickX < carouselWidth / 2) {
+          // Clicked on the left side, scroll backward
+          currentIndex = (currentIndex - 1 + $slides.length) % $slides.length;
+        } else {
+          // Clicked on the right side, cycle forward
+          currentIndex = (currentIndex + 1) % $slides.length;
+        }
+
         showSlide(currentIndex);
         stopInterval();
       });
-  
+
       startInterval();
     }
-  
+
     rotateCarousel('carousel1');
     rotateCarousel('carousel2');
     rotateCarousel('carousel3');
     rotateCarousel('carousel4');
     rotateCarousel('carousel5');
     rotateCarousel('carousel6');
-  </script>
+</script>
   
   
   <script src="../../utils/scrollHelp.js"></script>
