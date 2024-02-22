@@ -196,9 +196,9 @@
         </div>
       </div>
       <div class="C3 space-around fade-in pc">
-        <div class="column" id="lineHeight">
+        <div class="column">
           <h2>To My Dear</h2>
-          <p>Dreamers. Doers.<br />
+          <p id="lineHeight">Dreamers. Doers.<br />
             Free Spirits. Wanderers.<br />
             Lovers. Romantics.<br />
             Healers. Empaths.<br />
@@ -209,9 +209,9 @@
             Revolutionists. Visionaries.
           </p>
         </div>
-        <div class="column" id="calcHeight">
+        <div class="column">
           <h2>I Dare You</h2>
-          <p>Dare to drum to your heartbeat.<br />
+          <p id="calcHeight">Dare to drum to your heartbeat.<br />
             Dare to be different.<br />
             Dare to dance.<br />
             Dare to dream.<br />
@@ -363,7 +363,7 @@
     const calcHeightDiv = document.getElementById('calcHeight');
     const lineHeightDiv = document.getElementById('lineHeight');
 
-    const calcHeight = calcHeightDiv.clientHeight / 10;
+    const calcHeight = calcHeightDiv.clientHeight / 9;
 
     lineHeightDiv.style.lineHeight = `${calcHeight}px`;
   </script>
