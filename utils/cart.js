@@ -121,7 +121,7 @@ $('.addToCartButton').on('click', function () {
 });
 
 $('#cartTableBody').on('keydown', '.custom-qty-input', function (e) {
-  if (e.key === 'Enter' || e.key === 'Return') { // Check if Enter key or Return key is pressed
+  if (e.key === 'Enter' || e.key === 'Return') {
     e.preventDefault();
     updateCartQuantity(this);
   }
