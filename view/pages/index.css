@@ -470,7 +470,7 @@ body::before {
 .crystals .container-fluid section .ContainerCarousel2,
 .footer .container-fluid section .ContainerCarousel2,
 .registration .container-fluid section .ContainerCarousel2 {
-  top: 40vh;
+  top: 46vh;
   position: absolute;
   padding: 2vh !important;
   border-radius: 5vh;
