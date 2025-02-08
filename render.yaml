@@ -1,14 +1,14 @@
 # Exported from Render on 2024-04-29T17:22:43Z
 databases:
 - name: MerDB
-  databaseName: merdb_7ein
-  user: merdb_7ein_user
+  databaseName: merdb_88h1
+  user: merdb_88h1_user
   plan: free
   region: oregon
   ipAllowList:
   - source: 0.0.0.0/0
     description: everywhere
-  - source: 70.51.219.48/32
+  - source: 76.39.100.211
     description: r28828113@gmail.com
-  postgresMajorVersion: "15"
+  postgresMajorVersion: "16"
 version: "1"
